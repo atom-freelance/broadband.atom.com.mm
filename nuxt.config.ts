@@ -7,7 +7,11 @@ export default defineNuxtConfig({
 	css: ['flag-icons/css/flag-icons.min.css'],
 	app: {
 		head: {
+			title: 'ATOM Myanmar',
 			meta: [{ name: 'theme-color', media: '(prefers-color-scheme: light)' }],
+			bodyAttrs: {
+				class: 'text-content-primary scroll-smooth',
+			},
 		},
 	},
 })

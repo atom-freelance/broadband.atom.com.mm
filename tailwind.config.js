@@ -102,4 +102,5 @@ export default {
 	plugins: [require('daisyui')],
 	theme: { extend: themeExtend },
 	daisyui: daisyConfig,
+	safelist: ['container', 'text-content-primary', 'scroll-smooth'],
 }
