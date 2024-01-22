@@ -7,5 +7,8 @@
 		"tailwindcss",
 		"vueuse",
 		"မြန်မာ"
-	]
+	],
+	"[xml]": {
+		"editor.defaultFormatter": "DotJoshJohnson.xml"
+	}
 }

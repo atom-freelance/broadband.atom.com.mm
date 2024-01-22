@@ -1023,7 +1023,7 @@ export type IconName =
 	| 'pinterest'
 	| 'pizza-slice'
 	| 'plate-utensils'
-	| 'Plate'
+	| 'plate'
 	| 'play-circle'
 	| 'play-pause'
 	| 'play-square'
