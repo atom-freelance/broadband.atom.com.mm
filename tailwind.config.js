@@ -5,6 +5,7 @@ const themeExtend = {
 		padding: '2rem',
 	},
 	fontSize: {
+		'title-hero': ['72px', '88px'],
 		'title-screen': ['30px', '34px'],
 		'title-section': ['26px', '32px'],
 		'title-subsection': ['22px', '28px'],
