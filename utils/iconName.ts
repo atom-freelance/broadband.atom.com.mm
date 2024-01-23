@@ -52,7 +52,7 @@ export type IconName =
 	| 'angles-up-small'
 	| 'angles-up'
 	| 'app-store'
-	| 'Apple-fruit'
+	| 'apple-fruit'
 	| 'apple-pay'
 	| 'apple'
 	| 'archive'

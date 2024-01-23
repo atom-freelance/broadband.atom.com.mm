@@ -1,10 +1,10 @@
 <template>
-	<main>
+	<main class="pb-20">
 		<!-- Hero Section -->
 		<section class="hero-section">
 			<article class="flex flex-col items-center">
 				<h1
-					class="mt-[40%] flex flex-col items-center text-4xl font-medium md:text-5xl lg:mt-20 lg:text-7xl"
+					class="lg:text-title-hero mt-[40%] flex flex-col items-center text-4xl font-medium md:mt-[30%] md:text-5xl lg:mt-20"
 				>
 					<span>The most</span>
 					<i class="font-extrabold">reliable high-speed</i>
@@ -54,6 +54,55 @@
 				</p>
 			</article>
 		</section>
+
+		<!-- Features -->
+		<section
+			class="container mt-40 grid grid-cols-1 gap-6 py-6 md:grid-cols-2 lg:grid-cols-3"
+		>
+			<FeatureCard
+				class="hover:bg-interactive-accent"
+				icon="dollar-circle"
+				title="Free installation fee"
+				sub-title="Zero installation costs enjoy our offer."
+			/>
+
+			<FeatureCard
+				class="hover:bg-interactive-accent"
+				icon="like"
+				title="Flexible plan"
+				sub-title="Many plans that are suitable for you."
+			/>
+
+			<FeatureCard
+				class="hover:bg-interactive-accent"
+				icon="rocket-launch"
+				title="High speed broadband"
+				sub-title="Fast broadband for seamless connection."
+			/>
+
+			<FeatureCard
+				class="hover:bg-interactive-accent"
+				icon="heart"
+				title="Customer support"
+				sub-title="We care about our customer 24/7."
+			/>
+
+			<FeatureCard
+				class="hover:bg-interactive-accent"
+				icon="wifi"
+				title="Unlimited data"
+				sub-title="Endless data for limitless connectivity."
+			/>
+
+			<FeatureCard
+				class="hover:bg-interactive-accent"
+				icon="sparkle"
+				title="Prioritize quality"
+				sub-title="Top-notch quality is our priority."
+			/>
+		</section>
+
+		<section></section>
 	</main>
 </template>
 
@@ -66,9 +115,10 @@
 	background-position-y: 100%;
 }
 
-@screen lg {
+/* screen size: lg */
+@media (min-width: 1024px) {
 	.hero-section {
-		background-size: unset;
+		background-size: 100% auto;
 		background-position-y: 80%;
 	}
 }
