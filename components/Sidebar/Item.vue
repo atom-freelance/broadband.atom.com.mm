@@ -36,7 +36,7 @@ watch(
 		<div class="flex gap-2">
 			<span v-show="isActive" class="mr-2 border-l-[3px] border-l-primary" />
 			<div
-				class="flex items-center gap-2"
+				class="flex items-center gap-2 text-xs lg:text-lg"
 				:class="isActive ? 'text-primary' : ''"
 			>
 				<Icon :name="props.iconName" /> {{ props.name }}

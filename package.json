@@ -22,7 +22,8 @@
 		]
 	},
 	"dependencies": {
-		"flag-icons": "^7.1.0"
+		"flag-icons": "^7.1.0",
+		"tailwind-merge": "^2.2.1"
 	},
 	"devDependencies": {
 		"@nuxtjs/tailwindcss": "^6.11.0",

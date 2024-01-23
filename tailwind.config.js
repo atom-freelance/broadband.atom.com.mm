@@ -16,11 +16,11 @@ const themeExtend = {
 		'body': ['14px', '22px'],
 	},
 	colors: {
-		primary: {
+		'primary': {
 			DEFAULT: '#2449FB',
 			light: '#00C8FF',
 		},
-		content: {
+		'content': {
 			'primary': '#0E0F0C',
 			'secondary': '#454745',
 			'tertiary': '#6A6C6A',
@@ -28,7 +28,7 @@ const themeExtend = {
 			'link-hover': '#0D1F00',
 			'link-active': '#0E0F0C',
 		},
-		interactive: {
+		'interactive': {
 			'primary': '#163300',
 			'primary-hover': '#0D1F00',
 			'primary-active': '#0E0F0C',
@@ -45,14 +45,14 @@ const themeExtend = {
 			'negative-hover': '#D03238',
 			'negative-active': '#BF1E2C',
 		},
-		sentiment: {
+		'sentiment': {
 			'negative': '#A8200D',
 			'negative-hover': '#8E1B0B',
 			'negative-active': '#761709',
 			'positive': '#2F5711',
 			'warning': '#EDC843',
 		},
-		categories: {
+		'categories': {
 			'bills': '#EDB37E',
 			'cash': '#AFCCA1',
 			'eating-out': '#92B0EA',
@@ -69,6 +69,11 @@ const themeExtend = {
 			'shopping': '#7B8ABE',
 			'transport': '#FFAA99',
 			'trips': '#C8AD98',
+		},
+		'benefit-card': {
+			'wifi': '#FFD8EF',
+			'pone-call': '#78C9FF',
+			'sim-card': '#A0E1E1',
 		},
 	},
 }
