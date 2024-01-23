@@ -7,7 +7,7 @@
 					<a href="tel:+959780008080" class="link">+959 780 008 080</a>
 				</p>
 
-				<DropdownRoot>
+				<DropdownRoot class="dropdown-end">
 					<DropdownTarget class="btn btn-ghost btn-xs flex items-center gap-1">
 						<i
 							class="fi fi-gb inline-block !size-5 overflow-hidden rounded-full border border-white !bg-cover"
