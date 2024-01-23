@@ -1,6 +1,6 @@
 <template>
-	<div class="container grid h-screen grid-cols-12 gap-4">
-		<div class="col-span-3">
+	<div class="container grid min-h-fit grid-cols-12 gap-0 lg:gap-4">
+		<div class="col-span-6 lg:col-span-3">
 			<ul class="flex flex-col items-start gap-10 p-4 text-content-secondary">
 				<li>
 					<SidebarItem
@@ -49,7 +49,7 @@
 				</li>
 			</ul>
 		</div>
-		<div class="col-span-9">
+		<div class="col-span-6 p-10 pl-0 lg:col-span-9">
 			<slot />
 		</div>
 	</div>

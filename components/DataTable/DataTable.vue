@@ -12,11 +12,13 @@ const props = defineProps({
 </script>
 
 <template>
-	<div class="space-y-4">
+	<div class="flex flex-col gap-4">
 		<h1 v-show="props.title" class="text-title-section font-semibold">
 			{{ props.title }}
 		</h1>
-		<p v-show="props.description" class="text-sm">{{ props.description }}</p>
+		<p v-show="props.description" class="text-sm">
+			{{ props.description }}
+		</p>
 
 		<div class="overflow-x-auto">
 			<table class="table">
