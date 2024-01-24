@@ -103,7 +103,7 @@
 		</section>
 
 		<!-- Plans -->
-		<section class="container">
+		<section class="container mt-40">
 			<article class="flex flex-col items-center space-y-6 text-center">
 				<h2 class="text-5xl font-medium">
 					The <i class="font-bold">best selling</i> plan
@@ -125,7 +125,7 @@
 			</article>
 
 			<article
-				class="container mt-20 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
+				class="mt-20 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-4 lg:grid-cols-3"
 			>
 				<ItemCard
 					img-url="https://images.unsplash.com/photo-1652197881268-d625ad54402b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -141,28 +141,62 @@
 
 				<ItemCard
 					img-url="https://images.unsplash.com/photo-1652197881268-d625ad54402b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-					title="Home plan"
-					sub-title="Power 40 Up to 40Mbps"
+					title="Starter kit"
+					sub-title="Up to 10Mbps"
 				>
 					<div class="flex items-center gap-4 font-semibold">
-						<h6 class="text-title-body">45,000 / 30 days</h6>
+						<h6 class="text-title-body">115,00 / 90 days</h6>
 
-						<button class="btn btn-sm rounded-full">Fiber</button>
+						<button class="btn btn-sm rounded-full">Wireless</button>
 					</div>
 				</ItemCard>
 
 				<ItemCard
 					img-url="https://images.unsplash.com/photo-1652197881268-d625ad54402b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-					title="Home plan"
-					sub-title="Power 40 Up to 40Mbps"
+					title="Starter"
+					sub-title="Power Flexi Net"
 				>
 					<div class="flex items-center gap-4 font-semibold">
-						<h6 class="text-title-body">45,000 / 30 days</h6>
+						<h6 class="text-title-body">25,000 / 30 days</h6>
 
-						<button class="btn btn-sm rounded-full">Fiber</button>
+						<button class="btn btn-sm rounded-full">Wireless</button>
 					</div>
 				</ItemCard>
 			</article>
+		</section>
+
+		<!-- Scenarios -->
+		<section
+			class="mt-40 grid grid-cols-1 gap-20 md:container md:grid-cols-5 md:gap-4 lg:grid-cols-9"
+		>
+			<figure class="md:col-span-2 lg:col-span-4">
+				<img
+					src="https://images.unsplash.com/photo-1652197881268-d625ad54402b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+					class="h-[400px] w-full object-cover object-center"
+				/>
+				<h5 class="mt-4 text-title-screen font-semibold">Listening music</h5>
+				<h6 class="mt-2 text-title-body font-semibold">
+					The smoothest internet
+				</h6>
+			</figure>
+
+			<figure class="md:col-span-2 lg:col-span-3">
+				<img
+					src="https://images.unsplash.com/photo-1652197881268-d625ad54402b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+					class="h-[400px] w-full object-cover object-center"
+				/>
+				<h5 class="mt-4 text-title-screen font-semibold">Playing game</h5>
+				<h6 class="mt-2 text-title-body font-semibold">The fastest internet</h6>
+			</figure>
+
+			<figure class="md:col-span-1 lg:col-span-2">
+				<img
+					src="https://images.unsplash.com/photo-1652197881268-d625ad54402b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+					class="h-[400px] w-full object-cover object-center"
+				/>
+				<h5 class="mt-4 text-title-screen font-semibold">Movie date</h5>
+				<h6 class="mt-2 text-title-body font-semibold">Love and Internet</h6>
+			</figure>
 		</section>
 	</main>
 </template>
