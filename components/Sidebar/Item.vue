@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { computed } from 'vue'
 
 const props = defineProps({
 	to: {
@@ -18,26 +18,19 @@ const props = defineProps({
 
 const route = useRoute()
 
-const isActive = ref(false)
-
-watch(
-	() => route.path,
-	() => {
-		isActive.value = route.path.includes(props.to)
-	},
-	{
-		immediate: true,
-	},
-)
+const isRouteActive = computed(() => route.path.includes(props.to))
 </script>
 
 <template>
 	<NuxtLink :to="props.to">
 		<div class="flex gap-2">
-			<span v-show="isActive" class="mr-2 border-l-[3px] border-l-primary" />
+			<span
+				v-show="isRouteActive"
+				class="mr-2 border-l-[3px] border-l-primary"
+			/>
 			<div
-				class="flex items-center gap-2"
-				:class="isActive ? 'text-primary' : ''"
+				class="flex items-center gap-2 text-xs lg:text-lg"
+				:class="isRouteActive ? 'text-primary' : ''"
 			>
 				<Icon :name="props.iconName" /> {{ props.name }}
 			</div>
