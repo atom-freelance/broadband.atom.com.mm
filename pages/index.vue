@@ -4,7 +4,7 @@
 		<section class="hero-section">
 			<article class="flex flex-col items-center">
 				<h1
-					class="lg:text-title-hero mt-[40%] flex flex-col items-center text-4xl font-medium md:mt-[30%] md:text-5xl lg:mt-20"
+					class="mt-[40%] flex flex-col items-center text-4xl font-medium md:mt-[30%] md:text-5xl lg:mt-14 lg:text-title-hero 2xl:mt-20"
 				>
 					<span>The most</span>
 					<i class="font-extrabold">reliable high-speed</i>
@@ -57,7 +57,7 @@
 
 		<!-- Features -->
 		<section
-			class="container mt-40 grid grid-cols-1 gap-6 py-6 md:grid-cols-2 lg:grid-cols-3"
+			class="container mt-40 grid grid-cols-1 gap-10 py-6 md:grid-cols-2 lg:grid-cols-3 2xl:px-40"
 		>
 			<FeatureCard
 				class="hover:bg-interactive-accent"
@@ -102,7 +102,68 @@
 			/>
 		</section>
 
-		<section></section>
+		<!-- Plans -->
+		<section class="container">
+			<article class="flex flex-col items-center space-y-6 text-center">
+				<h2 class="text-5xl font-medium">
+					The <i class="font-bold">best selling</i> plan
+				</h2>
+
+				<p class="max-w-[700px] text-body-large">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+					labore facilis praesentium aut unde quaerat saepe quibusdam, sequi
+					tempora error voluptate, tempore iste reprehenderit aliquid? Officia
+					iure accusantium voluptatibus tempora?
+				</p>
+
+				<NuxtLink
+					to="#"
+					class="btn btn-ghost btn-sm text-body-large font-semibold text-interactive-accent"
+				>
+					Explore plan
+				</NuxtLink>
+			</article>
+
+			<article
+				class="container mt-20 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
+			>
+				<ItemCard
+					img-url="https://images.unsplash.com/photo-1652197881268-d625ad54402b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+					title="Home plan"
+					sub-title="Power 40 Up to 40Mbps"
+				>
+					<div class="flex items-center gap-4 font-semibold">
+						<h6 class="text-title-body">45,000 / 30 days</h6>
+
+						<button class="btn btn-sm rounded-full">Fiber</button>
+					</div>
+				</ItemCard>
+
+				<ItemCard
+					img-url="https://images.unsplash.com/photo-1652197881268-d625ad54402b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+					title="Home plan"
+					sub-title="Power 40 Up to 40Mbps"
+				>
+					<div class="flex items-center gap-4 font-semibold">
+						<h6 class="text-title-body">45,000 / 30 days</h6>
+
+						<button class="btn btn-sm rounded-full">Fiber</button>
+					</div>
+				</ItemCard>
+
+				<ItemCard
+					img-url="https://images.unsplash.com/photo-1652197881268-d625ad54402b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+					title="Home plan"
+					sub-title="Power 40 Up to 40Mbps"
+				>
+					<div class="flex items-center gap-4 font-semibold">
+						<h6 class="text-title-body">45,000 / 30 days</h6>
+
+						<button class="btn btn-sm rounded-full">Fiber</button>
+					</div>
+				</ItemCard>
+			</article>
+		</section>
 	</main>
 </template>
 

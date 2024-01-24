@@ -24,7 +24,7 @@ const props = defineProps({
 	<article
 		:class="[
 			{ 'h-article': props.iconPosition === 'horizontal' },
-			'w-[clamp(300px, 360px, 360px)] relative cursor-pointer space-y-4 overflow-hidden rounded-2xl px-8 py-6',
+			'w-[clamp(300px, 320px, 320px)] relative cursor-pointer space-y-4 overflow-hidden rounded-2xl px-8 py-6',
 		]"
 	>
 		<div class="h-[48px]">
@@ -44,12 +44,19 @@ const props = defineProps({
 
 <style scoped>
 article {
-	--translate-x: 16rem;
+	--translate-x: 200px;
 	--translate-y: 1.5rem;
 	--horizontal-icon-opacity: 0.2;
 	--horizontal-icon-size: 140px;
 
 	transition: all ease-in-out 200ms;
+}
+
+@media (min-width: 1536px) {
+	article {
+		--translate-x: 240px;
+		--translate-y: 2rem;
+	}
 }
 
 .icon {
