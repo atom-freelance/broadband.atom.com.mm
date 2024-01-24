@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { showModal, closeModal } = useModal()
+</script>
+
 <template>
 	<main class="pb-20">
 		<!-- Hero Section -->
@@ -21,6 +25,14 @@
 					<span>Let's start contact</span>
 					<Icon name="arrow-right" />
 				</NuxtLink>
+
+				<button @click="showModal('test-modal')">Show Modal</button>
+				<ModalRoot id="test-modal">
+					Hello
+					<ModalBackdrop enable-close>
+						<button>close</button>
+					</ModalBackdrop>
+				</ModalRoot>
 			</article>
 		</section>
 
