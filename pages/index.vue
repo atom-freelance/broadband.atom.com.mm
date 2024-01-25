@@ -198,6 +198,49 @@
 				<h6 class="mt-2 text-title-body font-semibold">Love and Internet</h6>
 			</figure>
 		</section>
+
+		<!-- Quotes -->
+		<section class="container mt-40 grid grid-cols-1 lg:grid-cols-2">
+			<article class="lg:justify-self-end">
+				<div class="pr-20 text-3xl font-medium lg:text-5xl">
+					<h3>Empowering</h3>
+					<h3>Connections, Enriching</h3>
+					<h3>Lives, Your Broadband,</h3>
+					<div class="flex items-center gap-6">
+						<h3>Your World.</h3>
+						<img src="/squiggly_line.png" class="w-2/5" />
+					</div>
+				</div>
+
+				<img
+					src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+					class="aspect-[3/2] h-[350px] w-full object-cover object-center"
+				/>
+			</article>
+
+			<article
+				class="bg-flag-gray flex h-full w-full flex-col justify-between py-10 pl-20 pr-10"
+			>
+				<p
+					class="text-right text-body-large font-semibold text-content-tertiary"
+				>
+					From 2010
+				</p>
+
+				<p
+					class="flex flex-col gap-6 text-title-section font-medium text-content-tertiary"
+				>
+					<img src="/quote.svg" class="size-6" />
+					<span>
+						Surf the Digital Waves of Connectivity: Elevate Your Experience with
+						Lightning-Fast, Always-On Broadband, Where Every Click Connects You
+						to Boundless Possibilities.
+					</span>
+				</p>
+
+				<div>dots</div>
+			</article>
+		</section>
 	</main>
 </template>
 
