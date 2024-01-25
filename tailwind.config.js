@@ -20,6 +20,7 @@ const themeExtend = {
 			DEFAULT: '#2449FB',
 			light: '#00C8FF',
 		},
+		'flag-gray': '#F0F0F0',
 		'content': {
 			'primary': '#0E0F0C',
 			'secondary': '#454745',
