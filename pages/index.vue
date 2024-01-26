@@ -1,5 +1,5 @@
 <template>
-	<main class="pb-20">
+	<main class="pb-40">
 		<!-- Hero Section -->
 		<section class="hero-section">
 			<article class="flex flex-col items-center">
