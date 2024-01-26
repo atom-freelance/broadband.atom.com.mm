@@ -9,4 +9,7 @@
 html {
 	font-family: Inter, 'Noto Sans Myanmar', sans-serif;
 }
+body {
+	overflow: hidden;
+}
 </style>
