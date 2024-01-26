@@ -219,7 +219,7 @@
 			</article>
 
 			<article
-				class="bg-flag-gray flex h-full w-full flex-col justify-between py-10 pl-20 pr-10"
+				class="flex h-full w-full flex-col justify-between bg-flag-gray py-10 pl-20 pr-10"
 			>
 				<p
 					class="text-right text-body-large font-semibold text-content-tertiary"
@@ -240,6 +240,64 @@
 
 				<div>dots</div>
 			</article>
+		</section>
+
+		<!-- Video -->
+		<section class="container mt-40">
+			<YoutubePlayer
+				src="https://www.youtube.com/embed/EqzbiXFPaAs?si=j04iNMEQUrYx4TBL&amp;controls=0"
+				autoplay
+			/>
+		</section>
+
+		<!-- Articles -->
+		<section class="container mt-40">
+			<div class="flex items-center justify-between">
+				<h3 class="text-5xl font-medium">Useful articles</h3>
+				<div>1 - 12</div>
+			</div>
+
+			<div class="relative mt-10 h-[250px]">
+				<div class="absolute left-0 top-0 flex items-start gap-10">
+					<article class="w-3/4 flex-none">
+						<h4 class="mb-4 text-4xl">
+							How does the broadband service compare in terms of speed,
+							reliability, and coverage in your area?
+						</h4>
+
+						<div
+							class="flex items-center gap-4 text-body-large font-semibold text-content-tertiary"
+						>
+							<p>16 Nov 2023 (Thursday)</p>
+							<i class="inline-block size-2 rounded-full bg-content-tertiary" />
+							<p>10 mins read</p>
+						</div>
+
+						<button class="btn btn-primary mt-8 rounded-full">
+							Read article
+						</button>
+					</article>
+
+					<article class="w-3/4 flex-none">
+						<h4 class="mb-4 text-4xl">
+							How does the broadband service compare in terms of speed,
+							reliability, and coverage in your area?
+						</h4>
+
+						<div
+							class="flex items-center gap-4 text-body-large font-semibold text-content-tertiary"
+						>
+							<p>16 Nov 2023 (Thursday)</p>
+							<i class="inline-block size-2 rounded-full bg-content-tertiary" />
+							<p>10 mins read</p>
+						</div>
+
+						<button class="btn btn-primary mt-8 rounded-full">
+							Read article
+						</button>
+					</article>
+				</div>
+			</div>
 		</section>
 	</main>
 </template>
