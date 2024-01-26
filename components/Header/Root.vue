@@ -1,5 +1,5 @@
 <template>
-	<header class="relative">
+	<header class="relative z-10">
 		<section class="h-8 bg-interactive-accent-hover text-body text-white">
 			<nav class="container flex h-full items-center justify-between">
 				<p>
@@ -34,14 +34,14 @@
 			</nav>
 		</section>
 
-		<section class="h-16">
+		<section class="h-16 bg-white">
 			<nav class="container flex h-full items-center justify-between">
 				<article class="flex h-full items-center">
 					<NuxtLink to="/" class="inline-block h-4/5 w-40">
 						<img src="/logo.png" class="inline-block h-full" />
 					</NuxtLink>
 
-					<!-- TODO: Navbar -->
+					<HeaderNavMenu />
 				</article>
 
 				<article>
