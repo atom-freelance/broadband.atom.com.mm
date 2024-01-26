@@ -201,8 +201,8 @@
 
 		<!-- Quotes -->
 		<section class="container mt-40 grid grid-cols-1 lg:grid-cols-2">
-			<article class="lg:justify-self-end">
-				<div class="pr-20 text-3xl font-medium lg:text-5xl">
+			<article class="lg:justify-self-end lg:py-10 lg:pl-10">
+				<div class="text-3xl font-medium lg:pr-10 lg:text-5xl">
 					<h3>Empowering</h3>
 					<h3>Connections, Enriching</h3>
 					<h3>Lives, Your Broadband,</h3>
