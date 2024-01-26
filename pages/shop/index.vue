@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { reactive } from 'vue';
-import { fiberHomePlans, fiberBusinessPlans } from './data'
 import ServiceBtnGroup from './ServiceBtnGroup.vue';
 
 const menuLinks = reactive(['Fiber', 'Wireless', 'Flexi net', 'Mini Pro'])
