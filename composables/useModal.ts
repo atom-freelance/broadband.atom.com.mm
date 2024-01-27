@@ -6,7 +6,7 @@ export function useModal() {
 
 	function closeModal(id: string) {
 		const el = document.getElementById(id) as HTMLDialogElement
-		el.showModal()
+		el.close()
 	}
 
 	return { showModal, closeModal }

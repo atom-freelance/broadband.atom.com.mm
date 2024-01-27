@@ -6,7 +6,7 @@ const props = defineProps({
 
 <template>
 	<dialog :id="props.id" class="modal">
-		<div class="modal-box">
+		<div class="modal-box py-0">
 			<slot />
 		</div>
 	</dialog>
