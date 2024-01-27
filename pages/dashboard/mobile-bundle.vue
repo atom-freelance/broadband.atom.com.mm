@@ -46,7 +46,7 @@
 					<DashboardBenefitList>
 						<DashboardBenefitItem subTitle="+959976356548" title="Phone number">
 							<DashboardActionButton
-								class="bg-interactive-accent text-white"
+								class="bg-interactive-accent text-white hover:bg-interactive-accent-hover"
 								btnText="Claim"
 							/>
 						</DashboardBenefitItem>
