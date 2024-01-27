@@ -43,30 +43,18 @@
 						Phone Number to share the benefits :</span
 					>
 
-					<ul class="flex flex-col gap-4">
-						<DashboardBenefitItem
-							phoneNumber="+959976356548"
-							class="bg-interactive-accent text-white"
-							btnText="Claim"
-						/>
-						<DashboardBenefitItem
-							phoneNumber="+959976356548"
-							btnText="Change"
-						/>
-						<DashboardBenefitItem
-							phoneNumber="+959976356548"
-							btnText="Change"
-						/>
-						<DashboardBenefitItem
-							phoneNumber="+959976356548"
-							btnText="Change"
-						/>
-						<DashboardBenefitItem
-							phoneNumber="+959976356548"
-							class="bg-interactive-accent text-white"
-							btnText="Claim"
-						/>
-					</ul>
+					<DashboardBenefitList>
+						<DashboardBenefitItem subTitle="+959976356548" title="Phone number">
+							<DashboardActionButton
+								class="bg-interactive-accent text-white"
+								btnText="Claim"
+							/>
+						</DashboardBenefitItem>
+
+						<DashboardBenefitItem subTitle="+959976356548" title="Phone number">
+							<DashboardActionButton btnText="Change" />
+						</DashboardBenefitItem>
+					</DashboardBenefitList>
 				</div>
 			</div>
 		</section>

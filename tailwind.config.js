@@ -21,6 +21,7 @@ const themeExtend = {
 			light: '#00C8FF',
 		},
 		'flag-gray': '#F0F0F0',
+		'flag-green': '#005B13',
 		'content': {
 			'primary': '#0E0F0C',
 			'secondary': '#454745',
