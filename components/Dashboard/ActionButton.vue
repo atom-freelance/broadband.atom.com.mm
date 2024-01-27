@@ -16,7 +16,7 @@ const props = defineProps({
 <template>
 	<button
 		type="button"
-		:class="twMerge('btn btn-xs rounded-2xl bg-white lg:btn-sm', props.class)"
+		:class="twMerge('btn btn-xs rounded-2xl bg-white  lg:btn-sm', props.class)"
 	>
 		{{ props.btnText }}
 	</button>

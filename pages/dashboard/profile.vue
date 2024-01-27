@@ -19,24 +19,50 @@ const { showModal, closeModal } = useModal()
 				title="Account ID"
 				subTitle="5000198"
 				icon="hashtag"
+			/>
+
+			<DashboardBenefitItem
+				title="Phone number"
+				subTitle="+959976356548"
+				icon="phone"
 			>
 				<DashboardActionButton
 					class="bg-interactive-accent text-white hover:bg-interactive-accent-hover"
 					btnText="Change"
-					@click="() => showModal('verification-id')"
+					@click="() => showModal('phone-number')"
+				/>
+			</DashboardBenefitItem>
+
+			<DashboardBenefitItem
+				title="Email address"
+				subTitle="aungminsoe@gmail.com"
+				icon="envelope"
+			>
+				<DashboardActionButton
+					class="bg-interactive-accent text-white hover:bg-interactive-accent-hover"
+					btnText="Change"
+					@click="() => showModal('email-address')"
+				/>
+			</DashboardBenefitItem>
+
+			<DashboardBenefitItem title="Password" subTitle="*********" icon="lock">
+				<DashboardActionButton
+					class="bg-interactive-accent text-white hover:bg-interactive-accent-hover"
+					btnText="Change"
+					@click="() => showModal('password')"
 				/>
 			</DashboardBenefitItem>
 		</DashboardBenefitList>
 	</div>
 
 	<!-- Send Verification Code Modal Section -->
-	<ModalRoot id="verification-id">
+	<ModalRoot id="phone-number">
 		<div class="flex items-center justify-between pt-4">
 			<h3 class="text-title-body">Change phone number</h3>
 
 			<button
 				class="btn btn-circle btn-ghost btn-sm text-black lg:text-lg"
-				@click="() => closeModal('verification-id')"
+				@click="() => closeModal('phone-number')"
 			>
 				✕
 			</button>
@@ -79,7 +105,7 @@ const { showModal, closeModal } = useModal()
 					class="!h-fit w-full bg-interactive-accent px-6 py-3 text-white hover:bg-interactive-accent-hover"
 					@click="
 						() => {
-							closeModal('verification-id')
+							closeModal('phone-number')
 							showModal('code-id')
 						}
 					"
@@ -133,6 +159,94 @@ const { showModal, closeModal } = useModal()
 					btnText="Submit"
 					class="!h-fit w-full bg-interactive-accent px-6 py-3 text-white hover:bg-interactive-accent-hover"
 					@click="() => closeModal('code-id')"
+				/>
+			</div>
+		</ModalAction>
+	</ModalRoot>
+
+	<!-- Change Email Modal Section -->
+	<ModalRoot id="email-address">
+		<div class="flex items-center justify-between pt-4">
+			<h3 class="text-title-body">Change email address</h3>
+
+			<button
+				class="btn btn-circle btn-ghost btn-sm text-black lg:text-lg"
+				@click="() => closeModal('email-address')"
+			>
+				✕
+			</button>
+		</div>
+
+		<span class="divider my-0" />
+
+		<ModalBackdrop enableClose>
+			<div class="flex flex-col gap-6 py-8 text-black">
+				<label class="form-control w-full">
+					<div class="label">
+						<span class="label-text">Email Address</span>
+					</div>
+					<input
+						type="text"
+						class="input input-bordered w-full border-2 focus:border-black"
+						placeholder="09 976356548"
+					/>
+				</label>
+			</div>
+		</ModalBackdrop>
+
+		<span class="divider my-0" />
+
+		<ModalAction class="my-5">
+			<div class="w-full text-center">
+				<DashboardActionButton
+					type="submit"
+					btnText="Submit"
+					class="!h-fit w-full bg-interactive-accent px-6 py-3 text-white hover:bg-interactive-accent-hover"
+					@click="() => closeModal('email-address')"
+				/>
+			</div>
+		</ModalAction>
+	</ModalRoot>
+
+	<!-- Change Password Modal Section -->
+	<ModalRoot id="password">
+		<div class="flex items-center justify-between pt-4">
+			<h3 class="text-title-body">Change password</h3>
+
+			<button
+				class="btn btn-circle btn-ghost btn-sm text-black lg:text-lg"
+				@click="() => closeModal('password')"
+			>
+				✕
+			</button>
+		</div>
+
+		<span class="divider my-0" />
+
+		<ModalBackdrop enableClose>
+			<div class="flex flex-col gap-6 py-8 text-black">
+				<label class="form-control w-full">
+					<div class="label">
+						<span class="label-text">Password</span>
+					</div>
+					<input
+						type="password"
+						class="input input-bordered w-full border-2 focus:border-black"
+						placeholder="09 976356548"
+					/>
+				</label>
+			</div>
+		</ModalBackdrop>
+
+		<span class="divider my-0" />
+
+		<ModalAction class="my-5">
+			<div class="w-full text-center">
+				<DashboardActionButton
+					type="submit"
+					btnText="Submit"
+					class="!h-fit w-full bg-interactive-accent px-6 py-3 text-white hover:bg-interactive-accent-hover"
+					@click="() => closeModal('password')"
 				/>
 			</div>
 		</ModalAction>
