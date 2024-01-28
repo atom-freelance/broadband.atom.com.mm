@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { showModal, closeModal } = useModal()
+</script>
+
 <template>
 	<DataTable title="Order" description="Manage and your personal information">
 		<template #thead>
@@ -22,9 +26,12 @@
 				</td>
 				<td class="flex justify-between">
 					<span>197000 MMK</span>
-					<span class="font-bold underline underline-offset-4"
-						>View Receipt</span
+					<button
+						class="font-bold underline underline-offset-4"
+						@click="() => showModal('billing')"
 					>
+						View Receipt
+					</button>
 				</td>
 			</tr>
 			<tr>
@@ -37,9 +44,12 @@
 				</td>
 				<td class="flex justify-between">
 					<span>197000 MMK</span>
-					<span class="font-bold underline underline-offset-4"
-						>View Receipt</span
+					<button
+						class="font-bold underline underline-offset-4"
+						@click="() => showModal('billing')"
 					>
+						View Receipt
+					</button>
 				</td>
 			</tr>
 			<tr>
@@ -52,9 +62,12 @@
 				</td>
 				<td class="flex justify-between">
 					<span>197000 MMK</span>
-					<span class="font-bold underline underline-offset-4"
-						>View Receipt</span
+					<button
+						class="font-bold underline underline-offset-4"
+						@click="() => showModal('billing')"
 					>
+						View Receipt
+					</button>
 				</td>
 			</tr>
 		</template>
@@ -63,4 +76,134 @@
 			<DataTableFooter />
 		</template>
 	</DataTable>
+
+	<!-- Billing Modal Section -->
+	<ModalRoot id="billing">
+		<div class="flex items-center justify-between pt-4">
+			<h3 class="text-title-body">Billing Detail - B000240</h3>
+
+			<button
+				class="btn btn-circle btn-ghost btn-sm text-black lg:text-lg"
+				@click="() => closeModal('billing')"
+			>
+				✕
+			</button>
+		</div>
+
+		<span class="divider my-0" />
+
+		<ModalBackdrop enableClose>
+			<article class="card gap-5 rounded border p-5 text-black">
+				<!-- customer information -->
+				<section class="flex flex-col gap-6">
+					<h3 class="text-body-large font-semibold">Customer information</h3>
+
+					<div class="flex items-center justify-between gap-4">
+						<span class="text-sm font-normal">Name</span>
+						<span class="text-sm font-medium">Aungmin Soe</span>
+					</div>
+
+					<div class="flex items-center justify-between gap-4">
+						<span class="text-sm font-normal">Phone number</span>
+						<span class="text-sm font-medium">09 12345678</span>
+					</div>
+
+					<div class="flex items-center justify-between gap-4">
+						<span class="text-sm font-normal">Email address</span>
+						<span class="text-sm font-medium">hi@aungminsoe.com</span>
+					</div>
+				</section>
+
+				<span class="divider my-0" />
+
+				<!-- Address information -->
+				<section class="flex flex-col gap-6">
+					<h3 class="text-body-large font-semibold">Address information</h3>
+
+					<div class="flex items-center justify-between gap-4">
+						<span class="text-sm font-normal">Service address</span>
+						<span class="text-sm font-medium">Hlaing, Yangon</span>
+					</div>
+
+					<div class="flex items-center justify-between gap-4">
+						<span class="text-sm font-normal">Delivery address</span>
+						<span class="text-sm font-medium">Tamwe, Yangon</span>
+					</div>
+				</section>
+
+				<span class="divider my-0" />
+
+				<!-- Product information -->
+				<section class="flex flex-col gap-6">
+					<h3 class="text-body-large font-semibold">Product information</h3>
+
+					<div class="flex items-center justify-between gap-4">
+						<span class="text-sm font-normal">Subscription ID</span>
+						<span class="text-sm font-medium">S00239</span>
+					</div>
+
+					<div class="flex items-center justify-between gap-4">
+						<span class="text-sm font-normal">Product name</span>
+						<span class="text-sm font-medium">Home Wireless Kit</span>
+					</div>
+
+					<div class="flex items-center justify-between gap-4">
+						<span class="text-sm font-normal">Product speed</span>
+						<span class="text-sm font-medium">100 Mps*</span>
+					</div>
+
+					<div class="flex items-center justify-between gap-4">
+						<span class="text-sm font-normal">Monthly amount</span>
+						<span class="text-sm font-medium">77500 MMK</span>
+					</div>
+				</section>
+
+				<span class="divider my-0" />
+
+				<!-- Payment Information -->
+				<section class="flex flex-col gap-6">
+					<h3 class="text-body-large font-semibold">Payment information</h3>
+
+					<div class="flex items-center justify-between gap-4">
+						<span class="text-sm font-normal">Payment method</span>
+						<span class="text-sm font-medium">Visa Card</span>
+					</div>
+
+					<div class="flex items-center justify-between gap-4">
+						<span class="text-sm font-normal">CPE Device Cost</span>
+						<span class="text-sm font-medium">0 MMK</span>
+					</div>
+
+					<div class="flex items-center justify-between gap-4">
+						<span class="text-sm font-normal">Delivery Fee</span>
+						<span class="text-sm font-medium">0 MMK</span>
+					</div>
+
+					<div class="flex items-center justify-between gap-4">
+						<span class="text-sm font-normal">Subscription Cost</span>
+						<span class="text-sm font-medium">77500 MMK</span>
+					</div>
+				</section>
+
+				<span class="divider my-0" />
+
+				<p class="text-end text-body-large font-semibold">
+					Grand Total : 77500 MMK
+				</p>
+			</article>
+		</ModalBackdrop>
+
+		<span class="divider my-0" />
+
+		<ModalAction class="my-5">
+			<div class="w-full text-center">
+				<DashboardActionButton
+					type="submit"
+					btnText="Download"
+					class="!h-fit w-full bg-interactive-accent px-6 py-3 text-white hover:bg-interactive-accent-hover"
+					@click="() => closeModal('billing')"
+				/>
+			</div>
+		</ModalAction>
+	</ModalRoot>
 </template>
