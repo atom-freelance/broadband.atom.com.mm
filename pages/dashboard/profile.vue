@@ -55,7 +55,7 @@ const { showModal, closeModal } = useModal()
 		</DashboardBenefitList>
 	</div>
 
-	<!-- Send Verification Code Modal Section -->
+	<!-- Change phone number Modal Section -->
 	<ModalRoot id="phone-number">
 		<div class="flex items-center justify-between pt-4">
 			<h3 class="text-title-body">Change phone number</h3>
