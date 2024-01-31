@@ -57,7 +57,7 @@
 
 		<!-- Features -->
 		<section
-			class="container mt-40 grid grid-cols-1 gap-10 py-6 md:grid-cols-2 lg:grid-cols-3 2xl:px-40"
+			class="container sticky top-0 -z-10 grid grid-cols-1 gap-10 bg-white py-6 pt-40 md:grid-cols-2 lg:grid-cols-3 2xl:px-40"
 		>
 			<FeatureCard
 				class="hover:bg-interactive-accent"
@@ -103,7 +103,7 @@
 		</section>
 
 		<!-- Plans -->
-		<section class="container mt-40">
+		<section class="container bg-white pt-40">
 			<article class="flex flex-col items-center space-y-6 text-center">
 				<h2 class="text-5xl font-medium">
 					The <i class="font-bold">best selling</i> plan
@@ -167,7 +167,7 @@
 
 		<!-- Scenarios -->
 		<section
-			class="mt-40 grid grid-cols-1 gap-20 md:container md:grid-cols-5 md:gap-4 lg:grid-cols-9"
+			class="grid grid-cols-1 gap-20 bg-white pt-40 md:container md:grid-cols-5 md:gap-4 lg:grid-cols-9"
 		>
 			<figure class="md:col-span-2 lg:col-span-4">
 				<img
@@ -200,7 +200,7 @@
 		</section>
 
 		<!-- Quotes -->
-		<section class="container mt-40 grid grid-cols-1 lg:grid-cols-2">
+		<section class="container grid grid-cols-1 bg-white pt-40 lg:grid-cols-2">
 			<article class="lg:justify-self-end lg:py-10 lg:pl-10">
 				<div class="text-3xl font-medium lg:pr-10 lg:text-5xl">
 					<h3>Empowering</h3>
@@ -243,7 +243,7 @@
 		</section>
 
 		<!-- Video -->
-		<section class="container mt-40">
+		<section class="container sticky top-0 -z-10 bg-white pt-40">
 			<YoutubePlayer
 				src="https://www.youtube.com/embed/EqzbiXFPaAs?si=j04iNMEQUrYx4TBL&amp;controls=0"
 				autoplay
@@ -251,53 +251,55 @@
 		</section>
 
 		<!-- Articles -->
-		<section class="container mt-40">
+		<section class="container bg-white pt-40">
 			<div class="flex items-center justify-between">
 				<h3 class="text-5xl font-medium">Useful articles</h3>
-				<div>1 - 12</div>
+				<!-- <div>1 - 12</div> -->
 			</div>
 
-			<div class="relative mt-10 h-[250px]">
-				<div class="absolute left-0 top-0 flex items-start gap-10">
-					<article class="w-3/4 flex-none">
-						<h4 class="mb-4 text-4xl">
-							How does the broadband service compare in terms of speed,
-							reliability, and coverage in your area?
-						</h4>
+			<div class="mt-10 flex w-full items-start overflow-auto">
+				<article class="w-3/4 flex-none">
+					<h4 class="mb-4 text-4xl">
+						How does the broadband service compare in terms of speed,
+						reliability, and coverage in your area?
+					</h4>
 
-						<div
-							class="flex items-center gap-4 text-body-large font-semibold text-content-tertiary"
-						>
-							<p>16 Nov 2023 (Thursday)</p>
-							<i class="inline-block size-2 rounded-full bg-content-tertiary" />
-							<p>10 mins read</p>
-						</div>
+					<div
+						class="flex items-center gap-4 text-body-large font-semibold text-content-tertiary"
+					>
+						<p>16 Nov 2023 (Thursday)</p>
+						<i class="inline-block size-2 rounded-full bg-content-tertiary" />
+						<p>10 mins read</p>
+					</div>
 
-						<button class="btn btn-primary mt-8 rounded-full">
-							Read article
-						</button>
-					</article>
+					<button class="btn btn-primary mt-8 rounded-full">
+						Read article
+					</button>
+				</article>
 
-					<article class="w-3/4 flex-none">
-						<h4 class="mb-4 text-4xl">
-							How does the broadband service compare in terms of speed,
-							reliability, and coverage in your area?
-						</h4>
+				<article class="w-3/4 flex-none">
+					<h4 class="mb-4 text-4xl">
+						How does the broadband service compare in terms of speed,
+						reliability, and coverage in your area?
+					</h4>
 
-						<div
-							class="flex items-center gap-4 text-body-large font-semibold text-content-tertiary"
-						>
-							<p>16 Nov 2023 (Thursday)</p>
-							<i class="inline-block size-2 rounded-full bg-content-tertiary" />
-							<p>10 mins read</p>
-						</div>
+					<div
+						class="flex items-center gap-4 text-body-large font-semibold text-content-tertiary"
+					>
+						<p>16 Nov 2023 (Thursday)</p>
+						<i class="inline-block size-2 rounded-full bg-content-tertiary" />
+						<p>10 mins read</p>
+					</div>
 
-						<button class="btn btn-primary mt-8 rounded-full">
-							Read article
-						</button>
-					</article>
-				</div>
+					<button class="btn btn-primary mt-8 rounded-full">
+						Read article
+					</button>
+				</article>
 			</div>
+		</section>
+
+		<section class="bg-white pt-40">
+			<ShopServiceAvailable />
 		</section>
 	</main>
 </template>
