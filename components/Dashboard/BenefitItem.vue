@@ -2,15 +2,16 @@
 import { twMerge } from 'tailwind-merge'
 
 const props = defineProps({
-	phoneNumber: {
+	icon: {
+		type: String as PropType<IconName>,
+		required: false,
+		default: 'sim-card',
+	},
+	title: {
 		type: String as PropType<string>,
 		required: true,
 	},
-	class: {
-		type: String as PropType<string>,
-		required: false,
-	},
-	btnText: {
+	subTitle: {
 		type: String as PropType<string>,
 		required: true,
 	},
@@ -21,20 +22,15 @@ const props = defineProps({
 	<li class="flex flex-wrap items-center justify-between">
 		<div class="flex items-center gap-2">
 			<span class="rounded-full bg-gray-200 p-3"
-				><Icon name="sim-card" />
+				><Icon :name="props.icon" />
 			</span>
 
 			<div class="flex flex-col items-start justify-center gap-1">
-				<span>Phone number</span>
-				<span>{{ props.phoneNumber }}</span>
+				<span class="font-bold">{{ props.title }}</span>
+				<span class="text-sm">{{ props.subTitle }}</span>
 			</div>
 		</div>
 
-		<button
-			type="button"
-			:class="twMerge('btn btn-xs rounded-2xl bg-white lg:btn-sm', props.class)"
-		>
-			{{ props.btnText }}
-		</button>
+		<slot />
 	</li>
 </template>

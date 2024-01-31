@@ -26,12 +26,12 @@
 					<DashboardStatus class="bg-categories-cash" name="Active" />
 				</td>
 				<td>
-					<button
-						type="button"
-						class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
-					>
-						Renew Plan
-					</button>
+					<NuxtLink :to="`/${1}`">
+						<DashboardActionButton
+							btnText="Renew Plan"
+							class="btn btn-xs bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
+						/>
+					</NuxtLink>
 				</td>
 			</tr>
 			<tr>
@@ -43,12 +43,12 @@
 					<DashboardStatus class="bg-categories-groceries" name="Expired" />
 				</td>
 				<td>
-					<button
-						type="button"
-						class="btn btn-xs bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
-					>
-						Renew Plan
-					</button>
+					<NuxtLink :to="`/${2}`">
+						<DashboardActionButton
+							btnText="Renew Plan"
+							class="btn btn-xs bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
+						/>
+					</NuxtLink>
 				</td>
 			</tr>
 			<tr>

@@ -2,10 +2,28 @@
 definePageMeta({
 	layout: 'login',
 })
+
+const { showModal } = useModal()
+
+onMounted(() => showModal('success'))
 </script>
 
 <template>
-	<div class="container p-20">
+	<ModalRoot id="success">
+		<div class="flex flex-col items-center justify-center gap-6 py-14">
+			<Icon name="check-circle" size="72px" class="text-flag-green" />
+
+			<h3 class="text-title-body font-semibold">Thank You</h3>
+
+			<span>Your purchase has been successfully completed.</span>
+
+			<DashboardActionButton
+				btnText="OK"
+				class="inline-block !h-fit rounded-full bg-interactive-accent !px-12 py-3 text-white hover:bg-interactive-accent-hover"
+			/>
+		</div>
+	</ModalRoot>
+	<!-- <div class="container p-20">
 		<DataTable title="Billing" description="Welcome to billing.">
 			<template #thead>
 				<tr>
@@ -45,5 +63,5 @@ definePageMeta({
 				<DataTableFooter />
 			</template>
 		</DataTable>
-	</div>
+	</div> -->
 </template>
