@@ -32,3 +32,66 @@ export const FAQLinks = [
 		},
 	],
 ]
+
+export const FAQSections = [
+	{
+		sectionTitle: 'Section 1',
+		faqs: [
+			{
+				title: 'Lorem ipsum dolor sit amet,',
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam id eos, minima aut rem officiis perspiciatis reiciendis explicabo tempora provident harum accusantium dolorum eum aliquid sed dolorem, et recusandae quasi.',
+			},
+			{
+				title: 'Lorem ipsum dolor sit amet,',
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam id eos, minima aut rem officiis perspiciatis reiciendis explicabo tempora provident harum accusantium dolorum eum aliquid sed dolorem, et recusandae quasi.',
+			},
+		],
+	},
+	{
+		sectionTitle: 'Section 2',
+		faqs: [
+			{
+				title: 'Lorem ipsum dolor sit amet,',
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam id eos, minima aut rem officiis perspiciatis reiciendis explicabo tempora provident harum accusantium dolorum eum aliquid sed dolorem, et recusandae quasi.',
+			},
+			{
+				title: 'Lorem ipsum dolor sit amet,',
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam id eos, minima aut rem officiis perspiciatis reiciendis explicabo tempora provident harum accusantium dolorum eum aliquid sed dolorem, et recusandae quasi.',
+			},
+		],
+	},
+	{
+		sectionTitle: 'Section 3',
+		faqs: [
+			{
+				title: 'Lorem ipsum dolor sit amet,',
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam id eos, minima aut rem officiis perspiciatis reiciendis explicabo tempora provident harum accusantium dolorum eum aliquid sed dolorem, et recusandae quasi.',
+			},
+			{
+				title: 'Lorem ipsum dolor sit amet,',
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam id eos, minima aut rem officiis perspiciatis reiciendis explicabo tempora provident harum accusantium dolorum eum aliquid sed dolorem, et recusandae quasi.',
+			},
+		],
+	},
+	{
+		sectionTitle: 'Section 4',
+		faqs: [
+			{
+				title: 'Lorem ipsum dolor sit amet,',
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam id eos, minima aut rem officiis perspiciatis reiciendis explicabo tempora provident harum accusantium dolorum eum aliquid sed dolorem, et recusandae quasi.',
+			},
+			{
+				title: 'Lorem ipsum dolor sit amet,',
+				description:
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam id eos, minima aut rem officiis perspiciatis reiciendis explicabo tempora provident harum accusantium dolorum eum aliquid sed dolorem, et recusandae quasi.',
+			},
+		],
+	},
+]

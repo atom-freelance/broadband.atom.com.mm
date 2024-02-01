@@ -1,11 +1,27 @@
 <script setup lang="ts">
 const faqPages = FAQLinks
+
+const faqSections = FAQSections
+
+const route = useRoute()
+
+const pageTitle = computed(() => {
+	return faqPages.flat().find((p) => p.to === route.path)?.title || ''
+})
+
+function isVisitedHash(hash: string) {
+	return route.hash === `#${snakeCase(hash)}`
+}
 </script>
 
 <template>
-	<main class="container mb-40 mt-10 grid grid-cols-1 lg:grid-cols-8">
-		<nav class="hidden lg:col-span-2 lg:block">
-			<article v-for="section in faqPages" class="flex flex-col gap-1">
+	<main
+		class="container relative mb-40 mt-10 grid grid-cols-1 gap-8 lg:grid-cols-8"
+	>
+		<nav
+			class="hidden lg:sticky lg:top-28 lg:col-span-2 lg:block lg:self-start"
+		>
+			<article v-for="section in faqPages" class="mb-8 flex flex-col gap-1">
 				<template v-for="link in section">
 					<!-- Render Text when type is label -->
 					<h6
@@ -29,16 +45,48 @@ const faqPages = FAQLinks
 		</nav>
 
 		<section class="lg:col-span-4">
-			<h3 class="mb-10 text-title-screen font-semibold">General FAQs</h3>
+			<h3 class="text-title-screen font-semibold">{{ pageTitle }}</h3>
 
-			<Accordion title="Lorem ipsum dolor sit amet">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam id
-				eos, minima aut rem officiis perspiciatis reiciendis explicabo tempora
-				provident harum accusantium dolorum eum aliquid sed dolorem, et
-				recusandae quasi.
-			</Accordion>
+			<section
+				v-for="section in faqSections"
+				:id="snakeCase(section.sectionTitle)"
+				class="pt-14"
+			>
+				<h5 class="mb-2 text-title-body font-semibold text-content-primary">
+					{{ section.sectionTitle }}
+				</h5>
+
+				<Accordion v-for="faq in section.faqs" :title="faq.title">
+					{{ faq.description }}
+				</Accordion>
+			</section>
 		</section>
 
-		<aside class="hidden lg:col-span-2 lg:block"></aside>
+		<aside
+			class="hidden lg:sticky lg:top-28 lg:col-span-2 lg:block lg:self-start"
+		>
+			<h5 class="mb-4 pl-4 text-title-body font-semibold text-content-primary">
+				Quick Search
+			</h5>
+
+			<article class="flex flex-col gap-1">
+				<a
+					v-for="section in faqSections"
+					:href="`#${snakeCase(section.sectionTitle)}`"
+					class="flex cursor-pointer items-center gap-2 text-body-large text-content-tertiary hover:text-interactive-accent-hover"
+					:class="{
+						'text-interactive-accent': isVisitedHash(section.sectionTitle),
+					}"
+				>
+					<i
+						class="size-2 rounded-full"
+						:class="{
+							'bg-interactive-accent': isVisitedHash(section.sectionTitle),
+						}"
+					/>
+					<span>{{ section.sectionTitle }}</span>
+				</a>
+			</article>
+		</aside>
 	</main>
 </template>
