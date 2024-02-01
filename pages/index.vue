@@ -57,7 +57,7 @@
 
 		<!-- Features -->
 		<section
-			class="container sticky top-0 -z-10 grid grid-cols-1 gap-10 bg-white py-6 pt-40 md:grid-cols-2 lg:grid-cols-3 2xl:px-40"
+			class="container sticky top-0 grid grid-cols-1 gap-10 bg-white py-6 pt-40 md:grid-cols-2 lg:grid-cols-3 2xl:px-40"
 		>
 			<FeatureCard
 				class="hover:bg-interactive-accent"
@@ -103,7 +103,7 @@
 		</section>
 
 		<!-- Plans -->
-		<section class="container bg-white pt-40">
+		<section class="container sticky bg-white pt-40">
 			<article class="flex flex-col items-center space-y-6 text-center">
 				<h2 class="text-5xl font-medium">
 					The <i class="font-bold">best selling</i> plan
@@ -167,7 +167,7 @@
 
 		<!-- Scenarios -->
 		<section
-			class="grid grid-cols-1 gap-20 bg-white pt-40 md:container md:grid-cols-5 md:gap-4 lg:grid-cols-9"
+			class="sticky grid grid-cols-1 gap-20 bg-white pt-40 md:container md:grid-cols-5 md:gap-4 lg:grid-cols-9"
 		>
 			<figure class="md:col-span-2 lg:col-span-4">
 				<img
@@ -200,7 +200,9 @@
 		</section>
 
 		<!-- Quotes -->
-		<section class="container grid grid-cols-1 bg-white pt-40 lg:grid-cols-2">
+		<section
+			class="container sticky grid grid-cols-1 bg-white pt-40 lg:grid-cols-2"
+		>
 			<article class="lg:justify-self-end lg:py-10 lg:pl-10">
 				<div class="text-3xl font-medium lg:pr-10 lg:text-5xl">
 					<h3>Empowering</h3>
@@ -243,7 +245,7 @@
 		</section>
 
 		<!-- Video -->
-		<section class="container sticky top-0 -z-10 bg-white pt-40">
+		<section class="container sticky top-0 bg-white pt-40">
 			<YoutubePlayer
 				src="https://www.youtube.com/embed/EqzbiXFPaAs?si=j04iNMEQUrYx4TBL&amp;controls=0"
 				autoplay
@@ -251,7 +253,7 @@
 		</section>
 
 		<!-- Articles -->
-		<section class="container bg-white pt-40">
+		<section class="container sticky bg-white pt-40">
 			<div class="flex items-center justify-between">
 				<h3 class="text-5xl font-medium">Useful articles</h3>
 				<!-- <div>1 - 12</div> -->
@@ -298,7 +300,7 @@
 			</div>
 		</section>
 
-		<section class="bg-white pt-40">
+		<section class="sticky bg-white pt-40">
 			<ShopServiceAvailable />
 		</section>
 	</main>

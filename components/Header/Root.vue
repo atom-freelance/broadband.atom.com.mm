@@ -3,7 +3,7 @@ const isLoggedIn = ref(true)
 </script>
 
 <template>
-	<header class="sticky top-0 z-10">
+	<header class="sticky top-0 z-20">
 		<section class="h-8 bg-interactive-accent-hover text-body text-white">
 			<nav class="container flex h-full items-center justify-between">
 				<p>
