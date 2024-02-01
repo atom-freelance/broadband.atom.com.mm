@@ -74,7 +74,7 @@ const { showModal, closeModal } = useModal()
 			<h3 class="text-title-body">Change phone number</h3>
 
 			<button
-				class="btn btn-circle btn-ghost btn-sm text-black lg:text-lg"
+				class="btn btn-circle btn-ghost btn-sm text-content-primary lg:text-lg"
 				@click="() => closeModal('phone-number')"
 			>
 				✕
@@ -84,7 +84,7 @@ const { showModal, closeModal } = useModal()
 		<span class="divider my-0" />
 
 		<ModalBackdrop enableClose>
-			<div class="flex flex-col gap-6 py-8 text-black">
+			<div class="flex flex-col gap-6 py-8 text-content-primary">
 				<label class="form-control w-full">
 					<div class="label">
 						<span class="label-text">Current phone number</span>
@@ -128,7 +128,7 @@ const { showModal, closeModal } = useModal()
 			<h3 class="text-title-body">Claim the benefit</h3>
 
 			<button
-				class="btn btn-circle btn-ghost btn-sm text-black lg:text-lg"
+				class="btn btn-circle btn-ghost btn-sm text-content-primary lg:text-lg"
 				@click="() => closeModal('claim')"
 			>
 				✕
@@ -138,7 +138,7 @@ const { showModal, closeModal } = useModal()
 		<span class="divider my-0" />
 
 		<ModalBackdrop enableClose>
-			<div class="flex flex-col gap-6 py-8 text-black">
+			<div class="flex flex-col gap-6 py-8 text-content-primary">
 				<label class="form-control w-full">
 					<div class="label">
 						<span class="label-text">Phone number</span>

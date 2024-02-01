@@ -7,7 +7,9 @@ const { showModal, closeModal } = useModal()
 		<section class="flex flex-col gap-10">
 			<section class="breadcrumbs text-sm">
 				<ul>
-					<li>Settings</li>
+					<li>
+						<NuxtLink to="/dashboard"> Settings </NuxtLink>
+					</li>
 					<li>
 						<NuxtLink to="/dashboard/subscription">Subscription</NuxtLink>
 					</li>
