@@ -221,26 +221,27 @@
 			</article>
 
 			<article
-				class="flex h-full w-full flex-col justify-between bg-flag-gray py-10 pl-20 pr-10"
+				class="bg-flag-gray py-10 px-5 lg:pl-20 lg:pr-10"
 			>
-				<p
-					class="text-right text-body-large font-semibold text-content-tertiary"
-				>
-					From 2010
-				</p>
-
-				<p
-					class="flex flex-col gap-6 text-title-section font-medium text-content-tertiary"
-				>
-					<img src="/quote.svg" class="size-6" />
-					<span>
-						Surf the Digital Waves of Connectivity: Elevate Your Experience with
-						Lightning-Fast, Always-On Broadband, Where Every Click Connects You
-						to Boundless Possibilities.
-					</span>
-				</p>
-
-				<div>dots</div>
+				<HomeQuoteCarousel
+					:quotes="[
+						{
+							subNote: 'From 2010',
+							description:
+								'Surf the Digital Waves of Connectivity: Elevate Your Experience with Lightning-Fast, Always-On Broadband, Where Every Click Connects You to Boundless Possibilities.',
+						},
+						{
+							subNote: 'From 2014',
+							description:
+								'Surf the Digital Waves of Connectivity: Elevate Your Experience with Lightning-Fast, Always-On Broadband, Where Every Click Connects You to Boundless Possibilities.',
+						},
+						{
+							subNote: 'From 2018',
+							description:
+								'Surf the Digital Waves of Connectivity: Elevate Your Experience with Lightning-Fast, Always-On Broadband, Where Every Click Connects You to Boundless Possibilities.',
+						},
+					]"
+				/>
 			</article>
 		</section>
 
