@@ -61,7 +61,7 @@ const { showModal, closeModal } = useModal()
 			<h3 class="text-title-body">Change phone number</h3>
 
 			<button
-				class="btn btn-circle btn-ghost btn-sm text-black lg:text-lg"
+				class="btn btn-circle btn-ghost btn-sm text-content-primary lg:text-lg"
 				@click="() => closeModal('phone-number')"
 			>
 				✕
@@ -71,7 +71,7 @@ const { showModal, closeModal } = useModal()
 		<span class="divider my-0" />
 
 		<ModalBackdrop enableClose>
-			<div class="flex flex-col gap-6 py-8 text-black">
+			<div class="flex flex-col gap-6 py-8 text-content-primary">
 				<label class="form-control w-full">
 					<div class="label">
 						<span class="label-text">Current phone number</span>
@@ -120,7 +120,7 @@ const { showModal, closeModal } = useModal()
 			<h3 class="text-title-body">Change phone number</h3>
 
 			<button
-				class="btn btn-circle btn-ghost btn-sm text-black lg:text-lg"
+				class="btn btn-circle btn-ghost btn-sm text-content-primary lg:text-lg"
 				@click="() => closeModal('code-id')"
 			>
 				✕
@@ -130,7 +130,7 @@ const { showModal, closeModal } = useModal()
 		<span class="divider my-0" />
 
 		<ModalBackdrop enableClose>
-			<div class="flex flex-col gap-6 py-8 text-black">
+			<div class="flex flex-col gap-6 py-8 text-content-primary">
 				<p class="font-normal text-content-primary">
 					Enter the 6-digit code we just send +95 912345678.
 					<span class="text-sm font-semibold underline underline-offset-4"
@@ -170,7 +170,7 @@ const { showModal, closeModal } = useModal()
 			<h3 class="text-title-body">Change email address</h3>
 
 			<button
-				class="btn btn-circle btn-ghost btn-sm text-black lg:text-lg"
+				class="btn btn-circle btn-ghost btn-sm text-content-primary lg:text-lg"
 				@click="() => closeModal('email-address')"
 			>
 				✕
@@ -180,7 +180,7 @@ const { showModal, closeModal } = useModal()
 		<span class="divider my-0" />
 
 		<ModalBackdrop enableClose>
-			<div class="flex flex-col gap-6 py-8 text-black">
+			<div class="flex flex-col gap-6 py-8 text-content-primary">
 				<label class="form-control w-full">
 					<div class="label">
 						<span class="label-text">Email Address</span>
@@ -214,7 +214,7 @@ const { showModal, closeModal } = useModal()
 			<h3 class="text-title-body">Change password</h3>
 
 			<button
-				class="btn btn-circle btn-ghost btn-sm text-black lg:text-lg"
+				class="btn btn-circle btn-ghost btn-sm text-content-primary lg:text-lg"
 				@click="() => closeModal('password')"
 			>
 				✕
@@ -224,7 +224,7 @@ const { showModal, closeModal } = useModal()
 		<span class="divider my-0" />
 
 		<ModalBackdrop enableClose>
-			<div class="flex flex-col gap-6 py-8 text-black">
+			<div class="flex flex-col gap-6 py-8 text-content-primary">
 				<label class="form-control w-full">
 					<div class="label">
 						<span class="label-text">Password</span>

@@ -76,7 +76,7 @@ const { showModal, closeModal } = useModal()
 			<h3 class="text-title-body">Relocate Address</h3>
 
 			<button
-				class="btn btn-circle btn-ghost btn-sm text-black lg:text-lg"
+				class="btn btn-circle btn-ghost btn-sm text-content-primary lg:text-lg"
 				@click="() => closeModal('relocate-map')"
 			>
 				✕
@@ -94,7 +94,7 @@ const { showModal, closeModal } = useModal()
 			></iframe>
 
 			<div
-				class="absolute inset-5 flex max-h-fit w-1/3 flex-col gap-6 rounded-2xl bg-white p-5 text-black"
+				class="absolute inset-5 flex max-h-fit w-1/3 flex-col gap-6 rounded-2xl bg-white p-5 text-content-primary"
 			>
 				<div class="flex flex-col gap-4">
 					<h3 class="text-body-large font-semibold">
@@ -155,7 +155,7 @@ const { showModal, closeModal } = useModal()
 			<h3 class="text-title-body">Change phone number</h3>
 
 			<button
-				class="btn btn-circle btn-ghost btn-sm text-black lg:text-lg"
+				class="btn btn-circle btn-ghost btn-sm text-content-primary lg:text-lg"
 				@click="() => closeModal('relocate-address')"
 			>
 				✕
@@ -165,7 +165,7 @@ const { showModal, closeModal } = useModal()
 		<span class="divider my-0" />
 
 		<ModalBackdrop enableClose>
-			<div class="flex flex-col gap-6 py-8 text-black">
+			<div class="flex flex-col gap-6 py-8 text-content-primary">
 				<label class="form-control w-full">
 					<div class="label">
 						<span class="label-text">Relocate date</span>
@@ -202,7 +202,7 @@ const { showModal, closeModal } = useModal()
 			<DashboardActionButton
 				type="submit"
 				btnText="Change location"
-				class="!h-fit px-6 py-3"
+				class="!h-fit rounded-full px-6 py-3"
 				@click="
 					() => {
 						closeModal('relocate-address')
@@ -213,7 +213,7 @@ const { showModal, closeModal } = useModal()
 			<DashboardActionButton
 				type="submit"
 				btnText="Confirm"
-				class="!h-fit grow bg-interactive-accent px-6 py-3 text-white hover:bg-interactive-accent-hover"
+				class="!h-fit grow rounded-full bg-interactive-accent px-6 py-3 text-white hover:bg-interactive-accent-hover"
 				@click="
 					() => {
 						closeModal('relocate-address')

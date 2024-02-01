@@ -1,5 +1,13 @@
 <script setup lang="ts">
+import { vOnClickOutside } from '@vueuse/components'
+
 const isLoggedIn = ref(true)
+
+const showMenu = ref(false)
+
+function close() {
+	showMenu.value = false
+}
 </script>
 
 <template>
@@ -56,92 +64,94 @@ const isLoggedIn = ref(true)
 				</article>
 
 				<!-- After logged in -->
-				<details class="dropdown dropdown-end" v-show="isLoggedIn">
-					<summary class="btn btn-primary rounded-full">
+				<article class="dropdown dropdown-end" v-show="isLoggedIn">
+					<button
+						class="btn rounded-full bg-interactive-accent text-white hover:bg-interactive-accent-hover"
+						@click="showMenu = true"
+					>
 						<Icon name="user" /> Hi, Aungmin
-					</summary>
+					</button>
 
 					<section
 						class="card dropdown-content card-compact z-[1] mt-2 w-52 rounded-box bg-base-100 p-2 shadow"
+						v-show="showMenu"
+						v-on-click-outside="close"
 					>
 						<div class="card-body items-start gap-5">
 							<section>
 								<h3 class="text-title-subsection font-bold">Aungmin Soe</h3>
-								<span class="text-sm font-normal">Account ID: 5000198</span>
+								<span class="text-sm font-normal text-content-secondary"
+									>Account ID: 5000198</span
+								>
 							</section>
 
-							<ul class="flex flex-col gap-4">
+							<MenuList @click="close">
 								<li>
-									<NuxtLink
+									<MenuItem
 										to="/dashboard/profile"
-										class="flex items-center gap-2"
-									>
-										<Icon name="user-circle" />
-										Profile
-									</NuxtLink>
+										name="Profile"
+										iconName="user-circle"
+									/>
 								</li>
 								<li>
-									<NuxtLink
+									<MenuItem
 										to="/dashboard/subscription"
-										class="flex items-center gap-2"
-									>
-										<Icon name="receipt-text" />
-										Subscription
-									</NuxtLink>
+										name="Subscription"
+										iconName="receipt-text"
+									/>
 								</li>
 								<li>
-									<NuxtLink
+									<MenuItem
 										to="/dashboard/order"
-										class="flex items-center gap-2"
-									>
-										<Icon name="truck" />Order</NuxtLink
-									>
+										name="Order"
+										iconName="truck"
+									/>
 								</li>
 								<li>
-									<NuxtLink
+									<MenuItem
 										to="/dashboard/billing"
-										class="flex items-center gap-2"
-									>
-										<Icon name="dollar-circle" /> Billing
-									</NuxtLink>
+										name="Billing"
+										iconName="dollar-circle"
+									/>
 								</li>
 								<li>
-									<NuxtLink
+									<MenuItem
 										to="/dashboard/relocate"
-										class="flex items-center gap-2"
-									>
-										<Icon name="home-activity" />Relacate</NuxtLink
-									>
+										name="Relacate"
+										iconName="home-activity"
+									/>
 								</li>
 								<li>
-									<NuxtLink
+									<MenuItem
 										to="/dashboard/term-and-condition"
-										class="flex items-center gap-2"
-									>
-										<Icon name="badge-check" />T&C acceptance</NuxtLink
-									>
+										name="T&C acceptance"
+										iconName="badge-check"
+									/>
 								</li>
 								<li>
-									<NuxtLink
+									<MenuItem
 										to="/dashboard/mobile-bundle"
-										class="flex items-center gap-2"
-									>
-										<Icon name="mobile" />Mobile bundle</NuxtLink
-									>
+										name="Mobile bundle"
+										iconName="mobile"
+									/>
 								</li>
-							</ul>
+							</MenuList>
 
 							<span class="divider m-0" />
 
 							<button
 								type="button"
-								class="flex items-center gap-2 text-interactive-negative hover:text-interactive-negative-hover"
+								class="flex items-center gap-2 text-interactive-negative"
 							>
-								<Icon name="log-out" />Logout
+								<Icon name="log-out" />
+								<span
+									class="duration-200 hover:font-bold hover:text-content-primary hover:ease-in-out"
+									>Logout</span
+								>
 							</button>
 						</div>
 					</section>
-				</details>
+				</article>
 			</nav>
 		</section>
 	</header>

@@ -22,6 +22,7 @@
 		]
 	},
 	"dependencies": {
+		"@vueuse/components": "^10.7.2",
 		"flag-icons": "^7.1.0",
 		"tailwind-merge": "^2.2.1"
 	},

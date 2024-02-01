@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { twMerge } from 'tailwind-merge'
 import { computed } from 'vue'
 
 const props = defineProps({
@@ -25,22 +24,14 @@ const isRouteActive = computed(() => route.path.includes(props.to))
 <template>
 	<NuxtLink :to="props.to">
 		<div class="flex gap-2">
-			<span
-				:class="
-					twMerge(
-						'mr-2  border-l-[3px] border-l-transparent',
-						isRouteActive && 'border-l-primary',
-					)
-				"
-			/>
 			<div
 				class="flex items-center gap-2 text-xs lg:text-lg"
 				:class="isRouteActive ? 'text-primary' : ''"
 			>
 				<Icon :name="props.iconName" />
-				<span class="text-sm duration-200 hover:font-bold hover:ease-in-out">{{
-					props.name
-				}}</span>
+				<span class="text-sm duration-200 hover:font-bold hover:ease-in-out">
+					{{ props.name }}
+				</span>
 			</div>
 		</div>
 	</NuxtLink>
