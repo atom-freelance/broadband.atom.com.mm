@@ -85,57 +85,57 @@ function close() {
 								>
 							</section>
 
-							<MenuList @click="close">
+							<SidebarList @click="close">
 								<li>
-									<MenuItem
+									<SidebarItem
 										to="/dashboard/profile"
 										name="Profile"
 										iconName="user-circle"
 									/>
 								</li>
 								<li>
-									<MenuItem
+									<SidebarItem
 										to="/dashboard/subscription"
 										name="Subscription"
 										iconName="receipt-text"
 									/>
 								</li>
 								<li>
-									<MenuItem
+									<SidebarItem
 										to="/dashboard/order"
 										name="Order"
 										iconName="truck"
 									/>
 								</li>
 								<li>
-									<MenuItem
+									<SidebarItem
 										to="/dashboard/billing"
 										name="Billing"
 										iconName="dollar-circle"
 									/>
 								</li>
 								<li>
-									<MenuItem
+									<SidebarItem
 										to="/dashboard/relocate"
 										name="Relacate"
 										iconName="home-activity"
 									/>
 								</li>
 								<li>
-									<MenuItem
+									<SidebarItem
 										to="/dashboard/term-and-condition"
 										name="T&C acceptance"
 										iconName="badge-check"
 									/>
 								</li>
 								<li>
-									<MenuItem
+									<SidebarItem
 										to="/dashboard/mobile-bundle"
 										name="Mobile bundle"
 										iconName="mobile"
 									/>
 								</li>
-							</MenuList>
+							</SidebarList>
 
 							<span class="divider m-0" />
 
