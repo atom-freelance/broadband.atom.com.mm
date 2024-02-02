@@ -15,6 +15,11 @@ const props = defineProps({
 		type: String as PropType<IconName>,
 		required: true,
 	},
+	enableLeftSideBorder: {
+		type: Boolean as PropType<boolean>,
+		required: false,
+		default: false,
+	},
 })
 
 const route = useRoute()
@@ -26,6 +31,7 @@ const isRouteActive = computed(() => route.path.includes(props.to))
 	<NuxtLink :to="props.to">
 		<div class="flex gap-2">
 			<span
+				v-show="props.enableLeftSideBorder"
 				:class="
 					twMerge(
 						'mr-2  border-l-[3px] border-l-transparent',
@@ -34,13 +40,11 @@ const isRouteActive = computed(() => route.path.includes(props.to))
 				"
 			/>
 			<div
-				class="flex items-center gap-2 text-xs lg:text-lg"
+				class="flex items-center gap-2 text-xs duration-200 hover:font-bold hover:ease-in-out lg:text-lg"
 				:class="isRouteActive ? 'text-primary' : ''"
 			>
 				<Icon :name="props.iconName" />
-				<span class="text-sm duration-200 hover:font-bold hover:ease-in-out">{{
-					props.name
-				}}</span>
+				<span class="text-sm">{{ props.name }}</span>
 			</div>
 		</div>
 	</NuxtLink>
