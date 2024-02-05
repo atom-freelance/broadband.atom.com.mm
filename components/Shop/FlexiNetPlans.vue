@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import { flexiNetStarter, flexiNetRenewal } from '../../utils/data'
-</script>
-
 <template>
 	<div>
 		<h1 class="mt-8 text-[48px] font-semibold max-sm:text-3xl">Starter</h1>

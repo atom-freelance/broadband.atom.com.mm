@@ -1,11 +1,5 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import {
-	wirelessStarterPlans,
-	wirelessRenewalPlans,
-	wirelessDataAddOn,
-	specialDataPacks,
-} from '../../utils/data'
 
 const isStandard = ref(true)
 

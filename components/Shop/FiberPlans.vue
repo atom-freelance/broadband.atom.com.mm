@@ -1,7 +1,3 @@
-<script setup>
-import { fiberHomePlans, fiberBusinessPlans } from '../../utils/data'
-</script>
-
 <template>
 	<div>
 		<!-- Home plan package lists -->
@@ -17,7 +13,7 @@ import { fiberHomePlans, fiberBusinessPlans } from '../../utils/data'
 			<div
 				class="group w-full cursor-pointer bg-base-100"
 				v-for="plan in fiberHomePlans"
-				:key="plan.label"
+				:key="plan.title"
 			>
 				<ShopPlanCard :plan="plan" :planType="'fiber'" />
 			</div>
@@ -36,7 +32,7 @@ import { fiberHomePlans, fiberBusinessPlans } from '../../utils/data'
 			<div
 				class="group w-full cursor-pointer bg-base-100"
 				v-for="plan in fiberBusinessPlans"
-				:key="plan.label"
+				:key="plan.title"
 			>
 				<ShopPlanCard :plan="plan" :planType="'fiber'" />
 			</div>
