@@ -6,7 +6,7 @@ import FlexiNet from '~/components/Shop/FlexiNetPlans.vue'
 
 type LinkType = 'Fiber' | 'Wireless' | 'Flexi net' | 'Mini Pro'
 
-const activeLink = ref(1)
+const activeLink = ref(0)
 const menuLinks: LinkType[] = reactive([
 	'Fiber',
 	'Wireless',
@@ -26,7 +26,7 @@ const handleChangeLink = (link: number) => {
 	<div class="relative bg-white">
 		<!-- banner hero text and service menu -->
 		<div
-			class="container fixed left-0 right-0 top-16 flex h-[calc(100vh-10rem)] flex-col justify-center gap-10"
+			class="container fixed left-0 right-0 top-16 flex h-[calc(95vh-10rem)] flex-col justify-center gap-10"
 		>
 			<div class="hero">
 				<div class="hero-content text-center">
@@ -56,12 +56,12 @@ const handleChangeLink = (link: number) => {
 		</div>
 
 		<!-- set height for fixed hero block -->
-		<div class="h-[calc(100vh-10rem)]"></div>
+		<div class="h-[calc(85vh-10rem)]"></div>
 
 		<div class="relative bg-white">
 			<div id="shop-plans" class="container z-10 py-20">
 				<!-- sticky service menu links -->
-				<div class="sticky top-6 z-10 flex items-center justify-center">
+				<div class="sticky top-28 z-10 flex items-center justify-center">
 					<div
 						class="rounded-full bg-white px-6 py-5 shadow-[0_20px_66px_0_rgba(34,48,73,0.2)] max-sm:px-2 max-sm:py-3"
 					>
