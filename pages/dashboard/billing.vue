@@ -40,7 +40,133 @@ const { showModal, closeModal } = useModal()
 				<td class="underline">O219159</td>
 				<td class="underline">O219159</td>
 				<td>
+					<DashboardStatus class="bg-categories-investments" name="Pending" />
+				</td>
+				<td class="flex justify-between">
+					<span>197000 MMK</span>
+					<button
+						class="font-bold underline underline-offset-4"
+						@click="() => showModal('billing')"
+					>
+						View Receipt
+					</button>
+				</td>
+			</tr>
+			<tr>
+				<td>Reid Semiras</td>
+				<td>Teacher</td>
+				<td class="underline">O219159</td>
+				<td class="underline">O219159</td>
+				<td>
 					<DashboardStatus class="bg-categories-groceries" name="Failed" />
+				</td>
+				<td class="flex justify-between">
+					<span>197000 MMK</span>
+					<button
+						class="font-bold underline underline-offset-4"
+						@click="() => showModal('billing')"
+					>
+						View Receipt
+					</button>
+				</td>
+			</tr>
+			<tr>
+				<td>Reid Semiras</td>
+				<td>Teacher</td>
+				<td class="underline">O219159</td>
+				<td class="underline">O219159</td>
+				<td>
+					<DashboardStatus class="bg-categories-cash" name="Success" />
+				</td>
+				<td class="flex justify-between">
+					<span>197000 MMK</span>
+					<button
+						class="font-bold underline underline-offset-4"
+						@click="() => showModal('billing')"
+					>
+						View Receipt
+					</button>
+				</td>
+			</tr>
+			<tr>
+				<td>Reid Semiras</td>
+				<td>Teacher</td>
+				<td class="underline">O219159</td>
+				<td class="underline">O219159</td>
+				<td>
+					<DashboardStatus class="bg-categories-cash" name="Success" />
+				</td>
+				<td class="flex justify-between">
+					<span>197000 MMK</span>
+					<button
+						class="font-bold underline underline-offset-4"
+						@click="() => showModal('billing')"
+					>
+						View Receipt
+					</button>
+				</td>
+			</tr>
+			<tr>
+				<td>Reid Semiras</td>
+				<td>Teacher</td>
+				<td class="underline">O219159</td>
+				<td class="underline">O219159</td>
+				<td>
+					<DashboardStatus class="bg-categories-cash" name="Success" />
+				</td>
+				<td class="flex justify-between">
+					<span>197000 MMK</span>
+					<button
+						class="font-bold underline underline-offset-4"
+						@click="() => showModal('billing')"
+					>
+						View Receipt
+					</button>
+				</td>
+			</tr>
+			<tr>
+				<td>Reid Semiras</td>
+				<td>Teacher</td>
+				<td class="underline">O219159</td>
+				<td class="underline">O219159</td>
+				<td>
+					<DashboardStatus class="bg-categories-cash" name="Success" />
+				</td>
+				<td class="flex justify-between">
+					<span>197000 MMK</span>
+					<button
+						class="font-bold underline underline-offset-4"
+						@click="() => showModal('billing')"
+					>
+						View Receipt
+					</button>
+				</td>
+			</tr>
+			<tr>
+				<td>Reid Semiras</td>
+				<td>Teacher</td>
+				<td class="underline">O219159</td>
+				<td class="underline">O219159</td>
+				<td>
+					<DashboardStatus class="bg-categories-cash" name="Success" />
+				</td>
+				<td class="flex justify-between">
+					<span>197000 MMK</span>
+					<button
+						class="font-bold underline underline-offset-4"
+						@click="() => showModal('billing')"
+					>
+						View Receipt
+					</button>
+				</td>
+			</tr>
+			<tr>
+				<td>Reid Semiras</td>
+				<td>Teacher</td>
+				<td class="underline">O219159</td>
+				<td class="underline">O219159</td>
+				<td>
+					<DashboardStatus class="bg-categories-cash" name="Success" />
 				</td>
 				<td class="flex justify-between">
 					<span>197000 MMK</span>

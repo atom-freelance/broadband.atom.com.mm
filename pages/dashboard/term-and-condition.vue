@@ -14,17 +14,52 @@
 		<template #tbody>
 			<tr>
 				<td>12 Dec, 2023</td>
-				<td>ATOM အသုံးြပုသူများလိုက်နားရမည့် စည်းကမ်းချက်များ</td>
+				<td>ATOM အသုံးပြုသူများလိုက်နားရမည့် စည်းကမ်းချက်များ</td>
 				<td class="underline">Download</td>
 			</tr>
 			<tr>
 				<td>12 Dec, 2023</td>
-				<td>ATOM အသုံးြပုသူများလိုက်နားရမည့် စည်းကမ်းချက်များ</td>
+				<td>ATOM အသုံးပြုသူများလိုက်နားရမည့် စည်းကမ်းချက်များ</td>
 				<td class="underline">Download</td>
 			</tr>
 			<tr>
 				<td>12 Dec, 2023</td>
-				<td>ATOM အသုံးြပုသူများလိုက်နားရမည့် စည်းကမ်းချက်များ</td>
+				<td>ATOM အသုံးပြုသူများလိုက်နားရမည့် စည်းကမ်းချက်များ</td>
+				<td class="underline">Download</td>
+			</tr>
+			<tr>
+				<td>12 Dec, 2023</td>
+				<td>ATOM အသုံးပြုသူများလိုက်နားရမည့် စည်းကမ်းချက်များ</td>
+				<td class="underline">Download</td>
+			</tr>
+			<tr>
+				<td>12 Dec, 2023</td>
+				<td>ATOM အသုံးပြုသူများလိုက်နားရမည့် စည်းကမ်းချက်များ</td>
+				<td class="underline">Download</td>
+			</tr>
+			<tr>
+				<td>12 Dec, 2023</td>
+				<td>ATOM အသုံးပြုသူများလိုက်နားရမည့် စည်းကမ်းချက်များ</td>
+				<td class="underline">Download</td>
+			</tr>
+			<tr>
+				<td>12 Dec, 2023</td>
+				<td>ATOM အသုံးပြုသူများလိုက်နားရမည့် စည်းကမ်းချက်များ</td>
+				<td class="underline">Download</td>
+			</tr>
+			<tr>
+				<td>12 Dec, 2023</td>
+				<td>ATOM Broadband နေရာရွေ့ပြောင်းခြင်း သတ်မှတ်ချက်များ</td>
+				<td class="underline">Download</td>
+			</tr>
+			<tr>
+				<td>12 Dec, 2023</td>
+				<td>ATOM Broadband နေရာရွေ့ပြောင်းခြင်း သတ်မှတ်ချက်များ</td>
+				<td class="underline">Download</td>
+			</tr>
+			<tr>
+				<td>12 Dec, 2023</td>
+				<td>ATOM Broadband နေရာရွေ့ပြောင်းခြင်း သတ်မှတ်ချက်များ</td>
 				<td class="underline">Download</td>
 			</tr>
 		</template>

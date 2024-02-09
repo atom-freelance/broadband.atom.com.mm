@@ -64,7 +64,7 @@ function close() {
 				</article>
 
 				<!-- After logged in -->
-				<article class="dropdown dropdown-end" v-show="isLoggedIn">
+				<article class="relative flex flex-col items-end" v-show="isLoggedIn">
 					<button
 						class="btn rounded-full bg-interactive-accent text-white hover:bg-interactive-accent-hover"
 						@click="showMenu = true"
@@ -73,7 +73,7 @@ function close() {
 					</button>
 
 					<section
-						class="card dropdown-content card-compact z-[1] mt-2 w-52 rounded-box bg-base-100 p-2 shadow"
+						class="card card-compact absolute top-full z-[1] mt-2 w-52 rounded-box bg-base-100 p-2 shadow"
 						v-show="showMenu"
 						v-on-click-outside="close"
 					>
