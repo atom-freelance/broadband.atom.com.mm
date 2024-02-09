@@ -1,5 +1,8 @@
 <script setup lang="ts">
 const { showModal, closeModal } = useModal()
+
+let showPassword = ref(false)
+let showNewPassword = ref(false)
 </script>
 
 <template>
@@ -58,7 +61,7 @@ const { showModal, closeModal } = useModal()
 	<!-- Change phone number Modal Section -->
 	<ModalRoot id="phone-number">
 		<div class="flex items-center justify-between pt-4">
-			<h3 class="text-title-body">Change phone number</h3>
+			<h3 class="text-title-body font-semibold">Change phone number</h3>
 
 			<button
 				class="btn btn-circle btn-ghost btn-sm text-content-primary lg:text-lg"
@@ -78,7 +81,7 @@ const { showModal, closeModal } = useModal()
 					</div>
 					<input
 						type="text"
-						class="input input-bordered w-full border-2 focus:border-black"
+						class="input input-bordered w-full border-2 focus:border-neutral focus:outline-none"
 						placeholder="09 976356548"
 					/>
 				</label>
@@ -89,7 +92,7 @@ const { showModal, closeModal } = useModal()
 					</div>
 					<input
 						type="text"
-						class="input input-bordered w-full border-2 focus:border-black"
+						class="input input-bordered w-full border-2 focus:border-neutral focus:outline-none"
 					/>
 				</label>
 			</div>
@@ -106,7 +109,7 @@ const { showModal, closeModal } = useModal()
 					@click="
 						() => {
 							closeModal('phone-number')
-							showModal('code-id')
+							showModal('phone-code-id')
 						}
 					"
 				/>
@@ -114,14 +117,14 @@ const { showModal, closeModal } = useModal()
 		</ModalAction>
 	</ModalRoot>
 
-	<!-- Enter Code Modal Section -->
-	<ModalRoot id="code-id">
+	<!-- Enter Phone Code Modal Section -->
+	<ModalRoot id="phone-code-id">
 		<div class="flex items-center justify-between pt-4">
-			<h3 class="text-title-body">Change phone number</h3>
+			<h3 class="text-title-body font-semibold">Change phone number</h3>
 
 			<button
 				class="btn btn-circle btn-ghost btn-sm text-content-primary lg:text-lg"
-				@click="() => closeModal('code-id')"
+				@click="() => closeModal('phone-code-id')"
 			>
 				✕
 			</button>
@@ -143,10 +146,14 @@ const { showModal, closeModal } = useModal()
 					</div>
 					<input
 						type="text"
-						class="input input-bordered w-full border-2 focus:border-black"
-						placeholder="09 976356548"
+						class="input input-bordered w-full border-2 focus:border-neutral focus:outline-none"
+						placeholder=""
 					/>
 				</label>
+
+				<span class="font-semibold text-black underline underline-offset-2"
+					>I didn't receive a code</span
+				>
 			</div>
 		</ModalBackdrop>
 
@@ -158,7 +165,7 @@ const { showModal, closeModal } = useModal()
 					type="submit"
 					btnText="Submit"
 					class="!h-fit w-full bg-interactive-accent px-6 py-3 text-white hover:bg-interactive-accent-hover"
-					@click="() => closeModal('code-id')"
+					@click="() => closeModal('phone-code-id')"
 				/>
 			</div>
 		</ModalAction>
@@ -167,7 +174,7 @@ const { showModal, closeModal } = useModal()
 	<!-- Change Email Modal Section -->
 	<ModalRoot id="email-address">
 		<div class="flex items-center justify-between pt-4">
-			<h3 class="text-title-body">Change email address</h3>
+			<h3 class="text-title-body font-semibold">Change email address</h3>
 
 			<button
 				class="btn btn-circle btn-ghost btn-sm text-content-primary lg:text-lg"
@@ -183,12 +190,22 @@ const { showModal, closeModal } = useModal()
 			<div class="flex flex-col gap-6 py-8 text-content-primary">
 				<label class="form-control w-full">
 					<div class="label">
-						<span class="label-text">Email Address</span>
+						<span class="label-text">Current email address</span>
 					</div>
 					<input
-						type="text"
-						class="input input-bordered w-full border-2 focus:border-black"
-						placeholder="09 976356548"
+						type="email"
+						class="input input-bordered w-full border-2 focus:border-neutral focus:outline-none"
+						placeholder="aungminsoe.cumyeik@gmail.com"
+					/>
+				</label>
+
+				<label class="form-control w-full">
+					<div class="label">
+						<span class="label-text">New email address</span>
+					</div>
+					<input
+						type="email"
+						class="input input-bordered w-full border-2 focus:border-neutral focus:outline-none"
 					/>
 				</label>
 			</div>
@@ -200,9 +217,68 @@ const { showModal, closeModal } = useModal()
 			<div class="w-full text-center">
 				<DashboardActionButton
 					type="submit"
+					btnText="Send verification code"
+					class="!h-fit w-full bg-interactive-accent px-6 py-3 text-white hover:bg-interactive-accent-hover"
+					@click="
+						() => {
+							closeModal('email-address')
+							showModal('email-code-id')
+						}
+					"
+				/>
+			</div>
+		</ModalAction>
+	</ModalRoot>
+
+	<!-- Enter Email Code Modal Section -->
+	<ModalRoot id="email-code-id">
+		<div class="flex items-center justify-between pt-4">
+			<h3 class="text-title-body font-semibold">Change email address</h3>
+
+			<button
+				class="btn btn-circle btn-ghost btn-sm text-content-primary lg:text-lg"
+				@click="() => closeModal('email-code-id')"
+			>
+				✕
+			</button>
+		</div>
+
+		<span class="divider my-0" />
+
+		<ModalBackdrop enableClose>
+			<div class="flex flex-col gap-6 py-8 text-content-primary">
+				<p class="font-normal text-content-primary">
+					Enter the 6-digit code we just send ams@atom.com.mm.
+					<span class="text-sm font-semibold underline underline-offset-4"
+						>change</span
+					>
+				</p>
+				<label class="form-control w-full">
+					<div class="label">
+						<span class="label-text">6-digit code</span>
+					</div>
+					<input
+						type="text"
+						class="input input-bordered w-full border-2 focus:border-neutral focus:outline-none"
+						placeholder=""
+					/>
+				</label>
+
+				<span class="font-semibold text-black underline underline-offset-2"
+					>I didn't receive a code</span
+				>
+			</div>
+		</ModalBackdrop>
+
+		<span class="divider my-0" />
+
+		<ModalAction class="my-5">
+			<div class="w-full text-center">
+				<DashboardActionButton
+					type="submit"
 					btnText="Submit"
 					class="!h-fit w-full bg-interactive-accent px-6 py-3 text-white hover:bg-interactive-accent-hover"
-					@click="() => closeModal('email-address')"
+					@click="() => closeModal('email-code-id')"
 				/>
 			</div>
 		</ModalAction>
@@ -211,7 +287,7 @@ const { showModal, closeModal } = useModal()
 	<!-- Change Password Modal Section -->
 	<ModalRoot id="password">
 		<div class="flex items-center justify-between pt-4">
-			<h3 class="text-title-body">Change password</h3>
+			<h3 class="text-title-body font-semibold">Change password</h3>
 
 			<button
 				class="btn btn-circle btn-ghost btn-sm text-content-primary lg:text-lg"
@@ -225,15 +301,65 @@ const { showModal, closeModal } = useModal()
 
 		<ModalBackdrop enableClose>
 			<div class="flex flex-col gap-6 py-8 text-content-primary">
-				<label class="form-control w-full">
+				<label class="form-control">
 					<div class="label">
-						<span class="label-text">Password</span>
+						<span class="label-text">Current password</span>
 					</div>
-					<input
-						type="password"
-						class="input input-bordered w-full border-2 focus:border-black"
-						placeholder="09 976356548"
-					/>
+					<div class="relative">
+						<input
+							:type="showPassword ? 'text' : 'password'"
+							class="input input-bordered input-sm w-full md:input-md focus:border-neutral focus:outline-none"
+							value="1234"
+						/>
+
+						<div
+							class="absolute inset-y-0 right-0 flex items-center pr-3 text-sm leading-5"
+						>
+							<Icon
+								name="eye"
+								class="1rem lg:1.5rem hover:cursor-pointer"
+								@click="() => (showPassword = true)"
+								v-show="!showPassword"
+							/>
+
+							<Icon
+								name="eye-closed"
+								class="1rem lg:1.5rem hover:cursor-pointer"
+								@click="() => (showPassword = false)"
+								v-show="showPassword"
+							/>
+						</div>
+					</div>
+				</label>
+
+				<label class="form-control">
+					<div class="label">
+						<span class="label-text">New password</span>
+					</div>
+					<div class="relative">
+						<input
+							:type="showNewPassword ? 'text' : 'password'"
+							class="input input-bordered input-sm w-full md:input-md focus:border-neutral focus:outline-none"
+						/>
+
+						<div
+							class="absolute inset-y-0 right-0 flex items-center pr-3 text-sm leading-5"
+						>
+							<Icon
+								name="eye"
+								class="1rem lg:1.5rem hover:cursor-pointer"
+								@click="() => (showNewPassword = true)"
+								v-show="!showNewPassword"
+							/>
+
+							<Icon
+								name="eye-closed"
+								class="1rem lg:1.5rem hover:cursor-pointer"
+								@click="() => (showNewPassword = false)"
+								v-show="showNewPassword"
+							/>
+						</div>
+					</div>
 				</label>
 			</div>
 		</ModalBackdrop>

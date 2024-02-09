@@ -38,7 +38,73 @@
 				<td>Reichel, Glover and Hamill</td>
 				<td>China</td>
 				<td>
+					<DashboardStatus
+						class="bg-categories-entertainment"
+						name="Installed"
+					/>
+				</td>
+			</tr>
+			<tr>
+				<td>Reid Semiras</td>
+				<td>Teacher</td>
+				<td>Sporer, Sipes and Rogahn</td>
+				<td>Poland</td>
+				<td>
+					<DashboardStatus class="bg-categories-cash" name="Delivered" />
+				</td>
+			</tr>
+			<tr>
+				<td>Reid Semiras</td>
+				<td>Teacher</td>
+				<td>Sporer, Sipes and Rogahn</td>
+				<td>Poland</td>
+				<td>
+					<DashboardStatus class="bg-categories-cash" name="Delivered" />
+				</td>
+			</tr>
+			<tr>
+				<td>Reid Semiras</td>
+				<td>Teacher</td>
+				<td>Sporer, Sipes and Rogahn</td>
+				<td>Poland</td>
+				<td>
+					<DashboardStatus class="bg-categories-cash" name="Delivered" />
+				</td>
+			</tr>
+			<tr>
+				<td>Alec Lethby</td>
+				<td>Teacher</td>
+				<td>Reichel, Glover and Hamill</td>
+				<td>China</td>
+				<td>
 					<DashboardStatus class="bg-categories-bills" name="Todo" />
+				</td>
+			</tr>
+			<tr>
+				<td>Alec Lethby</td>
+				<td>Teacher</td>
+				<td>Reichel, Glover and Hamill</td>
+				<td>China</td>
+				<td>
+					<DashboardStatus class="bg-categories-bills" name="Todo" />
+				</td>
+			</tr>
+			<tr>
+				<td>Reid Semiras</td>
+				<td>Teacher</td>
+				<td>Sporer, Sipes and Rogahn</td>
+				<td>Poland</td>
+				<td>
+					<DashboardStatus class="bg-categories-cash" name="Delivered" />
+				</td>
+			</tr>
+			<tr>
+				<td>Reid Semiras</td>
+				<td>Teacher</td>
+				<td>Sporer, Sipes and Rogahn</td>
+				<td>Poland</td>
+				<td>
+					<DashboardStatus class="bg-categories-cash" name="Delivered" />
 				</td>
 			</tr>
 		</template>
