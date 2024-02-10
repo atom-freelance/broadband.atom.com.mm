@@ -3,11 +3,7 @@ import { vOnClickOutside } from '@vueuse/components'
 
 const isLoggedIn = ref(true)
 
-const showMenu = ref(false)
-
-function close() {
-	showMenu.value = false
-}
+const { showMenu, close, show } = useMenu()
 </script>
 
 <template>
@@ -64,19 +60,12 @@ function close() {
 				</article>
 
 				<!-- After logged in -->
-				<article class="relative flex flex-col items-end" v-show="isLoggedIn">
-					<button
-						class="btn rounded-full bg-interactive-accent text-white hover:bg-interactive-accent-hover"
-						@click="showMenu = true"
-					>
+				<MenuRoot v-show="isLoggedIn">
+					<MenuTarget @click="show">
 						<Icon name="user" /> Hi, Aungmin
-					</button>
+					</MenuTarget>
 
-					<section
-						class="card card-compact absolute top-full z-[1] mt-2 w-52 rounded-box bg-base-100 p-2 shadow"
-						v-show="showMenu"
-						v-on-click-outside="close"
-					>
+					<MenuList v-if="showMenu" v-on-click-outside="close">
 						<div class="card-body items-start gap-5">
 							<section>
 								<h3 class="text-title-subsection font-bold">Aungmin Soe</h3>
@@ -150,8 +139,8 @@ function close() {
 								>
 							</button>
 						</div>
-					</section>
-				</article>
+					</MenuList>
+				</MenuRoot>
 			</nav>
 		</section>
 	</header>
