@@ -24,7 +24,7 @@ const { showModal, closeModal } = useModal()
 					<div class="flex items-center justify-start gap-10">
 						<span>Botahtaung, Yangon</span>
 						<div class="flex items-center justify-start gap-4">
-							<Icon name="arrow-right-small" />
+							<img src="/assets/img/greater-than-equal-to.svg" />
 							<span>Hlaing, Yangon</span>
 							<DashboardStatus
 								class="bg-categories-investments"
@@ -49,7 +49,7 @@ const { showModal, closeModal } = useModal()
 					<div class="flex items-center justify-start gap-10">
 						<span>Botahtaung, Yangon</span>
 						<div class="flex items-center justify-start gap-4">
-							<Icon name="arrow-right-small" />
+							<img src="/assets/img/greater-than-equal-to.svg" />
 							<span>Hlaing, Yangon</span>
 							<DashboardStatus
 								class="bg-categories-investments"
@@ -74,7 +74,7 @@ const { showModal, closeModal } = useModal()
 					<div class="flex items-center justify-start gap-10">
 						<span>Botahtaung, Yangon</span>
 						<div class="flex items-center justify-start gap-4">
-							<Icon name="arrow-right-small" />
+							<img src="/assets/img/greater-than-equal-to.svg" />
 						</div>
 					</div>
 				</td>
@@ -94,7 +94,7 @@ const { showModal, closeModal } = useModal()
 					<div class="flex items-center justify-start gap-10">
 						<span>Botahtaung, Yangon</span>
 						<div class="flex items-center justify-start gap-4">
-							<Icon name="arrow-right-small" />
+							<img src="/assets/img/greater-than-equal-to.svg" />
 						</div>
 					</div>
 				</td>
@@ -114,7 +114,7 @@ const { showModal, closeModal } = useModal()
 					<div class="flex items-center justify-start gap-10">
 						<span>Botahtaung, Yangon</span>
 						<div class="flex items-center justify-start gap-4">
-							<Icon name="arrow-right-small" />
+							<img src="/assets/img/greater-than-equal-to.svg" />
 						</div>
 					</div>
 				</td>
@@ -134,7 +134,7 @@ const { showModal, closeModal } = useModal()
 					<div class="flex items-center justify-start gap-10">
 						<span>Botahtaung, Yangon</span>
 						<div class="flex items-center justify-start gap-4">
-							<Icon name="arrow-right-small" />
+							<img src="/assets/img/greater-than-equal-to.svg" />
 						</div>
 					</div>
 				</td>
@@ -154,7 +154,7 @@ const { showModal, closeModal } = useModal()
 					<div class="flex items-center justify-start gap-10">
 						<span>Botahtaung, Yangon</span>
 						<div class="flex items-center justify-start gap-4">
-							<Icon name="arrow-right-small" />
+							<img src="/assets/img/greater-than-equal-to.svg" />
 						</div>
 					</div>
 				</td>
@@ -174,7 +174,7 @@ const { showModal, closeModal } = useModal()
 					<div class="flex items-center justify-start gap-10">
 						<span>Botahtaung, Yangon</span>
 						<div class="flex items-center justify-start gap-4">
-							<Icon name="arrow-right-small" />
+							<img src="/assets/img/greater-than-equal-to.svg" />
 						</div>
 					</div>
 				</td>
@@ -309,7 +309,7 @@ const { showModal, closeModal } = useModal()
 						<span>Botahtaung, Yangon</span>
 					</div>
 
-					<Icon name="arrow-right-small" />
+					<img src="/assets/img/greater-than-equal-to.svg" />
 
 					<div class="flex flex-col items-end gap-3">
 						<span class="text-sm font-normal text-content-secondary">To</span>
