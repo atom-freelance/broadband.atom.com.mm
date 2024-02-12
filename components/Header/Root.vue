@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { vOnClickOutside } from '@vueuse/components'
 
+const drawer = useHeaderDrawer()
+
 const isLoggedIn = ref(true)
 
 const { showMenu, close, show } = useMenu()
@@ -44,7 +46,11 @@ const { showMenu, close, show } = useMenu()
 
 		<section class="h-16 bg-white">
 			<nav class="container flex h-full items-center justify-between">
-				<article class="flex h-full items-center">
+				<article class="flex h-full items-center gap-4">
+					<button @click="drawer.open" class="lg:hidden">
+						<Icon name="menu" />
+					</button>
+
 					<NuxtLink to="/" class="inline-block h-4/5 w-40">
 						<img src="/logo.png" class="inline-block h-full" />
 					</NuxtLink>

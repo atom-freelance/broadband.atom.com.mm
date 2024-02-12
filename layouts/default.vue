@@ -4,4 +4,6 @@
 	<slot />
 
 	<FooterRoot />
+
+	<HeaderDrawer />
 </template>
