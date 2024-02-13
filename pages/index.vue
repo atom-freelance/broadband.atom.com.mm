@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { showModal } = useModal()
+</script>
+
 <template>
 	<main class="pb-40">
 		<!-- Hero Section -->
@@ -127,41 +131,47 @@
 			<article
 				class="mt-20 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-4 lg:grid-cols-3"
 			>
-				<ItemCard
-					img-url="https://images.unsplash.com/photo-1652197881268-d625ad54402b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-					title="Home plan"
-					sub-title="Power 40 Up to 40Mbps"
-				>
-					<div class="flex items-center gap-4 font-semibold">
-						<h6 class="text-title-body">45,000 / 30 days</h6>
+				<ModalAction @click="() => showModal('shop-plan-id')">
+					<ItemCard
+						img-url="https://images.unsplash.com/photo-1652197881268-d625ad54402b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+						title="Home plan"
+						sub-title="Power 40 Up to 40Mbps"
+					>
+						<div class="flex items-center gap-4 font-semibold">
+							<h6 class="text-title-body">45,000 / 30 days</h6>
 
-						<button class="btn btn-sm rounded-full">Fiber</button>
-					</div>
-				</ItemCard>
+							<button class="btn btn-sm rounded-full">Fiber</button>
+						</div>
+					</ItemCard>
+				</ModalAction>
 
-				<ItemCard
-					img-url="https://images.unsplash.com/photo-1652197881268-d625ad54402b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-					title="Starter kit"
-					sub-title="Up to 10Mbps"
-				>
-					<div class="flex items-center gap-4 font-semibold">
-						<h6 class="text-title-body">115,00 / 90 days</h6>
+				<ModalAction @click="() => showModal('shop-plan-id')">
+					<ItemCard
+						img-url="https://images.unsplash.com/photo-1652197881268-d625ad54402b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+						title="Starter kit"
+						sub-title="Up to 10Mbps"
+					>
+						<div class="flex items-center gap-4 font-semibold">
+							<h6 class="text-title-body">115,00 / 90 days</h6>
 
-						<button class="btn btn-sm rounded-full">Wireless</button>
-					</div>
-				</ItemCard>
+							<button class="btn btn-sm rounded-full">Wireless</button>
+						</div>
+					</ItemCard>
+				</ModalAction>
 
-				<ItemCard
-					img-url="https://images.unsplash.com/photo-1652197881268-d625ad54402b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-					title="Starter"
-					sub-title="Power Flexi Net"
-				>
-					<div class="flex items-center gap-4 font-semibold">
-						<h6 class="text-title-body">25,000 / 30 days</h6>
+				<ModalAction @click="() => showModal('shop-plan-id')">
+					<ItemCard
+						img-url="https://images.unsplash.com/photo-1652197881268-d625ad54402b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+						title="Starter"
+						sub-title="Power Flexi Net"
+					>
+						<div class="flex items-center gap-4 font-semibold">
+							<h6 class="text-title-body">25,000 / 30 days</h6>
 
-						<button class="btn btn-sm rounded-full">Wireless</button>
-					</div>
-				</ItemCard>
+							<button class="btn btn-sm rounded-full">Wireless</button>
+						</div>
+					</ItemCard>
+				</ModalAction>
 			</article>
 		</section>
 
@@ -220,9 +230,7 @@
 				/>
 			</article>
 
-			<article
-				class="bg-flag-gray py-10 px-5 lg:pl-20 lg:pr-10"
-			>
+			<article class="bg-flag-gray px-5 py-10 lg:pl-20 lg:pr-10">
 				<HomeQuoteCarousel
 					:quotes="[
 						{
@@ -305,6 +313,9 @@
 			<ShopServiceAvailable />
 		</section>
 	</main>
+	<ModalRoot id="shop-plan-id">
+		<ShopPlanDetail />
+	</ModalRoot>
 </template>
 
 <style scoped>

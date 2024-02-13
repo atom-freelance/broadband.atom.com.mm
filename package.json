@@ -22,6 +22,7 @@
 		]
 	},
 	"dependencies": {
+		"@googlemaps/js-api-loader": "^1.16.2",
 		"@vueuse/components": "^10.7.2",
 		"flag-icons": "^7.1.0",
 		"swiper": "^11.0.5",
@@ -29,6 +30,7 @@
 	},
 	"devDependencies": {
 		"@nuxtjs/tailwindcss": "^6.11.0",
+		"@types/google.maps": "^3.55.2",
 		"@vueuse/nuxt": "^10.7.2",
 		"daisyui": "^4.6.0",
 		"nuxt": "^3.10.0",

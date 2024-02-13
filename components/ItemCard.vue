@@ -7,7 +7,7 @@ const props = defineProps({
 </script>
 
 <template>
-	<figure class="flex flex-col gap-1">
+	<figure class="flex cursor-pointer flex-col gap-1">
 		<div class="overflow-hidden">
 			<img
 				:src="props.imgUrl"
