@@ -79,9 +79,7 @@ const handleChangeLink = (link: number) => {
 					</div>
 				</div>
 
-				<Transition name="fade" mode="out-in" appear>
-					<component :is="components[activeLink]"></component>
-				</Transition>
+				<component :is="components[activeLink]"></component>
 			</div>
 
 			<!-- Service available locations -->

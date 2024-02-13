@@ -55,4 +55,7 @@ const { showModal } = useModal()
 .modal-box {
 	max-width: 48rem;
 }
+.modal-action {
+	display: block;
+}
 </style>
