@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { showModal } = useModal()
+</script>
+
 <template>
 	<div>
 		<!-- Home plan package lists -->
@@ -15,7 +19,9 @@
 				v-for="plan in fiberHomePlans"
 				:key="plan.title"
 			>
-				<ShopPlanCard :plan="plan" :planType="'fiber'" />
+				<ModalAction class="block" @click="() => showModal('shop-plan-id')">
+					<ShopPlanCard :plan="plan" :planType="'fiber'"
+				/></ModalAction>
 			</div>
 		</div>
 
@@ -34,8 +40,19 @@
 				v-for="plan in fiberBusinessPlans"
 				:key="plan.title"
 			>
-				<ShopPlanCard :plan="plan" :planType="'fiber'" />
+				<ModalAction @click="() => showModal('shop-plan-id')">
+					<ShopPlanCard :plan="plan" :planType="'fiber'"
+				/></ModalAction>
 			</div>
 		</div>
 	</div>
+	<ModalRoot id="shop-plan-id">
+		<ShopPlanDetail />
+	</ModalRoot>
 </template>
+
+<style scope>
+.modal-box {
+	max-width: 48rem;
+}
+</style>
