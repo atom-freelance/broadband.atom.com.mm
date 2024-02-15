@@ -258,7 +258,7 @@ const { showModal } = useModal()
 		</section>
 
 		<!-- Video -->
-		<section class="container sticky top-0 bg-white pt-40">
+		<section class="container sticky top-0 bg-white py-40">
 			<YoutubePlayer
 				src="https://www.youtube.com/embed/EqzbiXFPaAs?si=j04iNMEQUrYx4TBL&amp;controls=0"
 				autoplay

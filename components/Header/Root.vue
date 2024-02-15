@@ -70,21 +70,21 @@ const isLoggedIn = ref(true)
 				</article>
 
 				<!-- After logged in -->
-				<DropdownRoot v-show="isLoggedIn" v-slot="{ isOpen, toggle }">
+				<DropdownRoot v-show="isLoggedIn" v-slot="{ isOpen, close, toggle }">
 					<button class="btn btn-primary rounded-full" @click="toggle()">
 						<Icon name="user" /> Hi, Aungmin
 					</button>
 
-					<DropdownContent v-if="isOpen">
+					<DropdownContent v-show="isOpen">
 						<div class="card-body min-w-[230px] items-start gap-5">
 							<section>
 								<h3 class="text-title-subsection font-bold">Aungmin Soe</h3>
-								<span class="text-sm font-normal text-content-secondary"
-									>Account ID: 5000198</span
-								>
+								<span class="text-sm font-normal text-content-secondary">
+									Account ID: 5000198
+								</span>
 							</section>
 
-							<SidebarList @click="close">
+							<SidebarList @click="close()">
 								<li>
 									<SidebarItem
 										to="/dashboard/profile"
@@ -116,7 +116,7 @@ const isLoggedIn = ref(true)
 								<li>
 									<SidebarItem
 										to="/dashboard/relocate"
-										name="Relacate"
+										name="Relocate"
 										iconName="home-activity"
 									/>
 								</li>
@@ -145,8 +145,9 @@ const isLoggedIn = ref(true)
 								<Icon name="log-out" />
 								<span
 									class="duration-200 hover:font-bold hover:text-content-primary hover:ease-in-out"
-									>Logout</span
 								>
+									Logout
+								</span>
 							</button>
 						</div>
 					</DropdownContent>
