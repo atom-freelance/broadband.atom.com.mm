@@ -5,7 +5,7 @@ const { showModal } = useModal()
 <template>
 	<main class="pb-40">
 		<!-- Hero Section -->
-		<section class="hero-section">
+		<section class="container">
 			<article class="flex flex-col items-center">
 				<h1
 					class="mt-[40%] flex flex-col items-center text-4xl font-medium md:mt-[30%] md:text-5xl lg:mt-14 lg:text-title-hero 2xl:mt-20"
@@ -26,6 +26,10 @@ const { showModal } = useModal()
 					<Icon name="arrow-right" />
 				</NuxtLink>
 			</article>
+
+			<figure class="mt-32 hero-figure">
+				<img src="/hero_image.jpeg" class="aspect-video" />
+			</figure>
 		</section>
 
 		<!-- Product Explain -->
@@ -319,19 +323,7 @@ const { showModal } = useModal()
 </template>
 
 <style scoped>
-.hero-section {
-	height: calc(100svh - 6rem);
-	background: url(/hero_image.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position-y: 100%;
-}
-
-/* screen size: lg */
-@media (min-width: 1024px) {
-	.hero-section {
-		background-size: 100% auto;
-		background-position-y: 80%;
-	}
+.hero-figure {
+	box-shadow: 0px -40px 60px rgb(36, 73, 251, 0.35);
 }
 </style>

@@ -38,8 +38,8 @@ const sectionLinks = {
 	<footer class="relative bg-interactive-accent-hover pb-20 pt-6 text-white">
 		<section class="container grid grid-cols-1 space-y-4 lg:grid-cols-4">
 			<article>
-				<NuxtLink to="/" class="block w-40 rounded-lg bg-white px-6 py-4">
-					<img src="/logo.png" />
+				<NuxtLink to="/" class="block w-2/3 rounded-lg bg-white px-6 py-4">
+					<img src="/broadband_logo.jpeg" />
 				</NuxtLink>
 			</article>
 

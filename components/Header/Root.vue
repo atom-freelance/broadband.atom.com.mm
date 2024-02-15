@@ -51,8 +51,8 @@ const { showMenu, close, show } = useMenu()
 						<Icon name="menu" />
 					</button>
 
-					<NuxtLink to="/" class="inline-block h-4/5 w-40">
-						<img src="/logo.png" class="inline-block h-full" />
+					<NuxtLink to="/" class="inline-block h-3/5">
+						<img src="/broadband_logo.jpeg" class="inline-block h-full" />
 					</NuxtLink>
 
 					<HeaderNavMenu />
