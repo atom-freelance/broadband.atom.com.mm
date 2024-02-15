@@ -46,15 +46,12 @@ const { showModal } = useModal()
 			</div>
 		</div>
 	</div>
-	<ModalRoot id="shop-plan-id">
+	<ModalRoot id="shop-plan-id" class="max-w-12">
 		<ShopPlanDetail />
 	</ModalRoot>
 </template>
 
-<style scope>
-.modal-box {
-	max-width: 48rem;
-}
+<style scoped>
 .modal-action {
 	display: block;
 }

@@ -317,7 +317,7 @@ const { showModal } = useModal()
 			<ShopServiceAvailable />
 		</section>
 	</main>
-	<ModalRoot id="shop-plan-id">
+	<ModalRoot id="shop-plan-id" class="max-w-12">
 		<ShopPlanDetail />
 	</ModalRoot>
 </template>

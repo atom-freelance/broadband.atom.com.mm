@@ -36,7 +36,7 @@ const props = defineProps({
 	</div>
 </template>
 
-<style scope>
+<style scoped>
 th,
 td {
 	border: 1px solid #0e0f0c1f;
