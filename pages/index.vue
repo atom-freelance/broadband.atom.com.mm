@@ -27,7 +27,7 @@ const { showModal } = useModal()
 				</NuxtLink>
 			</article>
 
-			<figure class="mt-32 hero-figure">
+			<figure class="hero-figure mt-48">
 				<img src="/hero_image.jpeg" class="aspect-video" />
 			</figure>
 		</section>
@@ -324,6 +324,21 @@ const { showModal } = useModal()
 
 <style scoped>
 .hero-figure {
-	box-shadow: 0px -40px 60px rgb(36, 73, 251, 0.35);
+	position: relative;
+}
+
+.hero-figure::before {
+	position: absolute;
+	top: -50px;
+	content: '';
+	width: 100%;
+	height: 100px;
+	border-radius: 99999rem;
+	background: radial-gradient(
+		50% 50% at 50% 50%,
+		#2449fb 0%,
+		rgba(36, 73, 251, 0) 100%
+	);
+	filter: blur(40px);
 }
 </style>

@@ -9,5 +9,9 @@ export function useMenu() {
 		showMenu.value = false
 	}
 
-	return { showMenu, show, close }
+	function toggle() {
+		showMenu.value = !showMenu.value
+	}
+
+	return { showMenu, show, close, toggle }
 }

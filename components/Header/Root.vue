@@ -1,15 +1,11 @@
 <script setup lang="ts">
-import { vOnClickOutside } from '@vueuse/components'
-
 const drawer = useHeaderDrawer()
 
 const isLoggedIn = ref(true)
-
-const { showMenu, close, show } = useMenu()
 </script>
 
 <template>
-	<header class="sticky top-0 z-20">
+	<header class="sticky top-0 z-20 shadow">
 		<section class="h-8 bg-interactive-accent-hover text-body text-white">
 			<nav class="container flex h-full items-center justify-between">
 				<p>
@@ -17,29 +13,37 @@ const { showMenu, close, show } = useMenu()
 					<a href="tel:+959780008080" class="link">+959 780 008 080</a>
 				</p>
 
-				<DropdownRoot class="dropdown-end">
-					<DropdownTarget class="btn btn-ghost btn-xs flex items-center gap-1">
+				<DropdownRoot class="dropdown-end" v-slot="{ isOpen, toggle }">
+					<button
+						class="btn btn-ghost btn-xs flex items-center gap-1"
+						@click="toggle()"
+					>
 						<i
 							class="fi fi-gb inline-block !size-5 overflow-hidden rounded-full border border-white !bg-cover"
 						/>
 						<span>EN</span>
 						<Icon name="angle-down" size="1rem" />
-					</DropdownTarget>
+					</button>
 
-					<DropdownList class="text-content-secondary">
-						<li>
-							<a href="#en" class="">
-								<i class="fi fi-gb" />
-								<span>English</span>
-							</a>
-						</li>
-						<li>
-							<a href="#mm" class="">
-								<i class="fi fi-mm" />
-								<span>မြန်မာ</span>
-							</a>
-						</li>
-					</DropdownList>
+					<DropdownContent
+						v-show="isOpen"
+						class="min-w-[130px] py-4 text-content-secondary"
+					>
+						<ul class="flex flex-col items-stretch gap-2">
+							<li class="px-4 py-2 hover:bg-gray-100">
+								<a href="#en" class="flex gap-2">
+									<i class="fi fi-gb" />
+									<span>English</span>
+								</a>
+							</li>
+							<li class="px-4 py-2 hover:bg-gray-100">
+								<a href="#mm" class="flex gap-2">
+									<i class="fi fi-mm" />
+									<span>မြန်မာ</span>
+								</a>
+							</li>
+						</ul>
+					</DropdownContent>
 				</DropdownRoot>
 			</nav>
 		</section>
@@ -66,13 +70,13 @@ const { showMenu, close, show } = useMenu()
 				</article>
 
 				<!-- After logged in -->
-				<MenuRoot v-show="isLoggedIn">
-					<MenuTarget @click="show">
+				<DropdownRoot v-show="isLoggedIn" v-slot="{ isOpen, toggle }">
+					<button class="btn btn-primary rounded-full" @click="toggle()">
 						<Icon name="user" /> Hi, Aungmin
-					</MenuTarget>
+					</button>
 
-					<MenuList v-if="showMenu" v-on-click-outside="close">
-						<div class="card-body items-start gap-5">
+					<DropdownContent v-if="isOpen">
+						<div class="card-body min-w-[230px] items-start gap-5">
 							<section>
 								<h3 class="text-title-subsection font-bold">Aungmin Soe</h3>
 								<span class="text-sm font-normal text-content-secondary"
@@ -145,8 +149,8 @@ const { showMenu, close, show } = useMenu()
 								>
 							</button>
 						</div>
-					</MenuList>
-				</MenuRoot>
+					</DropdownContent>
+				</DropdownRoot>
 			</nav>
 		</section>
 	</header>
