@@ -95,7 +95,7 @@ function isTabActive(state: TabState) {
 								<DashboardStatus class="bg-categories-cash" name="Active" />
 							</td>
 							<td>
-								<NuxtLink :to="`/${1}`">
+								<NuxtLink :to="`/checkout-${1}`">
 									<DashboardActionButton
 										btnText="Renew Plan"
 										class="btn btn-xs bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
@@ -113,7 +113,7 @@ function isTabActive(state: TabState) {
 								<DashboardStatus class="bg-categories-cash" name="Active" />
 							</td>
 							<td>
-								<NuxtLink :to="`/${1}`">
+								<NuxtLink :to="`/checkout-${1}`">
 									<DashboardActionButton
 										btnText="Renew Plan"
 										class="btn btn-xs bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
@@ -131,7 +131,7 @@ function isTabActive(state: TabState) {
 								<DashboardStatus class="bg-categories-cash" name="Active" />
 							</td>
 							<td>
-								<NuxtLink :to="`/${1}`">
+								<NuxtLink :to="`/checkout-${1}`">
 									<DashboardActionButton
 										btnText="Renew Plan"
 										class="btn btn-xs bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
@@ -149,7 +149,7 @@ function isTabActive(state: TabState) {
 								<DashboardStatus class="bg-categories-cash" name="Active" />
 							</td>
 							<td>
-								<NuxtLink :to="`/${1}`">
+								<NuxtLink :to="`/checkout-${1}`">
 									<DashboardActionButton
 										btnText="Renew Plan"
 										class="btn btn-xs bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
@@ -197,7 +197,7 @@ function isTabActive(state: TabState) {
 								<DashboardStatus class="bg-categories-cash" name="Active" />
 							</td>
 							<td>
-								<NuxtLink :to="`/${1}`">
+								<NuxtLink :to="`/checkout-${1}`">
 									<DashboardActionButton
 										btnText="Renew Plan"
 										class="btn btn-xs bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
@@ -215,7 +215,7 @@ function isTabActive(state: TabState) {
 								<DashboardStatus class="bg-categories-cash" name="Active" />
 							</td>
 							<td>
-								<NuxtLink :to="`/${1}`">
+								<NuxtLink :to="`/checkout-${1}`">
 									<DashboardActionButton
 										btnText="Renew Plan"
 										class="btn btn-xs bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
@@ -233,7 +233,7 @@ function isTabActive(state: TabState) {
 								<DashboardStatus class="bg-categories-cash" name="Active" />
 							</td>
 							<td>
-								<NuxtLink :to="`/${1}`">
+								<NuxtLink :to="`/checkout-${1}`">
 									<DashboardActionButton
 										btnText="Renew Plan"
 										class="btn btn-xs bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
@@ -251,7 +251,7 @@ function isTabActive(state: TabState) {
 								<DashboardStatus class="bg-categories-cash" name="Active" />
 							</td>
 							<td>
-								<NuxtLink :to="`/${1}`">
+								<NuxtLink :to="`/checkout-${1}`">
 									<DashboardActionButton
 										btnText="Renew Plan"
 										class="btn btn-xs bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
@@ -299,7 +299,7 @@ function isTabActive(state: TabState) {
 								<DashboardStatus class="bg-categories-cash" name="Active" />
 							</td>
 							<td>
-								<NuxtLink :to="`/${1}`">
+								<NuxtLink :to="`/checkout-${1}`">
 									<DashboardActionButton
 										btnText="Renew Plan"
 										class="btn btn-xs bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
@@ -317,7 +317,7 @@ function isTabActive(state: TabState) {
 								<DashboardStatus class="bg-categories-cash" name="Active" />
 							</td>
 							<td>
-								<NuxtLink :to="`/${1}`">
+								<NuxtLink :to="`/checkout-${1}`">
 									<DashboardActionButton
 										btnText="Renew Plan"
 										class="btn btn-xs bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
@@ -335,7 +335,7 @@ function isTabActive(state: TabState) {
 								<DashboardStatus class="bg-categories-cash" name="Active" />
 							</td>
 							<td>
-								<NuxtLink :to="`/${1}`">
+								<NuxtLink :to="`/checkout-${1}`">
 									<DashboardActionButton
 										btnText="Renew Plan"
 										class="btn btn-xs bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
@@ -353,7 +353,7 @@ function isTabActive(state: TabState) {
 								<DashboardStatus class="bg-categories-cash" name="Active" />
 							</td>
 							<td>
-								<NuxtLink :to="`/${1}`">
+								<NuxtLink :to="`/checkout-${1}`">
 									<DashboardActionButton
 										btnText="Renew Plan"
 										class="btn btn-xs bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
