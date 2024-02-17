@@ -8,7 +8,7 @@ const { showModal } = useModal()
 		<section class="container">
 			<article class="flex flex-col items-center">
 				<h1
-					class="mt-[40%] flex flex-col items-center text-4xl font-medium md:mt-[30%] md:text-5xl lg:mt-14 lg:text-title-hero 2xl:mt-20"
+					class="mt-[40%] flex flex-col items-stretch text-4xl font-medium md:mt-[30%] md:text-5xl lg:mt-14 lg:text-center lg:text-title-hero 2xl:mt-20"
 				>
 					<span>The most</span>
 					<i class="font-extrabold">reliable high-speed</i>
