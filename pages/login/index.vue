@@ -10,9 +10,12 @@ let showPassword = ref(false)
 
 <template>
 	<div class="grid h-screen w-full grid-cols-1 lg:grid-cols-2">
-		<section class="hidden bg-interactive-accent-active lg:block"></section>
+		<section class="hidden md:relative lg:block">
+			<img src="/login_bg.png" class="h-full" />
+			<img src="/login_mascots.png" class="absolute bottom-0" />
+		</section>
 		<section
-			class="flex flex-col justify-center space-y-28 pb-10 pl-20 pr-36 pt-16"
+			class="flex flex-col justify-center space-y-28 p-8 md:relative md:-left-10 md:p-0"
 		>
 			<NuxtLink class="flex space-x-3 align-middle" to="/">
 				<Icon name="arrow-left" />
@@ -29,7 +32,7 @@ let showPassword = ref(false)
 						<input
 							type="text"
 							placeholder="Type here"
-							class="input input-bordered input-sm md:input-md"
+							class="input input-bordered input-sm md:input-md focus:border-interactive-secondary focus:outline-none"
 						/>
 					</label>
 
@@ -41,7 +44,7 @@ let showPassword = ref(false)
 							<input
 								:type="showPassword ? 'text' : 'password'"
 								placeholder="Type here"
-								class="input input-bordered input-error input-sm w-full md:input-md"
+								class="input input-bordered input-sm w-full border-2 border-sentiment-negative md:input-md focus:border-sentiment-negative-hover focus:outline-none"
 							/>
 
 							<div
@@ -49,32 +52,37 @@ let showPassword = ref(false)
 							>
 								<Icon
 									name="eye-closed"
-									class="1rem lg:1.5rem hover:cursor-pointer"
+									class="hover:cursor-pointer"
 									@click="() => (showPassword = true)"
 									v-show="!showPassword"
 								/>
 
 								<Icon
 									name="eye-slash"
-									class="1rem lg:1.5rem hover:cursor-pointer"
+									class="hover:cursor-pointer"
 									@click="() => (showPassword = false)"
 									v-show="showPassword"
 								/>
 							</div>
 						</div>
 						<div class="label justify-start space-x-1">
-							<Icon name="exclamation-circle" class="text-error" />
-							<span class="label-text-alt text-pretty text-xs text-error">
+							<Icon name="exclamation-circle" class="text-sentiment-negative" />
+							<span
+								class="label-text-alt text-pretty text-xs text-sentiment-negative"
+							>
 								These password does not match our records.
 							</span>
 						</div>
 					</label>
 
 					<div class="flex w-full flex-col space-y-3 text-center">
-						<button type="submit" class="btn btn-primary btn-sm md:btn-md">
+						<button
+							type="submit"
+							class="btn btn-sm bg-interactive-accent text-white md:btn-md"
+						>
 							Login
 						</button>
-						<NuxtLink to="#" class="text-xs text-primary md:text-lg"
+						<NuxtLink to="#" class="text-xs text-interactive-accent md:text-lg"
 							>Forgot Password?</NuxtLink
 						>
 					</div>
