@@ -314,9 +314,10 @@ const { showModal } = useModal()
 		</section>
 
 		<section class="sticky bg-white pt-40">
-			<ShopServiceAvailable />
+			<CheckServiceAvailability />
 		</section>
 	</main>
+
 	<ModalRoot id="shop-plan-id" class="max-w-12">
 		<ShopPlanDetail />
 	</ModalRoot>

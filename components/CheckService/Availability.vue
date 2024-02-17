@@ -22,11 +22,12 @@
 							we need to check service availability at your address where you
 							want to use the service.
 						</p>
-						<button
+						<NuxtLink
+							to="/check_service_availability"
 							class="btn w-64 rounded-full bg-interactive-accent px-6 py-3 text-base font-semibold text-white hover:bg-interactive-accent-hover max-md:self-center"
 						>
 							Check service available
-						</button>
+						</NuxtLink>
 					</div>
 					<div class="pb-4 max-sm:hidden max-sm:text-center">
 						<img src="~/assets/img/arrow-down-curve.png" alt="arrow-down" />

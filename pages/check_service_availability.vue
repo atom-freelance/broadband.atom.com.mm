@@ -11,6 +11,6 @@
 			Please ensure to register with correct location.
 		</p>
 
-		<ShopServiceLocation />
+		<CheckServiceLocation />
 	</div>
 </template>

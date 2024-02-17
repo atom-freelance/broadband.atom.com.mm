@@ -83,7 +83,7 @@ const handleChangeLink = (link: number) => {
 			</div>
 
 			<!-- Service available locations -->
-			<ShopServiceAvailable />
+			<CheckServiceAvailability />
 		</div>
 	</div>
 </template>
