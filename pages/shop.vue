@@ -7,7 +7,7 @@ import FlexiNet from '~/components/Shop/FlexiNetPlans.vue'
 type LinkType = 'Fiber' | 'Wireless' | 'Flexi net' | 'Mini Pro'
 
 const activeLink = ref(0)
-const menuLinks: LinkType[] = reactive([
+const menuLinks = reactive<LinkType[]>([
 	'Fiber',
 	'Wireless',
 	'Flexi net',

@@ -29,12 +29,12 @@ npm run dev
 
 ---
 
-## Production
+## Production (Static Site)
 
 Build the application for production:
 
 ```bash
-npm run build
+npm run generate
 ```
 
 Preview production build:
@@ -43,14 +43,16 @@ Preview production build:
 npm run preview
 ```
 
+You can deploy by uploading `dist` folder to hosting services. (eg. `AWS S3`)
+
 ---
 
-## Production Static Site
+## Production (Server Side Rendering)
 
 Build the application for production:
 
 ```bash
-npm run generate
+npm run build
 ```
 
 Preview production build:

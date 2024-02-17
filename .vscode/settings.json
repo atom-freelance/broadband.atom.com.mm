@@ -2,6 +2,7 @@
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"cSpell.words": [
 		"daisyui",
+		"Flexi",
 		"Nuxt",
 		"nuxtjs",
 		"tailwindcss",
