@@ -59,8 +59,8 @@ let showNewPassword = ref(false)
 	</div>
 
 	<!-- Change phone number Modal Section -->
-	<ModalRoot id="phone-number">
-		<div class="flex items-center justify-between pt-4">
+	<ModalRoot id="phone-number" class="px-0">
+		<div class="flex items-center justify-between px-8 pt-4">
 			<h3 class="text-title-body font-semibold">Change phone number</h3>
 
 			<button
@@ -73,7 +73,7 @@ let showNewPassword = ref(false)
 
 		<span class="divider my-0" />
 
-		<ModalBackdrop enableClose>
+		<ModalBackdrop class="px-8" enableClose>
 			<div class="flex flex-col gap-6 py-8 text-content-primary">
 				<label class="form-control w-full">
 					<div class="label">
@@ -100,7 +100,7 @@ let showNewPassword = ref(false)
 
 		<span class="divider my-0" />
 
-		<ModalAction class="my-5">
+		<ModalAction class="my-5 px-8">
 			<div class="w-full text-center">
 				<DashboardActionButton
 					type="submit"
@@ -118,8 +118,8 @@ let showNewPassword = ref(false)
 	</ModalRoot>
 
 	<!-- Enter Phone Code Modal Section -->
-	<ModalRoot id="phone-code-id">
-		<div class="flex items-center justify-between pt-4">
+	<ModalRoot id="phone-code-id" class="px-0">
+		<div class="flex items-center justify-between px-8 pt-4">
 			<h3 class="text-title-body font-semibold">Change phone number</h3>
 
 			<button
@@ -132,7 +132,7 @@ let showNewPassword = ref(false)
 
 		<span class="divider my-0" />
 
-		<ModalBackdrop enableClose>
+		<ModalBackdrop class="px-8" enableClose>
 			<div class="flex flex-col gap-6 py-8 text-content-primary">
 				<p class="font-normal text-content-primary">
 					Enter the 6-digit code we just send +95 912345678.
@@ -159,7 +159,7 @@ let showNewPassword = ref(false)
 
 		<span class="divider my-0" />
 
-		<ModalAction class="my-5">
+		<ModalAction class="my-5 px-8">
 			<div class="w-full text-center">
 				<DashboardActionButton
 					type="submit"
@@ -172,8 +172,8 @@ let showNewPassword = ref(false)
 	</ModalRoot>
 
 	<!-- Change Email Modal Section -->
-	<ModalRoot id="email-address">
-		<div class="flex items-center justify-between pt-4">
+	<ModalRoot id="email-address" class="px-0">
+		<div class="flex items-center justify-between px-8 pt-4">
 			<h3 class="text-title-body font-semibold">Change email address</h3>
 
 			<button
@@ -186,7 +186,7 @@ let showNewPassword = ref(false)
 
 		<span class="divider my-0" />
 
-		<ModalBackdrop enableClose>
+		<ModalBackdrop class="px-8" enableClose>
 			<div class="flex flex-col gap-6 py-8 text-content-primary">
 				<label class="form-control w-full">
 					<div class="label">
@@ -213,7 +213,7 @@ let showNewPassword = ref(false)
 
 		<span class="divider my-0" />
 
-		<ModalAction class="my-5">
+		<ModalAction class="my-5 px-8">
 			<div class="w-full text-center">
 				<DashboardActionButton
 					type="submit"
@@ -231,8 +231,8 @@ let showNewPassword = ref(false)
 	</ModalRoot>
 
 	<!-- Enter Email Code Modal Section -->
-	<ModalRoot id="email-code-id">
-		<div class="flex items-center justify-between pt-4">
+	<ModalRoot id="email-code-id" class="px-0">
+		<div class="flex items-center justify-between px-8 pt-4">
 			<h3 class="text-title-body font-semibold">Change email address</h3>
 
 			<button
@@ -245,7 +245,7 @@ let showNewPassword = ref(false)
 
 		<span class="divider my-0" />
 
-		<ModalBackdrop enableClose>
+		<ModalBackdrop class="px-8" enableClose>
 			<div class="flex flex-col gap-6 py-8 text-content-primary">
 				<p class="font-normal text-content-primary">
 					Enter the 6-digit code we just send ams@atom.com.mm.
@@ -272,7 +272,7 @@ let showNewPassword = ref(false)
 
 		<span class="divider my-0" />
 
-		<ModalAction class="my-5">
+		<ModalAction class="my-5 px-8">
 			<div class="w-full text-center">
 				<DashboardActionButton
 					type="submit"
@@ -285,8 +285,8 @@ let showNewPassword = ref(false)
 	</ModalRoot>
 
 	<!-- Change Password Modal Section -->
-	<ModalRoot id="password">
-		<div class="flex items-center justify-between pt-4">
+	<ModalRoot id="password" class="px-0">
+		<div class="flex items-center justify-between px-8 pt-4">
 			<h3 class="text-title-body font-semibold">Change password</h3>
 
 			<button
@@ -299,7 +299,7 @@ let showNewPassword = ref(false)
 
 		<span class="divider my-0" />
 
-		<ModalBackdrop enableClose>
+		<ModalBackdrop class="px-8" enableClose>
 			<div class="flex flex-col gap-6 py-8 text-content-primary">
 				<label class="form-control">
 					<div class="label">
@@ -366,7 +366,7 @@ let showNewPassword = ref(false)
 
 		<span class="divider my-0" />
 
-		<ModalAction class="my-5">
+		<ModalAction class="my-5 px-8">
 			<div class="w-full text-center">
 				<DashboardActionButton
 					type="submit"

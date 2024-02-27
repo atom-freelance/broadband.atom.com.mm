@@ -159,8 +159,8 @@ const { showModal, closeModal } = useModal()
 	</article>
 
 	<!-- Change Phone number Modal Section -->
-	<ModalRoot id="phone-number">
-		<div class="flex items-center justify-between pt-4">
+	<ModalRoot id="phone-number" class="px-0">
+		<div class="flex items-center justify-between px-8 pt-4">
 			<h3 class="text-title-body">Change phone number</h3>
 
 			<button
@@ -173,7 +173,7 @@ const { showModal, closeModal } = useModal()
 
 		<span class="divider my-0" />
 
-		<ModalBackdrop enableClose>
+		<ModalBackdrop class="px-8" enableClose>
 			<div class="flex flex-col gap-6 py-8 text-content-primary">
 				<label class="form-control w-full">
 					<div class="label">
@@ -200,7 +200,7 @@ const { showModal, closeModal } = useModal()
 
 		<span class="divider my-0" />
 
-		<ModalAction class="my-5">
+		<ModalAction class="my-5 px-8">
 			<div class="w-full text-center">
 				<DashboardActionButton
 					type="submit"
@@ -213,8 +213,8 @@ const { showModal, closeModal } = useModal()
 	</ModalRoot>
 
 	<!-- Claim Modal Section -->
-	<ModalRoot id="claim">
-		<div class="flex items-center justify-between pt-4">
+	<ModalRoot id="claim" class="px-0">
+		<div class="flex items-center justify-between px-8 pt-4">
 			<h3 class="text-title-body">Claim the benefit</h3>
 
 			<button
@@ -227,7 +227,7 @@ const { showModal, closeModal } = useModal()
 
 		<span class="divider my-0" />
 
-		<ModalBackdrop enableClose>
+		<ModalBackdrop class="px-8" enableClose>
 			<div class="flex flex-col gap-6 py-8 text-content-primary">
 				<label class="form-control w-full">
 					<div class="label">
@@ -244,7 +244,7 @@ const { showModal, closeModal } = useModal()
 
 		<span class="divider my-0" />
 
-		<ModalAction class="my-5">
+		<ModalAction class="my-5 px-8">
 			<div class="w-full text-center">
 				<DashboardActionButton
 					type="submit"

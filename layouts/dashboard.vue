@@ -60,7 +60,7 @@
 				</li>
 			</SidebarList>
 		</div>
-		<div class="col-span-6 p-10 pl-0 lg:col-span-9">
+		<div class="col-span-6 min-h-[500px] p-10 pl-0 lg:col-span-9">
 			<slot />
 		</div>
 	</div>
