@@ -144,12 +144,7 @@ const isLoggedIn = ref(true)
 								type="button"
 								class="flex items-center gap-2 text-interactive-negative"
 							>
-								<Icon name="log-out" />
-								<span
-									class="duration-200 hover:font-bold hover:text-content-primary hover:ease-in-out"
-								>
-									Logout
-								</span>
+								<SidebarItem to="/login" name="Logout" iconName="log-out" />
 							</button>
 						</div>
 					</DropdownContent>

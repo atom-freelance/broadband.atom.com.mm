@@ -204,10 +204,10 @@ const { showModal, closeModal } = useModal()
 	</DataTable>
 
 	<!-- Billing Modal Section -->
-	<ModalRoot id="billing">
+	<ModalRoot id="billing" class="px-0">
 		<section class="flex flex-col gap-5">
 			<section>
-				<div class="flex items-center justify-between pt-4">
+				<div class="flex items-center justify-between px-8 pt-4">
 					<h3 class="text-title-body">Billing Detail - B000240</h3>
 
 					<button
@@ -221,7 +221,7 @@ const { showModal, closeModal } = useModal()
 				<span class="divider my-0" />
 			</section>
 
-			<ModalBackdrop enableClose>
+			<ModalBackdrop class="px-8" enableClose>
 				<article class="card gap-5 rounded border p-5 text-content-primary">
 					<!-- customer information -->
 					<section class="flex flex-col gap-6">
@@ -326,7 +326,7 @@ const { showModal, closeModal } = useModal()
 				<section class="w-full">
 					<span class="divider mt-0" />
 
-					<div class="text-center">
+					<div class="px-8 text-center">
 						<DashboardActionButton
 							type="submit"
 							btnText="Download"

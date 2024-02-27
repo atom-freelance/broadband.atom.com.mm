@@ -6,16 +6,20 @@ definePageMeta({
 })
 
 let showPassword = ref(false)
+
+const login = async () => {
+	await navigateTo('/')
+}
 </script>
 
 <template>
 	<div class="grid h-screen w-full grid-cols-1 lg:grid-cols-2">
-		<section class="hidden md:relative lg:block">
+		<section class="hidden lg:relative lg:block">
 			<img src="/login_bg.png" class="h-full" />
 			<img src="/login_mascots.png" class="absolute bottom-0" />
 		</section>
 		<section
-			class="flex flex-col justify-center space-y-28 p-8 md:relative md:-left-10 md:p-0"
+			class="flex flex-col justify-center space-y-28 p-8 lg:relative lg:-left-10 lg:p-0"
 		>
 			<NuxtLink class="flex space-x-3 align-middle" to="/">
 				<Icon name="arrow-left" />
@@ -24,7 +28,10 @@ let showPassword = ref(false)
 
 			<div class="flex flex-col space-y-3 md:space-y-6">
 				<h3 class="text-xl font-bold md:text-3xl">Login here</h3>
-				<form @submit.prevent="" class="flex flex-col space-y-2 md:space-y-6">
+				<form
+					@submit.prevent="login"
+					class="flex flex-col space-y-2 md:space-y-6"
+				>
 					<label class="form-control">
 						<div class="label">
 							<span class="label-text">Primary phone</span>

@@ -275,8 +275,8 @@ const { showModal, closeModal } = useModal()
 	</ModalRoot>
 
 	<!-- Relocate address -->
-	<ModalRoot id="relocate-address">
-		<div class="flex items-center justify-between pt-4">
+	<ModalRoot id="relocate-address" class="px-0">
+		<div class="flex items-center justify-between px-8 pt-4">
 			<h3 class="text-title-body">Change phone number</h3>
 
 			<button
@@ -289,7 +289,7 @@ const { showModal, closeModal } = useModal()
 
 		<span class="divider my-0" />
 
-		<ModalBackdrop enableClose>
+		<ModalBackdrop class="px-8" enableClose>
 			<div class="flex flex-col gap-6 py-8 text-content-primary">
 				<label class="form-control w-full">
 					<div class="label">
@@ -323,7 +323,7 @@ const { showModal, closeModal } = useModal()
 
 		<span class="divider my-0" />
 
-		<ModalAction class="my-5 justify-between">
+		<ModalAction class="my-5 justify-between px-8">
 			<DashboardActionButton
 				type="submit"
 				btnText="Change location"
