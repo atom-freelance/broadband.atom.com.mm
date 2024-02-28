@@ -1,6 +1,6 @@
 <script setup lang="ts">
+const switchLocalePath = useSwitchLocalePath()
 const drawer = useHeaderDrawer()
-
 const isLoggedIn = ref(true)
 </script>
 
@@ -9,7 +9,7 @@ const isLoggedIn = ref(true)
 		<section class="h-8 bg-interactive-accent-hover text-body text-white">
 			<nav class="container flex h-full items-center justify-between">
 				<p>
-					<span>Contact Us : </span>
+					<span>{{ $t('common.contact_us') }} : </span>
 					<a href="tel:+959780008080" class="link">+959 780 008 080</a>
 				</p>
 
@@ -19,9 +19,13 @@ const isLoggedIn = ref(true)
 						@click="toggle()"
 					>
 						<i
-							class="fi fi-gb inline-block !size-5 overflow-hidden rounded-full border border-white !bg-cover"
+							class="fi inline-block !size-5 overflow-hidden rounded-full border border-white !bg-cover"
+							:class="{
+								'fi-gb': $i18n.locale === 'en',
+								'fi-mm': $i18n.locale === 'mm',
+							}"
 						/>
-						<span>EN</span>
+						<span class="uppercase">{{ $i18n.locale }}</span>
 						<Icon name="angle-down" size="1rem" />
 					</button>
 
@@ -31,16 +35,16 @@ const isLoggedIn = ref(true)
 					>
 						<ul class="flex flex-col items-stretch gap-2">
 							<li class="px-4 py-2 hover:bg-gray-100">
-								<a href="#en" class="flex gap-2">
+								<NuxtLink :to="switchLocalePath('en')" class="flex gap-2">
 									<i class="fi fi-gb" />
 									<span>English</span>
-								</a>
+								</NuxtLink>
 							</li>
 							<li class="px-4 py-2 hover:bg-gray-100">
-								<a href="#mm" class="flex gap-2">
+								<NuxtLink :to="switchLocalePath('mm')" class="flex gap-2">
 									<i class="fi fi-mm" />
 									<span>မြန်မာ</span>
-								</a>
+								</NuxtLink>
 							</li>
 						</ul>
 					</DropdownContent>
@@ -55,18 +59,18 @@ const isLoggedIn = ref(true)
 						<Icon name="menu" />
 					</button>
 
-					<NuxtLink to="/" class="inline-block h-3/5">
+					<NuxtLinkLocale to="/" class="inline-block h-3/5">
 						<img src="/broadband_logo.jpeg" class="inline-block h-full" />
-					</NuxtLink>
+					</NuxtLinkLocale>
 
 					<HeaderNavMenu />
 				</article>
 
 				<!-- Guest user -->
 				<article v-show="!isLoggedIn">
-					<NuxtLink to="/login" class="btn btn-primary rounded-full">
+					<NuxtLinkLocale to="/login" class="btn btn-primary rounded-full">
 						Login
-					</NuxtLink>
+					</NuxtLinkLocale>
 				</article>
 
 				<!-- After logged in -->

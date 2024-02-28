@@ -3,7 +3,7 @@ export default defineNuxtConfig({
 	// devtools: { enabled: true },
 	experimental: { typedPages: true },
 	devServer: { port: 4000 },
-	modules: ['@nuxtjs/tailwindcss', '@vueuse/nuxt'],
+	modules: ['@nuxtjs/tailwindcss', '@vueuse/nuxt', '@nuxtjs/i18n'],
 	css: ['flag-icons/css/flag-icons.min.css'],
 	app: {
 		head: {
@@ -19,5 +19,20 @@ export default defineNuxtConfig({
 				class: 'text-content-primary scroll-smooth',
 			},
 		},
+	},
+	i18n: {
+		strategy: 'prefix_except_default',
+		langDir: 'i18n',
+		defaultLocale: 'en',
+		locales: [
+			{
+				code: 'en',
+				file: 'en.js',
+			},
+			{
+				code: 'mm',
+				file: 'mm.js',
+			},
+		],
 	},
 })
