@@ -63,7 +63,7 @@ const textClass = reactive({
 		</div>
 		<div class="py-3.5">
 			<div class="flex items-center justify-between">
-				<p class="text-lg font-semibold">{{ plan.title }}</p>
+				<p class="text-lg font-semibold">{{ $t(plan.title as string) }}</p>
 				<Icon
 					:name="'info-circle'"
 					class="rounded-full bg-interactive-accent text-white"
@@ -72,7 +72,7 @@ const textClass = reactive({
 			<p v-if="plan.subtitle" class="my-1 leading-6 text-content-primary">
 				{{ plan.subtitle }}
 			</p>
-			<p class="leading-6 text-content-primary">{{ plan.tax }}</p>
+			<p class="leading-6 text-content-primary">{{ $t(plan.tax as string) }}</p>
 			<p class="mt-4">
 				<span class="text-lg font-semibold"
 					>{{
