@@ -52,7 +52,7 @@ const { showModal } = useModal()
 			</div>
 		</div>
 	</div>
-	<ModalRoot id="shop-plan-id" class="max-w-12">
+	<ModalRoot id="shop-plan-id" class="max-w-[800px]">
 		<ShopPlanDetail />
 	</ModalRoot>
 </template>
