@@ -20,7 +20,10 @@ const { showModal } = useModal()
 				:key="plan.title"
 			>
 				<ModalAction class="block" @click="() => showModal('shop-plan-id')">
-					<ShopPlanCard :plan="plan" :planType="'fiber'"
+					<ShopPlanCard
+						:plan="plan"
+						:planType="'fiber'"
+						:imagePath="plan.imagePath"
 				/></ModalAction>
 			</div>
 		</div>
@@ -41,7 +44,10 @@ const { showModal } = useModal()
 				:key="plan.title"
 			>
 				<ModalAction @click="() => showModal('shop-plan-id')">
-					<ShopPlanCard :plan="plan" :planType="'fiber'"
+					<ShopPlanCard
+						:plan="plan"
+						:planType="'fiber'"
+						:imagePath="plan.imagePath"
 				/></ModalAction>
 			</div>
 		</div>

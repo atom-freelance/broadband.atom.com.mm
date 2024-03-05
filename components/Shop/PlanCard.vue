@@ -23,6 +23,10 @@ const props = defineProps({
 		type: Boolean,
 		default: () => true,
 	},
+	imagePath: {
+		type: String,
+		default: () => '/shop/Fiber-Starter-Kit-1.jpg',
+	},
 })
 const { plan, planType } = props
 
@@ -40,20 +44,22 @@ const textClass = reactive({
 
 <template>
 	<div>
-		<div
-			:class="[
-				bgClass,
-				'flex h-72 origin-center items-end  p-6 transition duration-300',
-			]"
-		>
-			<p
+		<div class="h-60 overflow-hidden">
+			<div
+				:class="[
+					'flex h-60 w-full origin-bottom items-end bg-cover bg-no-repeat transition duration-300 group-hover:scale-110',
+				]"
+				:style="{ 'background-image': `url(${props.imagePath})` }"
+			>
+				<!-- <p
 				:class="[
 					textClass,
 					'origin-bottom-left text-6xl font-black transition duration-300 group-hover:scale-150',
 				]"
 			>
 				ATOM
-			</p>
+			</p> -->
+			</div>
 		</div>
 		<div class="py-3.5">
 			<div class="flex items-center justify-between">
