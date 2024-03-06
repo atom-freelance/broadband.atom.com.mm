@@ -11,10 +11,6 @@ const pageTitle = computed(() => {
 
 const visitedHash = ref('')
 
-function isVisitedHash(hash: string) {
-	return route.hash === `#${snakeCase(hash)}`
-}
-
 function scrollToId(id: string) {
 	visitedHash.value = id
 	document.getElementById(id)?.scrollIntoView({
@@ -59,8 +55,7 @@ function scrollToId(id: string) {
 		<section class="lg:col-span-4">
 			<h3 class="text-title-screen font-semibold">{{ pageTitle }}</h3>
 
-			<!-- :id="snakeCase(section.sectionTitle)" -->
-			<section v-for="section in faqSections" s="pt-14">
+			<section v-for="section in faqSections" class="pt-14">
 				<h5
 					:id="snakeCase(section.sectionTitle)"
 					class="mb-2 text-title-body font-semibold text-content-primary"
