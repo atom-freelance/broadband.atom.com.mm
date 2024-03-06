@@ -9,8 +9,18 @@ const pageTitle = computed(() => {
 	return faqPages.flat().find((p) => p.to === route.path)?.title || ''
 })
 
+const visitedHash = ref('')
+
 function isVisitedHash(hash: string) {
 	return route.hash === `#${snakeCase(hash)}`
+}
+
+function scrollToId(id: string) {
+	visitedHash.value = id
+	document.getElementById(id)?.scrollIntoView({
+		behavior: 'smooth',
+		block: 'center', // vertical alignment
+	})
 }
 </script>
 
@@ -18,6 +28,7 @@ function isVisitedHash(hash: string) {
 	<main
 		class="container relative mb-40 mt-10 grid grid-cols-1 gap-8 lg:grid-cols-8"
 	>
+		<!-- Left Side FAQ Pages -->
 		<nav
 			class="hidden lg:sticky lg:top-28 lg:col-span-2 lg:block lg:self-start"
 		>
@@ -44,15 +55,16 @@ function isVisitedHash(hash: string) {
 			</article>
 		</nav>
 
+		<!-- FAQs -->
 		<section class="lg:col-span-4">
 			<h3 class="text-title-screen font-semibold">{{ pageTitle }}</h3>
 
-			<section
-				v-for="section in faqSections"
-				:id="snakeCase(section.sectionTitle)"
-				class="pt-14"
-			>
-				<h5 class="mb-2 text-title-body font-semibold text-content-primary">
+			<!-- :id="snakeCase(section.sectionTitle)" -->
+			<section v-for="section in faqSections" s="pt-14">
+				<h5
+					:id="snakeCase(section.sectionTitle)"
+					class="mb-2 text-title-body font-semibold text-content-primary"
+				>
 					{{ section.sectionTitle }}
 				</h5>
 
@@ -62,6 +74,7 @@ function isVisitedHash(hash: string) {
 			</section>
 		</section>
 
+		<!-- Right Side Table of Contents -->
 		<aside
 			class="hidden lg:sticky lg:top-28 lg:col-span-2 lg:block lg:self-start"
 		>
@@ -73,15 +86,18 @@ function isVisitedHash(hash: string) {
 				<a
 					v-for="section in faqSections"
 					:href="`#${snakeCase(section.sectionTitle)}`"
+					@click.prevent="scrollToId(snakeCase(section.sectionTitle))"
 					class="flex cursor-pointer items-center gap-2 text-body-large text-content-tertiary hover:text-interactive-accent-hover"
 					:class="{
-						'text-interactive-accent': isVisitedHash(section.sectionTitle),
+						'text-interactive-accent':
+							visitedHash === snakeCase(section.sectionTitle),
 					}"
 				>
 					<i
 						class="size-2 rounded-full"
 						:class="{
-							'bg-interactive-accent': isVisitedHash(section.sectionTitle),
+							'bg-interactive-accent':
+								visitedHash === snakeCase(section.sectionTitle),
 						}"
 					/>
 					<span>{{ section.sectionTitle }}</span>
