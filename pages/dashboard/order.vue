@@ -1,12 +1,22 @@
 <template>
-	<DataTable title="Order" description="Manage and your personal information">
+	<DataTable :title="$t('order.title')" :description="$t('order.subtitle')">
 		<template #thead>
 			<tr>
-				<DataTableHeader iconName="hashtag"> Order ID </DataTableHeader>
-				<DataTableHeader iconName="menu-left"> Product name </DataTableHeader>
-				<DataTableHeader iconName="map">Address</DataTableHeader>
-				<DataTableHeader iconName="dollar-circle">Price</DataTableHeader>
-				<DataTableHeader iconName="papers">Status</DataTableHeader>
+				<DataTableHeader iconName="hashtag">
+					{{ $t('order.order_id') }}
+				</DataTableHeader>
+				<DataTableHeader iconName="menu-left">
+					{{ $t('order.product_name') }}
+				</DataTableHeader>
+				<DataTableHeader iconName="map">
+					{{ $t('order.address') }}
+				</DataTableHeader>
+				<DataTableHeader iconName="dollar-circle">
+					{{ $t('order.price') }}
+				</DataTableHeader>
+				<DataTableHeader iconName="papers">
+					{{ $t('order.status') }}
+				</DataTableHeader>
 			</tr>
 		</template>
 

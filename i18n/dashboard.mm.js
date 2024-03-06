@@ -66,4 +66,67 @@ export default {
 	// ============================================================
 	// #endregion Subscription
 	// ============================================================
+
+	// ============================================================
+	// #region Order
+	// ============================================================
+	'order.title': 'အော်ဒါမှတ်တမ်း',
+	'order.subtitle': 'Manage and your personal information',
+	'order.order_id': 'Order ID',
+	'order.product_name': 'product အမည်',
+	'order.address': 'ဝန်ဆောင်မှုသုံးစွဲမည့်နေရာ',
+	'order.price': 'စျေးနှုန်း',
+	'order.status': 'အခြေအနေ',
+	// ============================================================
+	// #endregion Order
+	// ============================================================
+
+	// ============================================================
+	// #region Billing
+	// ============================================================
+	'billing.title': 'ငွေပေးသွင်းမှုမှတ်တမ်း',
+	'billing.subtitle': 'Manage and your personal information',
+	'billing.date': 'Date',
+	'billing.product_name': 'Product Name',
+	'billing.order_id': 'Order ID',
+	'billing.subscription_id': 'Subscription ID',
+	'billing.status': 'Status',
+	'billing.price': 'Price',
+	// ============================================================
+	// #endregion Billing
+	// ============================================================
+
+	// ============================================================
+	// #region Relocate
+	// ============================================================
+	'relocate.title': 'Relocate',
+	'relocate.subtitle': 'Manage and your personal information',
+	'relocate.cpe_device': 'CPE Device(IMEI)',
+	'relocate.relocate_address': 'ပြောင်းရွှေ့သုံးစွဲမည့်နေရာ',
+	'relocate.action': 'လုပ်ဆောင်ချက်',
+	// ============================================================
+	// #endregion Relocate
+	// ============================================================
+
+	// ============================================================
+	// #region T&C acceptance
+	// ============================================================
+	't&c_acceptance.title': 'Term & Condition',
+	't&c_acceptance.subtitle': 'Manage and your personal information',
+	't&c_acceptance.date': 'Date',
+	't&c_acceptance.t&c_name': 'T&C Name',
+	't&c_acceptance.download': 'Download',
+	// ============================================================
+	// #endregion T&C acceptance
+	// ============================================================
+
+	// ============================================================
+	// #region T&C acceptance
+	// ============================================================
+	'mobile_bundle.title': 'Mobile bundle',
+	'mobile_bundle.subtitle':
+		'Congratulation !!! You are eligible to claim the mobile benefits.',
+	// ============================================================
+	// #endregion T&C acceptance
+	// ============================================================
 }
