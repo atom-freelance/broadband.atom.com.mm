@@ -4,16 +4,20 @@ const { showModal, closeModal } = useModal()
 
 <template>
 	<DataTable
-		title="Relocate"
-		description="Manage and your personal information"
+		:title="$t('relocate.title')"
+		:description="$t('relocate.subtitle')"
 	>
 		<template #thead>
 			<tr>
-				<DataTableHeader iconName="hard-drive"
-					>CPE Device(IMEI)</DataTableHeader
-				>
-				<DataTableHeader iconName="route"> Relocate address</DataTableHeader>
-				<DataTableHeader iconName="settings">Action</DataTableHeader>
+				<DataTableHeader iconName="hard-drive">
+					{{ $t('relocate.cpe_device') }}
+				</DataTableHeader>
+				<DataTableHeader iconName="route">
+					{{ $t('relocate.relocate_address') }}
+				</DataTableHeader>
+				<DataTableHeader iconName="settings">
+					{{ $t('relocate.action') }}
+				</DataTableHeader>
 			</tr>
 		</template>
 
@@ -198,7 +202,7 @@ const { showModal, closeModal } = useModal()
 	<!-- Relocate Map -->
 	<ModalRoot id="relocate-map" isFullWidth class="mx-auto w-[965px]">
 		<div class="flex items-center justify-between py-4">
-			<h3 class="text-title-body">Relocate Address</h3>
+			<h3 class="text-title-body">{{ $t('relocate.relocate_address') }}</h3>
 
 			<button
 				class="btn btn-circle btn-ghost btn-sm text-content-primary lg:text-lg"
