@@ -94,49 +94,49 @@ const isLoggedIn = ref(true)
 								<li>
 									<SidebarItem
 										to="/dashboard/profile"
-										name="Profile"
+										:name="$t('common.menu.profile')"
 										iconName="user-circle"
 									/>
 								</li>
 								<li>
 									<SidebarItem
 										to="/dashboard/subscription"
-										name="Subscription"
+										:name="$t('common.menu.subscription')"
 										iconName="receipt-text"
 									/>
 								</li>
 								<li>
 									<SidebarItem
 										to="/dashboard/order"
-										name="Order"
+										:name="$t('common.menu.order')"
 										iconName="truck"
 									/>
 								</li>
 								<li>
 									<SidebarItem
 										to="/dashboard/billing"
-										name="Billing"
+										:name="$t('common.menu.billing')"
 										iconName="dollar-circle"
 									/>
 								</li>
 								<li>
 									<SidebarItem
 										to="/dashboard/relocate"
-										name="Relocate"
+										:name="$t('common.menu.relocate')"
 										iconName="home-activity"
 									/>
 								</li>
 								<li>
 									<SidebarItem
 										to="/dashboard/term-and-condition"
-										name="T&C acceptance"
+										:name="$t('common.menu.t&c_acceptance')"
 										iconName="badge-check"
 									/>
 								</li>
 								<li>
 									<SidebarItem
 										to="/dashboard/mobile-bundle"
-										name="Mobile bundle"
+										:name="$t('common.menu.mobile_bundle')"
 										iconName="mobile"
 									/>
 								</li>
