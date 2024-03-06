@@ -28,7 +28,7 @@ const isRouteActive = computed(() => route.path.includes(props.to))
 </script>
 
 <template>
-	<NuxtLink :to="props.to">
+	<NuxtLinkLocale :to="props.to">
 		<div class="flex gap-2">
 			<span
 				v-show="props.enableLeftSideBorder"
@@ -47,5 +47,5 @@ const isRouteActive = computed(() => route.path.includes(props.to))
 				<span class="text-sm">{{ props.name }}</span>
 			</div>
 		</div>
-	</NuxtLink>
+	</NuxtLinkLocale>
 </template>

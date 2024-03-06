@@ -48,6 +48,7 @@ const togglePlanType = () => {
 					:plan="plan"
 					:planType="'wireless'"
 					:isStandard="isStandard"
+					:imagePath="plan.imagePath"
 				/>
 			</div>
 		</div>
@@ -65,7 +66,11 @@ const togglePlanType = () => {
 				v-for="plan in wirelessRenewalPlans"
 				:key="plan.title"
 			>
-				<ShopPlanCard :plan="plan" :planType="'wireless'" />
+				<ShopPlanCard
+					:plan="plan"
+					:planType="'wireless'"
+					:imagePath="plan?.imagePath"
+				/>
 			</div>
 		</div>
 
@@ -82,7 +87,11 @@ const togglePlanType = () => {
 				v-for="plan in wirelessDataAddOn"
 				:key="plan.title"
 			>
-				<ShopPlanCard :plan="plan" :planType="'wireless'" />
+				<ShopPlanCard
+					:plan="plan"
+					:planType="'wireless'"
+					:imagePath="plan?.imagePath"
+				/>
 			</div>
 		</div>
 
@@ -99,7 +108,11 @@ const togglePlanType = () => {
 				v-for="plan in specialDataPacks"
 				:key="plan.title"
 			>
-				<ShopPlanCard :plan="plan" :planType="'wireless'" />
+				<ShopPlanCard
+					:plan="plan"
+					:planType="'wireless'"
+					:imagePath="plan?.imagePath"
+				/>
 			</div>
 		</div>
 	</div>

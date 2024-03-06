@@ -1,57 +1,66 @@
 export const fiberHomePlans = [
 	{
-		title: 'Power 15 Up to 15Mbps',
-		tax: 'Inclusive of tax',
+		title: 'shop.up_to_15',
+		tax: '{{shop.inclusive_tax}}',
 		price: '28,000',
 		day: 30,
+		imagePath: '/shop/Fiber-Starter-Kit-1.jpg',
 	},
 	{
-		title: 'Power 15 Up to 15Mbps',
-		tax: 'Inclusive of tax',
+		title: 'shop.up_to_15',
+		tax: 'shop.inclusive_tax',
 		price: '77,000',
 		day: 90,
+		imagePath: '/shop/Fiber-Starter-Kit-1.jpg',
 	},
 	{
-		title: 'Power 15 Up to 15Mbps',
-		tax: 'Inclusive of tax',
+		title: 'shop.up_to_15',
+		tax: 'shop.inclusive_tax',
 		price: '140,000',
 		day: 180,
+		imagePath: '/shop/Fiber-Starter-Kit-1.jpg',
 	},
 	{
 		title: 'Power 25 Up to 25Mbps',
-		tax: 'Inclusive of tax',
+		tax: 'shop.inclusive_tax',
 		price: '32,000',
 		day: 30,
+		imagePath: '/shop/Fiber-Starter-Kit-2.jpg',
 	},
 	{
 		title: 'Power 25 Up to 25Mbps',
-		tax: 'Inclusive of tax',
+		tax: 'shop.inclusive_tax',
 		price: '88,500',
 		day: 90,
+		imagePath: '/shop/Fiber-Starter-Kit-2.jpg',
 	},
 	{
 		title: 'Power 25 Up to 25Mbps',
-		tax: 'Inclusive of tax',
+		tax: 'shop.inclusive_tax',
 		price: '162,000',
 		day: 180,
+		imagePath: '/shop/Fiber-Starter-Kit-2.jpg',
 	},
 	{
 		title: 'Power 40 Up to 40Mbps',
 		tax: 'Inclusive of tax',
 		price: '45,000',
 		day: 30,
+		imagePath: '/shop/Fiber-Starter-Kit-3.jpg',
 	},
 	{
 		title: 'Power 40 Up to 40Mbps',
 		tax: 'Inclusive of tax',
 		price: '123,000',
 		day: 90,
+		imagePath: '/shop/Fiber-Starter-Kit-3.jpg',
 	},
 	{
 		title: 'Power 40 Up to 40Mbps',
 		tax: 'Inclusive of tax',
 		price: '216,000',
 		day: 180,
+		imagePath: '/shop/Fiber-Starter-Kit-3.jpg',
 	},
 ]
 
@@ -61,36 +70,42 @@ export const fiberBusinessPlans = [
 		tax: 'Inclusive of tax',
 		price: '79,000',
 		day: 30,
+		imagePath: '/shop/Fiber-Starter-Kit-4.jpg',
 	},
 	{
 		title: 'Power 75 Up to 75Mbps',
 		tax: 'Inclusive of tax',
 		price: '197,000',
 		day: 90,
+		imagePath: '/shop/Fiber-Starter-Kit-4.jpg',
 	},
 	{
 		title: 'Power 75 Up to 75Mbps',
 		tax: 'Inclusive of tax',
 		price: '318,600',
 		day: 180,
+		imagePath: '/shop/Fiber-Starter-Kit-4.jpg',
 	},
 	{
 		title: 'Power 100 Up to 100Mbps',
 		tax: 'Inclusive of tax',
 		price: '99,600',
 		day: 30,
+		imagePath: '/shop/Fiber-Starter-Kit-5.jpg',
 	},
 	{
 		title: 'Power 100 Up to 100Mbps',
 		tax: 'Inclusive of tax',
 		price: '255,600',
 		day: 90,
+		imagePath: '/shop/Fiber-Starter-Kit-5.jpg',
 	},
 	{
 		title: 'Power 100 Up to 100Mbps',
 		tax: 'Inclusive of tax',
 		price: '427,600',
 		day: 180,
+		imagePath: '/shop/Fiber-Starter-Kit-5.jpg',
 	},
 ]
 
@@ -134,6 +149,7 @@ export const wirelessStarterPlans = [
 		price: '120,000',
 		priceForBattery: '145,000',
 		day: 90,
+		imagePath: '/shop/Standard-Wireless-Starter-2.jpg',
 	},
 	{
 		title: '600GB / 30 days',
@@ -149,7 +165,7 @@ export const wirelessStarterPlans = [
 		tax: 'Inclusive of SIM Tax and Commercial Tax',
 		price: '99,000',
 		priceForBattery: '124,000',
-		day: 60,
+		imagePath: '/shop/Standard-Wireless-Starter-7.jpg',
 	},
 	{
 		title: 'Unlimited data (FUP applied)',
@@ -158,6 +174,7 @@ export const wirelessStarterPlans = [
 		price: '110,000',
 		priceForBattery: '135,000',
 		day: 60,
+		imagePath: '/shop/Standard-Wireless-Starter-8.jpg',
 	},
 ]
 
@@ -168,6 +185,7 @@ export const wirelessRenewalPlans = [
 		tax: 'Inclusive of SIM Tax and Commercial Tax',
 		price: '90,000',
 		day: 90,
+		imagePath: '/shop/Standard-Wireless-Renewal-3.jpg',
 	},
 	{
 		title: '100GB / 30 days',
@@ -175,6 +193,7 @@ export const wirelessRenewalPlans = [
 		tax: 'Inclusive of SIM Tax and Commercial Tax',
 		price: '70,000',
 		day: 90,
+		imagePath: '/shop/Standard-Wireless-Renewal-4.jpg',
 	},
 	{
 		title: '150GB / 30 days',
@@ -182,6 +201,7 @@ export const wirelessRenewalPlans = [
 		tax: 'Inclusive of SIM Tax and Commercial Tax',
 		price: '33,000',
 		day: 30,
+		imagePath: '/shop/Standard-Wireless-Renewal-3.jpg',
 	},
 	{
 		title: '100GB / 30 days',
@@ -189,6 +209,7 @@ export const wirelessRenewalPlans = [
 		tax: 'Inclusive of SIM Tax and Commercial Tax',
 		price: '25,000',
 		day: 30,
+		imagePath: '/shop/Standard-Wireless-Renewal-4.jpg',
 	},
 	{
 		title: '300GB / 30 days',
@@ -197,6 +218,7 @@ export const wirelessRenewalPlans = [
 		price: '50,000',
 		priceForBattery: '',
 		day: 30,
+		imagePath: '/shop/Standard-Wireless-Renewal-5.jpg',
 	},
 	{
 		title: '300GB / 30 days',
@@ -204,6 +226,7 @@ export const wirelessRenewalPlans = [
 		tax: 'Inclusive of SIM Tax and Commercial Tax',
 		price: '120,000',
 		day: 90,
+		imagePath: '/shop/Standard-Wireless-Renewal-5.jpg',
 	},
 	{
 		title: '600GB / 30 days',
@@ -211,6 +234,7 @@ export const wirelessRenewalPlans = [
 		tax: 'Inclusive of SIM Tax and Commercial Tax',
 		price: '90,000',
 		day: 30,
+		imagePath: '/shop/Standard-Wireless-Renewal-7.jpg',
 	},
 	{
 		title: '600GB / 30 days',
@@ -218,6 +242,7 @@ export const wirelessRenewalPlans = [
 		tax: 'Inclusive of SIM Tax and Commercial Tax',
 		price: '216,000',
 		day: 90,
+		imagePath: '/shop/Standard-Wireless-Renewal-7.jpg',
 	},
 	{
 		title: 'Unlimited data (FUP applied)',
@@ -225,6 +250,7 @@ export const wirelessRenewalPlans = [
 		tax: 'Inclusive of SIM Tax and Commercial Tax',
 		price: '35,000',
 		day: 30,
+		imagePath: '/shop/Standard-Wireless-Renewal-9.jpg',
 	},
 	{
 		title: 'Unlimited data (FUP applied)',
@@ -232,6 +258,7 @@ export const wirelessRenewalPlans = [
 		tax: 'Inclusive of SIM Tax and Commercial Tax',
 		price: '100,000',
 		day: 90,
+		imagePath: '/shop/Standard-Wireless-Renewal-10.jpg',
 	},
 	{
 		title: 'Unlimited data (FUP applied)',
@@ -239,13 +266,15 @@ export const wirelessRenewalPlans = [
 		tax: 'Inclusive of SIM Tax and Commercial Tax',
 		price: '45,000',
 		day: 30,
+		imagePath: '/shop/Standard-Wireless-Renewal-11.jpg',
 	},
 	{
 		title: 'Unlimited data (FUP applied)',
 		subtitle: 'Up to 30 Mbps (Depends on service location)',
 		tax: 'Inclusive of SIM Tax and Commercial Tax',
 		price: '125,000',
-		day: 30,
+		day: 90,
+		imagePath: '/shop/Standard-Wireless-Renewal-12.jpg',
 	},
 ]
 
@@ -255,24 +284,28 @@ export const wirelessDataAddOn = [
 		subtitle: 'Up to 10 Mbps',
 		tax: 'Inclusive of SIM Tax and Commercial Tax',
 		price: '6,500',
+		imagePath: '/shop/Standard-Wireless-Data-Addon-1.jpg',
 	},
 	{
 		title: '30GB',
 		subtitle: 'Up to 10 Mbps',
 		tax: 'Inclusive of SIM Tax and Commercial Tax',
 		price: '10,000',
+		imagePath: '/shop/Standard-Wireless-Data-Addon-2.jpg',
 	},
 	{
 		title: '60GB',
 		subtitle: 'Up to 10 Mbps',
 		tax: 'Inclusive of SIM Tax and Commercial Tax',
 		price: '19,000',
+		imagePath: '/shop/Standard-Wireless-Data-Addon-4.jpg',
 	},
 	{
 		title: '120GB',
 		subtitle: 'Unlimited speed',
 		tax: 'Inclusive of SIM Tax and Commercial Tax',
 		price: '25,000',
+		imagePath: '/shop/Standard-Wireless-Data-Addon-3.jpg',
 	},
 ]
 
@@ -282,6 +315,7 @@ export const specialDataPacks = [
 		subtitle: 'Unlimited speed',
 		tax: 'Inclusive of SIM Tax and Commercial Tax',
 		price: '3,000',
+		imagePath: '/shop/Standard-Wireless-Special.jpg',
 	},
 ]
 
@@ -291,6 +325,7 @@ export const flexiNetStarter = [
 		tax: 'Inclusive of tax',
 		price: '25,000',
 		day: 30,
+		imagePath: '/shop/Flexi-Starter.jpeg',
 	},
 ]
 
@@ -300,17 +335,20 @@ export const flexiNetRenewal = [
 		tax: 'Inclusive of tax',
 		price: '15,000',
 		day: 30,
+		imagePath: '/shop/Flexi-Renewal.jpg',
 	},
 	{
 		title: 'Power flexi net 42 GB',
 		tax: 'Inclusive of tax',
 		price: '10,000',
 		day: 30,
+		imagePath: '/shop/Flexi-Renewal-2.jpg',
 	},
 	{
 		title: 'Power flexi net 20 GB',
 		tax: 'Inclusive of tax',
 		price: '5,000',
 		day: 30,
+		imagePath: '/shop/Flexi-Renewal-3.jpg',
 	},
 ]

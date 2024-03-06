@@ -11,7 +11,11 @@
 				v-for="plan in flexiNetStarter"
 				:key="plan.title"
 			>
-				<ShopPlanCard :plan="plan" :planType="'flexiNet'" />
+				<ShopPlanCard
+					:plan="plan"
+					:planType="'flexiNet'"
+					:imagePath="plan?.imagePath"
+				/>
 			</div>
 		</div>
 
@@ -28,7 +32,11 @@
 				v-for="plan in flexiNetRenewal"
 				:key="plan.title"
 			>
-				<ShopPlanCard :plan="plan" :planType="'flexiNet'" />
+				<ShopPlanCard
+					:plan="plan"
+					:planType="'flexiNet'"
+					:imagePath="plan?.imagePath"
+				/>
 			</div>
 		</div>
 	</div>
