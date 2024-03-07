@@ -79,6 +79,9 @@ export default {
 
 	'faq.power_fiber': 'PowerFiber',
 	'faq.power_fiber.general_faq': 'General FAQs',
+
+	'faq.mini_pro': 'MiniPro',
+	'faq.mini_pro.general_faq': 'General FAQs',
 	// ============================================================
 	// #endregion FAQ Links
 	// ============================================================

@@ -6,6 +6,7 @@ const route = useRoute()
 
 const HomeWireless = FAQsHomeWireless
 const PowerFiber = FAQsPowerFiber
+const MiniPro = FAQsMiniPro
 
 const pageMeta = computed(() => {
 	const slug: string = (route.params as any).slug || ''
@@ -17,9 +18,12 @@ const pageMeta = computed(() => {
 
 const pageContent = computed(() => {
 	const { pageIndex, sectionIndex } = pageMeta.value
+
 	let page: FAQPage = HomeWireless
 	if (pageIndex === 'home_wireless') page = HomeWireless
 	if (pageIndex === 'power_fiber') page = PowerFiber
+	if (pageIndex === 'mini_pro') page = MiniPro
+
 	const pageLocale = locale.value === 'mm' ? page.mm : page.en
 	return pageLocale[sectionIndex]
 })

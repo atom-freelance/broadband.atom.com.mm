@@ -14,6 +14,9 @@
   - NOTE: Nuxt3 auto imports all the `components` and `exports` as long as you follow their convention.
 - [TailwindCss](https://nuxt.com/modules/tailwindcss)
   - Utilities based CSS library
+- [DaisyUI](https://daisyui.com/)
+  - Tailwind base CSS UI library
+  - Most components are from Daisy while some components are custom components.
 - [VueUse](https://nuxt.com/modules/vueuse)
   - Official VueJS utilities composable hooks
 - [NuxtI18n](https://nuxt.com/modules/i18n)
@@ -22,6 +25,20 @@
   - Carousel Library
 - [Flag Icons](https://www.npmjs.com/package/flag-icons)
   - Countries Flag Icons CSS library
+
+---
+
+## Project Folders Brief
+
+If you want to know more about Nuxt3 folder structure please read about it [nuxt>docs>guid>directory_structure](https://nuxt.com/docs/guide).
+
+- `utils` folder have all the constants and some helper functions.
+- `composables` folder have some reusable hooks.
+- `components` folder have common components and page specific components.
+- `i18n` folder have localizations.
+- `layouts` folder have global layouts.
+- `public` folder have static assets.
+- `pages` folder have page specific codes.
 
 ---
 

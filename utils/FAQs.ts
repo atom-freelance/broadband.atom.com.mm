@@ -31,6 +31,15 @@ export const FAQLinks = [
 			to: '/faq/power_fiber-general',
 		},
 	],
+
+	[
+		{ type: 'label', title: 'faq.mini_pro' },
+		{
+			type: 'link',
+			title: 'faq.mini_pro.general_faq',
+			to: '/faq/mini_pro-general',
+		},
+	],
 ]
 
 export type FAQSection = {
@@ -1269,6 +1278,112 @@ export const FAQsPowerFiber: FAQPage = {
 								'Is there compensation if downtime is very long? What will you do for us when your network is down for a very long period?',
 							detail:
 								'If network is down for a long time (longer then a week) there will be a compensation for paying customer.',
+						},
+					],
+				},
+			],
+		},
+	},
+}
+
+export const FAQsMiniPro: FAQPage = {
+	en: {
+		general: {
+			title: 'FAQs for ATOM MiniPro',
+			sections: [
+				{
+					faqs: [
+						{
+							summary: 'Can customer use non-ATOM SIM with ATOM Power MiniPro?',
+							detail:
+								'ATOM Power MiniPro will only work with ATOM SIM. Non-ATOM SIMs cannot be used.',
+						},
+						{
+							summary: 'Can customer use any ATOM SIM with ATOM Power MiniPro?',
+							detail:
+								'Customer can use ATOM Power MiniPro with B2B, B2C, Vanity, Normal and BYOD FlexiNet SIMs.',
+						},
+						{
+							summary: 'How many data bundle can customer receive?',
+							detail:
+								'Customer will get 30GB and eligible for 1 SIM only for 1 device.',
+						},
+						{
+							summary: 'How long it takes to get data benefit after claim?',
+							detail: 'Only a couple of minutes.',
+						},
+						{
+							summary: 'How many SIMs can be used with ATOM Power MiniPro?',
+							detail: 'ATOM Power MiniPro can be used with only one SIM.',
+						},
+						{
+							summary: 'How many SIMs can get the bundle data benefit?',
+							detail:
+								'Only the first SIM to claim will get the data bundle benefit.',
+						},
+						{
+							summary: 'Can customer transfer bundle data benefit?',
+							detail: 'Customer cannot transfer bundle data benefit.',
+						},
+					],
+				},
+			],
+		},
+	},
+	mm: {
+		general: {
+			title: 'FAQs for ATOM MiniPro',
+			sections: [
+				{
+					faqs: [
+						{
+							summary:
+								'ATOM Power MiniPro ကို ATOM မဟုတ်သည့်အခြားဆင်းမ်ကဒ်များဖြင့်သုံးလို့ရပါသလား',
+							detail:
+								'ATOM Power MiniPro ကို ATOMဆင်းမ်ကဒ်ဖြင့်သာ အသုံးပြုနိုင်ပါသည်။',
+						},
+						{
+							summary:
+								'ATOM Power MiniPro ကို မည်သည့် ATOM ဆင်းမ်ကဒ်ဖြင့်မဆို အသုံးပြုလို့ရပါသလား',
+							detail:
+								'ATOM Power MiniPro ကို မည်သည့် ATOM ဆင်းမ်ကဒ်နှင့်မဆို အသုံးပြုလို့ရပါသည်။ (B2B, Normal, FlexiNet, etc)',
+						},
+						{
+							summary:
+								'ATOM Power MiniPro ဖြင့် ဒေတာလက်ဆောင် ဘယ်လောက်ရနိုင်ပါလဲ',
+							detail:
+								'ATOM Power MiniPro ဖြင့် 30GB ကို ရက်၁၈၀သက်တမ်းဖြင့်ရရှိပါမည်။',
+						},
+						{
+							summary:
+								'QRဖြင့်ရယူပြီးပြီး ဘယ်လောက်အကြာမှာ ဒေတာလက်ဆောင်စတင်ရရှိမှာပါလဲ',
+							detail: 'မိနစ်အနည်းငယ်မျှသာ။',
+						},
+						{
+							summary:
+								'ATOM Power MiniPro ကို ဆင်းမ်ကဒ်ဘယ်နကဒ်ထည့်သုံးလို့ရပါသလဲ',
+							detail: '၁ကဒ်သာ အသုံးပြုလို့ရနိုင်ပါသည်။',
+						},
+						{
+							summary:
+								'ပထမဆင်းမ်ကဒ်ဖြင့်ဒေတာလက်ဆောင်ကိုရရှိပြီးနောက် အခြား အက်တန်ဆင်းမ်းကဒ်ကိုထည့်သွင်းအသုံးပြုလို့ရပါသလား။ ထပ်ထည့်သုံးသောကဒ်တွင်လည်း ဒေတာလက်ဆောင်ထပ်ရနိုင်ပါသလား။',
+							detail:
+								'MiniPro တွင် ATOM ဆင်းမ်ကဒ်ဖြစ်ပါက အရေအတွက်အကန့်အသတ်မရှိထည့်သွင်းအသုံးပြုနိုင်ပါသည်။ ဒေတာလက်ဆောင်မှာ ပထမဆုံးထည့်သွင်းသောဆင်းမ်ကဒ်သာရရှိမည်ဖြစ်ပြီး အခြားထည့်သွင်းအသုံးပြုသောဆင်းမ်ကဒ်များမှာ မိမိကိုယ်ပိုင် ဒေတာပလန်များမှအသုံးပြုရမည်ဖြစ်ပါသည်။',
+						},
+						{
+							summary:
+								'ဒေတာလက်ဆောင်ကို ဆင်းမ်ကဒ် ဘယ်လောက်အရေအတွက် ရယူနိုင်ပါသလဲ',
+							detail: 'စက်တစ်လုံးအတွက် တစ်ကဒ်သာရယူနိုင်ပါသည်။',
+						},
+						{
+							summary:
+								'ဒေတာလက်ဆောင်ကို အခြားဆင်းမ်ကဒ်ထံလွှဲပြောင်းပေးလို့ရပါလား',
+							detail: 'မရပါ။',
+						},
+						{
+							summary:
+								'ဒေတာလက်ဆောင်ကို သက်တမ်းကုန်ပြီး နောက်ထပ်သက်တမ်းတစ်ခုထံ သယ်ဆောင်လို့ရပါလား',
+							detail: 'မရပါ။',
 						},
 					],
 				},
