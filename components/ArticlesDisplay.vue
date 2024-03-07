@@ -14,7 +14,12 @@
 				<p>10 mins read</p>
 			</div>
 
-			<button class="btn btn-primary mt-8 rounded-full">Read article</button>
+			<NuxtLinkLocale
+				to="/articles/123"
+				class="btn btn-primary mt-8 rounded-full"
+			>
+				Read article
+			</NuxtLinkLocale>
 		</article>
 
 		<article class="w-3/4 flex-none">
@@ -31,7 +36,12 @@
 				<p>10 mins read</p>
 			</div>
 
-			<button class="btn btn-primary mt-8 rounded-full">Read article</button>
+			<NuxtLinkLocale
+				to="/articles/234"
+				class="btn btn-primary mt-8 rounded-full"
+			>
+				Read article
+			</NuxtLinkLocale>
 		</article>
 	</div>
 </template>
