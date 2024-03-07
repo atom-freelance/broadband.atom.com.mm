@@ -1,5 +1,24 @@
 <script setup lang="ts">
 const { showModal, closeModal } = useModal()
+
+const showComponent = reactive({
+	all: false,
+	mobile_banking: false,
+	shop: false,
+	atom_pay: false,
+})
+function toggleShowComponent(
+	name: 'all' | 'mobile_banking' | 'shop' | 'atom_pay',
+) {
+	showComponent[name] = true
+	Object.keys(showComponent)
+		.filter((k) => k !== name)
+		.forEach(
+			(k) =>
+				(showComponent[k as 'all' | 'mobile_banking' | 'shop' | 'atom_pay'] =
+					false),
+		)
+}
 </script>
 
 <template>
@@ -66,39 +85,43 @@ const { showModal, closeModal } = useModal()
 						</div>
 
 						<div class="form-control gap-3">
-							<DashboardSubscriptionPlan
+							<DashboardPaymentMethod
 								name="payment"
-								productName="Pay with 1-2-3 Services"
+								:productName="
+									$t('subscription.checkout.payment_method.choose_services')
+								"
+								@click="toggleShowComponent('all')"
+								:show="showComponent.all"
 							>
-							</DashboardSubscriptionPlan>
+								<img src="/123-pay.svg" />
+							</DashboardPaymentMethod>
 
-							<DashboardSubscriptionPlan
+							<DashboardPaymentMethod
 								name="payment"
-								productName="Pay via mobile banking and mobile financial services"
+								:productName="
+									$t('subscription.checkout.payment_method.mobile_banking')
+								"
 							>
-							</DashboardSubscriptionPlan>
+							</DashboardPaymentMethod>
 
-							<DashboardSubscriptionPlan
+							<DashboardPaymentMethod
 								name="payment"
-								productName="Pay at shops"
+								:productName="
+									$t('subscription.checkout.payment_method.pay_at_shops')
+								"
 							>
-							</DashboardSubscriptionPlan>
+							</DashboardPaymentMethod>
 
-							<label class="label cursor-pointer rounded-xl border px-2">
-								<div class="flex flex-col flex-wrap items-start gap-4">
-									<div class="flex items-center gap-4">
-										<input
-											type="radio"
-											name="payment"
-											class="radio checked:bg-primary"
-										/>
-
-										<span class="text-xs lg:text-sm">Pay with ATOM Pay</span>
-									</div>
-
-									<img src="/payments.png" class="pb-3 pl-10" />
-								</div>
-							</label>
+							<DashboardPaymentMethod
+								name="payment"
+								:productName="
+									$t('subscription.checkout.payment_method.atom_pay')
+								"
+								@click="toggleShowComponent('atom_pay')"
+								:show="showComponent.atom_pay"
+							>
+								<img src="/atom-pay.png" />
+							</DashboardPaymentMethod>
 						</div>
 					</div>
 				</div>
