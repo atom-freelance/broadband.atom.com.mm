@@ -9,8 +9,8 @@ const props = defineProps({
 		<input type="checkbox" />
 
 		<div class="collapse-title flex items-center gap-4 p-0 text-body-large">
-			<Icon name="plus" size="1.4rem" class="icon-off" />
-			<Icon name="minus" size="1.4rem" class="icon-on" />
+			<Icon name="plus" size="1.4rem" class="icon-off flex-none" />
+			<Icon name="minus" size="1.4rem" class="icon-on flex-none" />
 
 			<span>{{ props.title }}</span>
 		</div>

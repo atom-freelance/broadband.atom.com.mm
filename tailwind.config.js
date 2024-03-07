@@ -114,7 +114,7 @@ const daisyConfig = {
 
 /** @type {import('tailwindcss').Config} */
 export default {
-	plugins: [require('daisyui')],
+	plugins: [require('daisyui'), require('@tailwindcss/typography')],
 	theme: { extend: themeExtend },
 	daisyui: daisyConfig,
 	safelist: ['container', 'text-content-primary', 'scroll-smooth'],

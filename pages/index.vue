@@ -10,21 +10,20 @@ const { showModal } = useModal()
 				<h1
 					class="mt-[40%] flex flex-col items-stretch text-4xl font-medium md:mt-[30%] md:text-5xl lg:mt-14 lg:text-center lg:text-title-hero 2xl:mt-20"
 				>
-					<span>The most</span>
-					<i class="font-extrabold">reliable high-speed</i>
-					<span>broadband</span>
+					<i class="font-extrabold">{{ $t('home.slogan.sec.1') }}</i>
+					<span>{{ $t('home.slogan.sec.2') }}</span>
 				</h1>
 
 				<h4 class="lg:mt-15 mt-10 text-title-body font-medium">
 					The best broadband you should choose
 				</h4>
-				<NuxtLink
+				<NuxtLinkLocale
 					to="#"
-					class="mt-2 flex items-center gap-1 text-title-body font-medium text-primary hover:underline"
+					class="mt-2 flex items-center gap-1 text-title-body font-medium hover:underline"
 				>
 					<span>Let's start contact</span>
 					<Icon name="arrow-right" />
-				</NuxtLink>
+				</NuxtLinkLocale>
 			</article>
 
 			<figure class="hero-figure mt-48">
@@ -36,8 +35,8 @@ const { showModal } = useModal()
 		<section class="container mt-20 lg:mt-40 lg:px-40">
 			<div class="relative flex items-center gap-4">
 				<h2 class="flex flex-col text-4xl lg:text-5xl">
-					<span>Do you know about</span>
-					<span><b>ATOM</b> Broadband?</span>
+					<span>{{ $t('home.about.title.sec.1') }}</span>
+					<b>{{ $t('home.about.title.sec.2') }}</b>
 				</h2>
 
 				<img
@@ -49,17 +48,9 @@ const { showModal } = useModal()
 			<article
 				class="mt-10 grid grid-cols-1 gap-4 text-title-body lg:grid-cols-4"
 			>
-				<b class="lg:col-span-1">Let me explain</b>
+				<b class="lg:col-span-1">{{ $t('home.about.hint') }}</b>
 
-				<p class="lg:col-span-3">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-					voluptas porro quae illum quam, dolorem vero, molestias autem
-					reprehenderit eveniet, animi officiis voluptate deserunt! Molestias ea
-					vitae id fugit voluptate. Lorem ipsum dolor sit amet consectetur
-					adipisicing elit. Sequi saepe suscipit sunt aliquid ipsa ad, dolore
-					fugiat inventore ipsam ducimus maiores quas illo veritatis porro
-					ipsum, velit, sint nostrum totam!
-				</p>
+				<p class="lg:col-span-3">{{ $t('home.about.paragraph') }}</p>
 			</article>
 		</section>
 
@@ -70,66 +61,63 @@ const { showModal } = useModal()
 			<FeatureCard
 				class="hover:bg-interactive-accent"
 				icon="dollar-circle"
-				title="Free installation fee"
-				sub-title="Zero installation costs enjoy our offer."
+				:title="$t('home.features.install_fee.title')"
+				:sub-title="$t('home.features.install_fee.desc')"
 			/>
 
 			<FeatureCard
 				class="hover:bg-interactive-accent"
 				icon="like"
-				title="Flexible plan"
-				sub-title="Many plans that are suitable for you."
+				:title="$t('home.features.flexible_plan.title')"
+				:sub-title="$t('home.features.flexible_plan.desc')"
 			/>
 
 			<FeatureCard
 				class="hover:bg-interactive-accent"
 				icon="rocket-launch"
-				title="High speed broadband"
-				sub-title="Fast broadband for seamless connection."
+				:title="$t('home.features.high_speed.title')"
+				:sub-title="$t('home.features.high_speed.desc')"
 			/>
 
 			<FeatureCard
 				class="hover:bg-interactive-accent"
 				icon="heart"
-				title="Customer support"
-				sub-title="We care about our customer 24/7."
+				:title="$t('home.features.support.title')"
+				:sub-title="$t('home.features.support.desc')"
 			/>
 
 			<FeatureCard
 				class="hover:bg-interactive-accent"
 				icon="wifi"
-				title="Unlimited data"
-				sub-title="Endless data for limitless connectivity."
+				:title="$t('home.features.unlimited_data.title')"
+				:sub-title="$t('home.features.unlimited_data.desc')"
 			/>
 
 			<FeatureCard
 				class="hover:bg-interactive-accent"
 				icon="sparkle"
-				title="Prioritize quality"
-				sub-title="Top-notch quality is our priority."
+				:title="$t('home.features.quality.title')"
+				:sub-title="$t('home.features.quality.desc')"
 			/>
 		</section>
 
 		<!-- Plans -->
 		<section class="container sticky bg-white pt-40">
 			<article class="flex flex-col items-center space-y-6 text-center">
-				<h2 class="text-5xl font-medium">
-					The <i class="font-bold">best selling</i> plan
+				<h2 class="flex gap-3 text-5xl font-medium">
+					<span>{{ $t('home.best_selling.title.sec.1') }}</span>
+					<i class="font-semibold">
+						{{ $t('home.best_selling.title.sec.2') }}
+					</i>
+					<span>{{ $t('home.best_selling.title.sec.3') }}</span>
 				</h2>
 
-				<p class="max-w-[700px] text-body-large">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-					labore facilis praesentium aut unde quaerat saepe quibusdam, sequi
-					tempora error voluptate, tempore iste reprehenderit aliquid? Officia
-					iure accusantium voluptatibus tempora?
-				</p>
-
-				<NuxtLink
-					to="#"
+				<NuxtLinkLocale
+					to="/shop"
 					class="btn btn-ghost btn-sm text-body-large font-semibold text-interactive-accent"
 				>
-					Explore plan
-				</NuxtLink>
+					{{ $t('home.best_selling.explore_btn') }}
+				</NuxtLinkLocale>
 			</article>
 
 			<article
@@ -137,43 +125,43 @@ const { showModal } = useModal()
 			>
 				<ModalAction @click="() => showModal('shop-plan-id')">
 					<ItemCard
-						img-url="https://images.unsplash.com/photo-1652197881268-d625ad54402b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+						img-url="/wireless_battery_9.jpeg"
 						title="Home plan"
 						sub-title="Power 40 Up to 40Mbps"
 					>
-						<div class="flex items-center gap-4 font-semibold">
+						<!-- <div class="flex items-center gap-4 font-semibold">
 							<h6 class="text-title-body">45,000 / 30 days</h6>
 
 							<button class="btn btn-sm rounded-full">Fiber</button>
-						</div>
+						</div> -->
 					</ItemCard>
 				</ModalAction>
 
 				<ModalAction @click="() => showModal('shop-plan-id')">
 					<ItemCard
-						img-url="https://images.unsplash.com/photo-1652197881268-d625ad54402b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+						img-url="/wireless_battery_10.jpeg"
 						title="Starter kit"
 						sub-title="Up to 10Mbps"
 					>
-						<div class="flex items-center gap-4 font-semibold">
+						<!-- <div class="flex items-center gap-4 font-semibold">
 							<h6 class="text-title-body">115,00 / 90 days</h6>
 
 							<button class="btn btn-sm rounded-full">Wireless</button>
-						</div>
+						</div> -->
 					</ItemCard>
 				</ModalAction>
 
 				<ModalAction @click="() => showModal('shop-plan-id')">
 					<ItemCard
-						img-url="https://images.unsplash.com/photo-1652197881268-d625ad54402b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+						img-url="/wireless_battery_11.jpeg"
 						title="Starter"
 						sub-title="Power Flexi Net"
 					>
-						<div class="flex items-center gap-4 font-semibold">
+						<!-- <div class="flex items-center gap-4 font-semibold">
 							<h6 class="text-title-body">25,000 / 30 days</h6>
 
 							<button class="btn btn-sm rounded-full">Wireless</button>
-						</div>
+						</div> -->
 					</ItemCard>
 				</ModalAction>
 			</article>
@@ -185,31 +173,44 @@ const { showModal } = useModal()
 		>
 			<figure class="md:col-span-2 lg:col-span-4">
 				<img
-					src="https://images.unsplash.com/photo-1652197881268-d625ad54402b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-					class="h-[400px] w-full object-cover object-center"
+					src="/music_listen.jpeg"
+					class="h-[450px] w-full object-cover object-center"
 				/>
-				<h5 class="mt-4 text-title-screen font-semibold">Listening music</h5>
+
+				<h5 class="mt-4 text-title-screen font-semibold">
+					{{ $t('home.scenarios.1.title') }}
+				</h5>
 				<h6 class="mt-2 text-title-body font-semibold">
-					The smoothest internet
+					{{ $t('home.scenarios.1.desc') }}
 				</h6>
 			</figure>
 
 			<figure class="md:col-span-2 lg:col-span-3">
 				<img
-					src="https://images.unsplash.com/photo-1652197881268-d625ad54402b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-					class="h-[400px] w-full object-cover object-center"
+					src="/game_play.jpeg"
+					class="h-[450px] w-full object-cover object-center"
 				/>
-				<h5 class="mt-4 text-title-screen font-semibold">Playing game</h5>
-				<h6 class="mt-2 text-title-body font-semibold">The fastest internet</h6>
+
+				<h5 class="mt-4 text-title-screen font-semibold">
+					{{ $t('home.scenarios.2.title') }}
+				</h5>
+				<h6 class="mt-2 text-title-body font-semibold">
+					{{ $t('home.scenarios.2.desc') }}
+				</h6>
 			</figure>
 
 			<figure class="md:col-span-1 lg:col-span-2">
 				<img
-					src="https://images.unsplash.com/photo-1652197881268-d625ad54402b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-					class="h-[400px] w-full object-cover object-center"
+					src="/movie_date.jpeg"
+					class="h-[450px] w-full object-cover object-center"
 				/>
-				<h5 class="mt-4 text-title-screen font-semibold">Movie date</h5>
-				<h6 class="mt-2 text-title-body font-semibold">Love and Internet</h6>
+
+				<h5 class="mt-4 text-title-screen font-semibold">
+					{{ $t('home.scenarios.3.title') }}
+				</h5>
+				<h6 class="mt-2 text-title-body font-semibold">
+					{{ $t('home.scenarios.3.desc') }}
+				</h6>
 			</figure>
 		</section>
 
@@ -268,7 +269,9 @@ const { showModal } = useModal()
 		<!-- Articles -->
 		<section class="container sticky bg-white pt-40">
 			<div class="flex items-center justify-between">
-				<h3 class="text-5xl font-medium">Useful articles</h3>
+				<h3 class="text-5xl font-medium">
+					{{ $t('home.useful.article.title') }}
+				</h3>
 				<!-- <div>1 - 12</div> -->
 			</div>
 
