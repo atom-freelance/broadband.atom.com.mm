@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { reactive } from 'vue'
 
-type LinkType = 'Fiber' | 'Wireless' | 'Flexi net' | 'Mini Pro'
+type LinkType = 'Fiber' | 'Wireless' | 'FlexiNet' | 'MiniPro'
 type MenuLink = {
 	label: LinkType
 	class: string
@@ -17,11 +17,11 @@ const menuLinks = reactive<MenuLink[]>([
 		class: 'bg-secondary-bright-blue text-content-primary',
 	},
 	{
-		label: 'Flexi net',
+		label: 'FlexiNet',
 		class: 'bg-secondary-bright-yellow text-content-primary',
 	},
 	{
-		label: 'Mini Pro',
+		label: 'MiniPro',
 		class: 'bg-flag-red text-white',
 	},
 ])

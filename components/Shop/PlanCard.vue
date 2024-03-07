@@ -6,7 +6,8 @@ export type PlanType = {
 	title: String
 	subtitle?: String
 	tax: String
-	price: String
+	price?: String
+	price_day?: String
 	priceForBattery?: String
 	day?: Number
 }
@@ -70,15 +71,17 @@ const textClass = reactive({
 				/>
 			</div>
 			<p v-if="plan.subtitle" class="my-1 leading-6 text-content-primary">
-				{{ plan.subtitle }}
+				{{ $t(plan.subtitle as string) }}
 			</p>
 			<p class="leading-6 text-content-primary">{{ $t(plan.tax as string) }}</p>
 			<p class="mt-4">
 				<span class="text-lg font-semibold"
 					>{{
 						!isStandard && plan.priceForBattery
-							? plan.priceForBattery
-							: plan.price
+							? $t(plan.priceForBattery as string)
+							: plan.price_day
+								? $t(plan.price_day as string)
+								: plan.price
 					}}
 				</span>
 				<span v-if="plan.day">/ {{ plan.day }} days</span>

@@ -24,7 +24,8 @@ const { showModal } = useModal()
 						:plan="plan"
 						:planType="'fiber'"
 						:imagePath="plan.imagePath"
-				/></ModalAction>
+					/>
+				</ModalAction>
 			</div>
 		</div>
 
@@ -48,7 +49,8 @@ const { showModal } = useModal()
 						:plan="plan"
 						:planType="'fiber'"
 						:imagePath="plan.imagePath"
-				/></ModalAction>
+					/>
+				</ModalAction>
 			</div>
 		</div>
 	</div>

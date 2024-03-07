@@ -4,14 +4,14 @@ import Fiber from '~/components/Shop/FiberPlans.vue'
 import Wireless from '~/components/Shop/WirelessPlans.vue'
 import FlexiNet from '~/components/Shop/FlexiNetPlans.vue'
 
-type LinkType = 'Fiber' | 'Wireless' | 'Flexi net' | 'Mini Pro'
+type LinkType = 'Fiber' | 'Wireless' | 'FlexiNet' | 'MiniPro'
 
 const activeLink = ref(0)
 const menuLinks = reactive<LinkType[]>([
 	'Fiber',
 	'Wireless',
-	'Flexi net',
-	'Mini Pro',
+	'FlexiNet',
+	'MiniPro',
 ])
 
 const components = [Fiber, Wireless, FlexiNet]
