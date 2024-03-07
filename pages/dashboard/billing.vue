@@ -3,15 +3,27 @@ const { showModal, closeModal } = useModal()
 </script>
 
 <template>
-	<DataTable title="Order" description="Manage and your personal information">
+	<DataTable :title="$t('billing.title')" :description="$t('billing.subtitle')">
 		<template #thead>
 			<tr>
-				<DataTableHeader iconName="calendar-empty-alt">Date</DataTableHeader>
-				<DataTableHeader iconName="menu-left">Product name</DataTableHeader>
-				<DataTableHeader iconName="list">Order ID</DataTableHeader>
-				<DataTableHeader iconName="list">Subscription ID</DataTableHeader>
-				<DataTableHeader iconName="papers">Status</DataTableHeader>
-				<DataTableHeader iconName="dollar-circle">Price</DataTableHeader>
+				<DataTableHeader iconName="calendar-empty-alt">
+					{{ $t('billing.date') }}
+				</DataTableHeader>
+				<DataTableHeader iconName="menu-left">
+					{{ $t('billing.product_name') }}
+				</DataTableHeader>
+				<DataTableHeader iconName="list">
+					{{ $t('billing.order_id') }}
+				</DataTableHeader>
+				<DataTableHeader iconName="list">
+					{{ $t('billing.subscription_id') }}
+				</DataTableHeader>
+				<DataTableHeader iconName="papers">
+					{{ $t('billing.status') }}
+				</DataTableHeader>
+				<DataTableHeader iconName="dollar-circle">
+					{{ $t('billing.price') }}
+				</DataTableHeader>
 			</tr>
 		</template>
 

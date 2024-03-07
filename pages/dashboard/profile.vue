@@ -7,51 +7,60 @@ let showNewPassword = ref(false)
 
 <template>
 	<div class="flex flex-col gap-4">
-		<h1 class="text-title-section font-semibold">Account settings</h1>
+		<h1 class="text-title-section font-semibold">
+			{{ $t('profile.title') }}
+		</h1>
 
 		<div>
-			<p class="text-sm">Manage and your personal information</p>
+			<p class="text-sm">{{ $t('profile.subtitle') }}</p>
 
 			<span class="divider mb-0 mt-2" />
 		</div>
 
 		<DashboardBenefitList>
-			<DashboardBenefitItem title="Name" subTitle="Aung Min Soe" />
+			<DashboardBenefitItem
+				:title="$t('profile.name')"
+				subTitle="Aung Min Soe"
+			/>
 
 			<DashboardBenefitItem
-				title="Account ID"
+				:title="$t('profile.account_id')"
 				subTitle="5000198"
 				icon="hashtag"
 			/>
 
 			<DashboardBenefitItem
-				title="Phone number"
+				:title="$t('profile.phone_number')"
 				subTitle="+959976356548"
 				icon="phone"
 			>
 				<DashboardActionButton
 					class="bg-interactive-accent text-white hover:bg-interactive-accent-hover"
-					btnText="Change"
+					:btnText="$t('profile.change.phone_number')"
 					@click="() => showModal('phone-number')"
 				/>
 			</DashboardBenefitItem>
 
 			<DashboardBenefitItem
-				title="Email address"
+				:title="$t('profile.email_address')"
 				subTitle="aungminsoe@gmail.com"
 				icon="envelope"
 			>
 				<DashboardActionButton
 					class="bg-interactive-accent text-white hover:bg-interactive-accent-hover"
-					btnText="Change"
+					:btnText="$t('profile.change.email_address')"
 					@click="() => showModal('email-address')"
 				/>
 			</DashboardBenefitItem>
 
-			<DashboardBenefitItem title="Password" subTitle="*********" icon="lock">
+			<DashboardBenefitItem
+				:title="$t('profile.password')"
+				subTitle="*********"
+				icon="lock"
+			>
 				<DashboardActionButton
 					class="bg-interactive-accent text-white hover:bg-interactive-accent-hover"
-					btnText="Change"
+					:btnText="$t('profile.change.password')"
 					@click="() => showModal('password')"
 				/>
 			</DashboardBenefitItem>
@@ -61,7 +70,9 @@ let showNewPassword = ref(false)
 	<!-- Change phone number Modal Section -->
 	<ModalRoot id="phone-number" class="px-0">
 		<div class="flex items-center justify-between px-8 pt-4">
-			<h3 class="text-title-body font-semibold">Change phone number</h3>
+			<h3 class="text-title-body font-semibold">
+				{{ $t('profile.change.phone_number') }}
+			</h3>
 
 			<button
 				class="btn btn-circle btn-ghost btn-sm text-content-primary lg:text-lg"

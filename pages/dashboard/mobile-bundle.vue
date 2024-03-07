@@ -4,9 +4,11 @@ const { showModal, closeModal } = useModal()
 
 <template>
 	<article class="flex flex-col gap-6">
-		<h1 class="text-title-section font-semibold">Mobile bundle</h1>
+		<h1 class="text-title-section font-semibold">
+			{{ $t('mobile_bundle.title') }}
+		</h1>
 		<p class="text-sm">
-			Congratulation !!! You are eligible to claim the mobile benefits.
+			{{ $t('mobile_bundle.subtitle') }}
 		</p>
 
 		<!-- First Benefit -->

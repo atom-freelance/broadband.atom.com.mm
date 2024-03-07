@@ -1,13 +1,19 @@
 <template>
 	<DataTable
-		title="Term & Condition"
-		description="Manage and your personal information"
+		:title="$t('t&c_acceptance.title')"
+		:description="$t('t&c_acceptance.subtitle')"
 	>
 		<template #thead>
 			<tr>
-				<DataTableHeader iconName="calendar-empty-alt">Date</DataTableHeader>
-				<DataTableHeader iconName="menu-left">T&C Name</DataTableHeader>
-				<DataTableHeader iconName="download-alt">Download</DataTableHeader>
+				<DataTableHeader iconName="calendar-empty-alt">
+					{{ $t('t&c_acceptance.date') }}
+				</DataTableHeader>
+				<DataTableHeader iconName="menu-left">
+					{{ $t('t&c_acceptance.t&c_name') }}
+				</DataTableHeader>
+				<DataTableHeader iconName="download-alt">
+					{{ $t('t&c_acceptance.download') }}
+				</DataTableHeader>
 			</tr>
 		</template>
 

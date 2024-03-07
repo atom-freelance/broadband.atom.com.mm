@@ -27,11 +27,11 @@ export default defineNuxtConfig({
 		locales: [
 			{
 				code: 'en',
-				files: ['en.js', 'shop.en.js'],
+				files: ['en.js', 'dashboard.en.js', 'shop.en.js'],
 			},
 			{
 				code: 'mm',
-				files: ['mm.js', 'shop.mm.js'],
+				files: ['mm.js', 'dashboard.mm.js', 'shop.mm.js'],
 			},
 		],
 	},
