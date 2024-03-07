@@ -7,6 +7,24 @@
 
 ---
 
+## Tech Stack
+
+- [Nuxt3](https://nuxt.com)
+  - VueJS meta framework
+  - NOTE: Nuxt3 auto imports all the `components` and `exports` as long as you follow their convention.
+- [TailwindCss](https://nuxt.com/modules/tailwindcss)
+  - Utilities based CSS library
+- [VueUse](https://nuxt.com/modules/vueuse)
+  - Official VueJS utilities composable hooks
+- [NuxtI18n](https://nuxt.com/modules/i18n)
+  - Localization
+- [SwiperJS](https://swiperjs.com/vue)
+  - Carousel Library
+- [Flag Icons](https://www.npmjs.com/package/flag-icons)
+  - Countries Flag Icons CSS library
+
+---
+
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup
