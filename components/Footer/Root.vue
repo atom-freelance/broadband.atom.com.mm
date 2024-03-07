@@ -1,46 +1,17 @@
-<script setup>
-const sectionLinks = {
-	one: [
-		[
-			{ type: 'label', title: 'Fiber' },
-			{ type: 'link', title: "ATOM's Home Plan", to: '' },
-			{ type: 'link', title: "ATOM's Business Plan", to: '' },
-		],
-
-		[
-			{ type: 'label', title: 'Wireless (Standard & Battery)' },
-			{ type: 'link', title: 'Starter Kit', to: '' },
-			{ type: 'link', title: 'Renewal Plan', to: '' },
-			{ type: 'link', title: 'Data Add-Ons', to: '' },
-			{ type: 'link', title: 'Special Data Pack (24 Hours Validity)', to: '' },
-		],
-
-		[
-			{ type: 'label', title: 'Flexi Net' },
-			{ type: 'link', title: 'Starter', to: '' },
-			{ type: 'link', title: 'Renewal Plan', to: '' },
-		],
-	],
-
-	two: FAQLinks,
-
-	three: [
-		[
-			{ type: 'label', title: 'Other' },
-			{ type: 'link', title: 'Privacy policy', to: '' },
-			{ type: 'link', title: 'Terms & conditions apply', to: '' },
-		],
-	],
-}
+<script setup lang="ts">
+const sectionLinks = FooterLinks
 </script>
 
 <template>
 	<footer class="relative bg-interactive-accent-hover pb-20 pt-6 text-white">
 		<section class="container grid grid-cols-1 space-y-4 lg:grid-cols-4">
 			<article>
-				<NuxtLink to="/" class="block w-2/3 rounded-lg bg-white px-6 py-4">
+				<NuxtLinkLocale
+					to="/"
+					class="block w-2/3 rounded-lg bg-white px-6 py-4"
+				>
 					<img src="/broadband_logo.jpeg" />
-				</NuxtLink>
+				</NuxtLinkLocale>
 			</article>
 
 			<article
@@ -53,25 +24,22 @@ const sectionLinks = {
 							v-if="link.type === 'label'"
 							class="text-title-body font-semibold"
 						>
-							{{ link.title }}
+							{{ $t(link.title) }}
 						</p>
 
-						<NuxtLink
+						<NuxtLinkLocale
 							v-if="link.type === 'link'"
 							class="text-body-large text-categories-salary hover:text-white"
 							:to="link.to"
 						>
-							{{ link.title }}
-						</NuxtLink>
+							{{ $t(link.title) }}
+						</NuxtLinkLocale>
 					</template>
 				</div>
 
 				<div :class="['space-y-4 text-body', key !== 'three' ? 'hidden' : '']">
-					<p>All internet services will be subject to Commercial Tax of 15%</p>
-					<p>
-						*3000 On-net SMS Fair Usage Policy Applied for SMS benefit Usage
-						beyond daily Fair Usage Policy will charge with standard rate.
-					</p>
+					<p>{{ $t('footer.tax_info') }}</p>
+					<p>{{ $t('footer.usage_policy') }}</p>
 				</div>
 			</article>
 		</section>
@@ -81,11 +49,11 @@ const sectionLinks = {
 
 			<div class="self-center lg:col-span-3">
 				<p class="flex flex-wrap items-center gap-1 text-body-large">
-					<span>© Copyright 2023 All rights reserved by ATOM Myanmar.</span>
+					<span>{{ $t('common.copyright') }}</span>
 					<span>|</span>
-					<span>Contact Us :</span>
+					<span>{{ $t('common.contact_us') }} :</span>
 					<a href="tel:+959780008080">+959780008080</a>
-					<span>(ATOM User Only)</span>
+					<span>{{ $t('footer.contact_note') }}</span>
 				</p>
 			</div>
 		</section>

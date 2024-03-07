@@ -11,7 +11,7 @@ const faqPages = FAQLinks
 					v-if="link.type === 'label'"
 					class="border-l-[3px] border-transparent pl-4 text-title-body font-semibold"
 				>
-					{{ link.title }}
+					{{ $t(link.title) }}
 				</h6>
 
 				<!-- Render Link when type is link -->
@@ -21,7 +21,7 @@ const faqPages = FAQLinks
 					class="block border-l-[3px] border-transparent py-2 pl-4 text-body-large hover:text-interactive-accent"
 					exact-active-class="text-interactive-accent !border-interactive-accent"
 				>
-					{{ link.title }}
+					{{ $t(link.title) }}
 				</NuxtLinkLocale>
 			</template>
 		</article>

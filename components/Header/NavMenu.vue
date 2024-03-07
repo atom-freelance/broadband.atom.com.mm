@@ -1,7 +1,11 @@
+<script setup lang="ts">
+const links = NavbarLinks
+</script>
+
 <template>
 	<ul class="ml-20 hidden h-full space-x-8 lg:flex lg:items-center">
 		<li
-			v-for="link in navbarLinks"
+			v-for="link in links"
 			:class="[
 				'h-full cursor-pointer text-body-large',
 				'[&_article]:hover:block',
@@ -17,11 +21,11 @@
 					'hover:border-interactive-accent-hover hover:text-interactive-accent-hover',
 				]"
 			>
-				{{ link.title }}
+				{{ $t(link.title) }}
 			</span>
 
 			<!-- Render Link when type is link -->
-			<NuxtLink
+			<NuxtLinkLocale
 				v-if="link.type === 'link'"
 				:to="link.to"
 				exact-active-class="inline-block h-full w-full font-semibold text-interactive-accent-hover !border-interactive-accent-hover"
@@ -31,8 +35,8 @@
 					'hover:border-interactive-accent-hover hover:text-interactive-accent-hover',
 				]"
 			>
-				{{ link.title }}
-			</NuxtLink>
+				{{ $t(link.title) }}
+			</NuxtLinkLocale>
 
 			<!-- Render Sub Menu if has subLinks -->
 			<article
@@ -46,16 +50,16 @@
 								v-if="subLink.type === 'label'"
 								class="text-title-body font-semibold"
 							>
-								{{ subLink.title }}
+								{{ $t(subLink.title) }}
 							</p>
-							<NuxtLink
+							<NuxtLinkLocale
 								v-if="subLink.type === 'link'"
 								:to="subLink.to"
 								class="text-body-large hover:text-interactive-accent-hover"
 								exact-active-class="text-interactive-accent-hover"
 							>
-								{{ subLink.title }}
-							</NuxtLink>
+								{{ $t(subLink.title) }}
+							</NuxtLinkLocale>
 						</li>
 					</ul>
 				</nav>

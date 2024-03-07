@@ -1,33 +1,33 @@
 export const FAQLinks = [
 	[
-		{ type: 'label', title: 'Home wireless' },
+		{ type: 'label', title: 'faq.home_wireless' },
 		{
 			type: 'link',
-			title: 'General FAQs',
+			title: 'faq.home_wireless.general_faq',
 			to: '/faq/home_wireless-general',
 		},
 		{
 			type: 'link',
-			title: 'Monthly Quota Changes',
+			title: 'faq.home_wireless.monthly_quota',
 			to: '/faq/home_wireless-monthly_quota',
 		},
 		{
 			type: 'link',
-			title: 'Starter Kit Data Add on Promotion',
+			title: 'faq.home_wireless.starter_kit',
 			to: '/faq/home_wireless-starter_kit',
 		},
 		{
 			type: 'link',
-			title: 'Renewal Data Add on Promotion',
+			title: 'faq.home_wireless.renewal_data',
 			to: '/faq/home_wireless-renewal_data',
 		},
 	],
 
 	[
-		{ type: 'label', title: 'Power fiber' },
+		{ type: 'label', title: 'faq.power_fiber' },
 		{
 			type: 'link',
-			title: 'General FAQs',
+			title: 'faq.power_fiber.general_faq',
 			to: '/faq/power_fiber-general',
 		},
 	],
