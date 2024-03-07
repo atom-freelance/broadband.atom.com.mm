@@ -52,8 +52,10 @@ const sectionLinks = FooterLinks
 					<span>{{ $t('common.copyright') }}</span>
 					<span>|</span>
 					<span>{{ $t('common.contact_us') }} :</span>
-					<a href="tel:+959780008080">+959780008080 ,</a>
-					<a href="tel:8080">8080</a>
+					<a class="hover:underline" href="tel:+959780008080">
+						+959780008080 ,
+					</a>
+					<a class="hover:underline" href="tel:8080">8080</a>
 					<span>{{ $t('footer.contact_note') }}</span>
 				</p>
 			</div>
