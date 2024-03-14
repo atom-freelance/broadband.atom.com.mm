@@ -41,12 +41,12 @@ onUnmounted(() => {
 
 <template>
 	<div
-		class="grid grid-cols-4 justify-items-center gap-4 max-md:grid-cols-2 max-sm:grid-cols-1"
+		class="grid grid-cols-4 justify-items-center gap-4 max-md:gap-2 max-sm:gap-1"
 	>
 		<div
 			v-for="link in menuLinks"
 			:key="link.label"
-			class="w-72 rounded-full px-3 py-2 text-center max-sm:w-full md:w-full md:py-6 md:text-2xl lg:w-full lg:py-11 lg:text-5xl"
+			class="w-full rounded-full px-3 py-2 text-center sm:text-sm md:py-6 md:text-2xl lg:py-11 lg:text-5xl"
 			:class="link.class"
 		>
 			{{ link.label }}

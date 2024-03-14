@@ -19,7 +19,7 @@ const handleChange = (value: string) => {
 			<div
 				:class="[
 					type === 'nrc' ? 'border-b-2 border-b-indigo-600' : 'border-b',
-					'flex w-full cursor-pointer justify-center gap-4 py-2',
+					'flex w-full cursor-pointer items-center justify-center gap-4 py-2 max-md:gap-1',
 				]"
 				@click="handleChange('nrc')"
 			>
@@ -31,12 +31,14 @@ const handleChange = (value: string) => {
 					class="cursor-pointer"
 					v-model="type"
 				/>
-				<label for="nrc" class="cursor-pointer">NRC (Local)</label>
+				<label for="nrc" class="cursor-pointer max-md:text-sm"
+					>NRC <span class="max-md:hidden">(Local)</span></label
+				>
 			</div>
 			<div
 				:class="[
 					type === 'passport' ? 'border-b-2 border-b-indigo-600' : 'border-b',
-					'flex w-full cursor-pointer justify-center gap-4 py-2',
+					'flex w-full cursor-pointer items-center justify-center gap-4 py-2 max-md:gap-1',
 				]"
 				@click="handleChange('passport')"
 			>
@@ -47,8 +49,8 @@ const handleChange = (value: string) => {
 					class="cursor-pointer"
 					v-model="type"
 				/>
-				<label for="passport" class="cursor-pointer"
-					>Passport (Foreigner)</label
+				<label for="passport" class="cursor-pointer max-md:text-sm"
+					>Passport <span class="max-md:hidden">(Foreigner)</span></label
 				>
 			</div>
 		</div>
@@ -79,7 +81,7 @@ const handleChange = (value: string) => {
 					/>
 				</div>
 			</div>
-			<div class="grid grid-cols-2 gap-4">
+			<div class="grid grid-cols-2 gap-4 max-md:grid-cols-1">
 				<FileUpload title="Front of NRC" />
 				<FileUpload title="Back of NRC" />
 			</div>

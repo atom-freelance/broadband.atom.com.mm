@@ -26,7 +26,7 @@ const handleClick = () => {
 		<h3 class="mb-1 font-medium">{{ props.title }}</h3>
 		<p class="mb-4 text-sm text-slate-600">{{ props.subTitle }}</p>
 		<button
-			class="btn w-36 rounded-full bg-interactive-accent px-4 py-2 text-base font-semibold text-white hover:bg-interactive-accent-hover max-md:self-center"
+			class="btn w-36 rounded-full bg-interactive-accent px-4 py-2 text-base font-semibold text-white hover:bg-interactive-accent-hover max-md:self-center max-md:py-2"
 		>
 			Or Select file
 		</button>

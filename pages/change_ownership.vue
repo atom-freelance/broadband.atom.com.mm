@@ -13,13 +13,15 @@ const handleContinue = () => {
 		return
 	}
 	active.value += 1
+	const el = document.getElementById('change-ownership')
+	if (el) el.scrollIntoView({ behavior: 'smooth' })
 }
 </script>
 
 <template>
-	<div class="container mx-auto my-6">
+	<div id="change-ownership" class="container mx-auto my-6 max-md:px-4">
 		<div
-			class="mx-auto w-1/2 rounded-xl pt-3 shadow-[0_20px_66px_0_rgba(34,48,73,0.2)]"
+			class="mx-auto w-1/3 rounded-xl pt-3 shadow-[0_20px_66px_0_rgba(34,48,73,0.2)] max-xl:w-1/2 max-lg:w-3/5 max-md:w-full"
 		>
 			<ul class="steps w-full">
 				<li
@@ -75,12 +77,14 @@ const handleContinue = () => {
 					>
 				</li>
 			</ul>
-			<div class="my-4 px-8 py-4">
+			<div class="my-4 px-8 py-4 max-md:px-4">
 				<component :is="components[active]" :onContinue="handleContinue" />
 			</div>
 		</div>
 
-		<div class="mx-auto w-1/3 space-y-6 pt-6 text-sm text-content-secondary">
+		<div
+			class="mx-auto w-1/3 space-y-6 pt-6 text-sm text-content-secondary max-md:w-full"
+		>
 			<p class="flex items-center gap-2">
 				<Icon name="exclamation-circle" />
 				<span>ATOM စက်ပိုင်ရှင် ပြောင်းလဲနည်း</span>

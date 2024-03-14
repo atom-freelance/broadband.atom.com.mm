@@ -11,18 +11,24 @@ const props = defineProps({
 
 <template>
 	<div class="space-y-8">
-		<h4 class="mt-5 font-medium text-content-secondary">
+		<h4 class="mt-5 font-medium text-content-secondary max-md:text-sm">
 			Check your detail information and confirm to continue ownership change
 			process
 		</h4>
 		<div class="space-y-3">
-			<p class="flex justify-between text-sm text-content-secondary">
+			<p
+				class="flex justify-between text-sm text-content-secondary max-md:text-xs"
+			>
 				<span>IMEI Number</span><span class="font-medium">86123456</span>
 			</p>
-			<p class="flex justify-between text-sm text-content-secondary">
+			<p
+				class="flex justify-between text-sm text-content-secondary max-md:text-xs"
+			>
 				<span>New owner</span><span class="font-medium">Wai Lin</span>
 			</p>
-			<p class="flex justify-between text-sm text-content-secondary">
+			<p
+				class="flex justify-between text-sm text-content-secondary max-md:text-xs"
+			>
 				<span>Phone number</span><span class="font-medium">09 12345678</span>
 			</p>
 		</div>

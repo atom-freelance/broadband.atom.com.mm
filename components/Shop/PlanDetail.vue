@@ -4,22 +4,28 @@ const { closeModal } = useModal()
 
 <template>
 	<div class="w-full px-0 py-6">
-		<div class="mb-4 grid w-full grid-cols-5 rounded-lg bg-red-500 px-4 py-2">
-			<div class="col-span-3 flex items-center gap-2">
+		<div
+			class="mb-4 grid w-full grid-cols-5 rounded-lg bg-red-500 px-4 py-2 max-md:space-y-3 max-md:px-2"
+		>
+			<div
+				class="col-span-3 flex items-center gap-2 max-md:col-span-5 max-md:flex-col"
+			>
 				<Icon name="triangle-exclamation" class="text-white" />
-				<p class="text-sm text-white">
+				<p class="text-center text-sm text-white">
 					This product is not available in <strong>San Chaung.</strong>
 				</p>
 			</div>
-			<div class="col-span-2 flex items-center justify-end gap-2">
+			<div
+				class="col-span-2 flex items-center justify-end gap-2 max-md:col-span-5 max-md:w-full"
+			>
 				<button
-					class="btn btn-ghost btn-sm text-white"
+					class="btn btn-ghost btn-sm text-white max-md:w-1/2"
 					@click="() => closeModal('shop-plan-id')"
 				>
 					Change location
 				</button>
 				<button
-					class="btn btn-sm bg-gray-100 text-red-500"
+					class="btn btn-sm bg-gray-100 text-red-500 max-md:w-1/2"
 					@click="() => closeModal('shop-plan-id')"
 				>
 					Available products
@@ -44,18 +50,25 @@ const { closeModal } = useModal()
 			/>
 			<div class="grow">
 				<p class="mb-3 text-lg font-medium">Information</p>
-				<div class="grid grid-cols-6 items-center gap-4">
-					<p class="col-span-2 flex items-center gap-4 text-sm font-medium">
+				<div class="flex items-center gap-4 max-md:justify-between">
+					<p
+						class="flex w-1/3 items-center gap-4 text-sm font-medium max-md:flex-1"
+					>
 						<Icon name="rocket-launch" size="22" />
 						<span>Speed</span>
 					</p>
-					<p class="col-span-3 text-sm font-medium">Up to 15Mbps</p>
-
-					<p class="col-span-2 flex items-center gap-4 text-sm font-medium">
+					<p class="flex-1 text-sm font-medium max-md:flex-none">
+						Up to 15Mbps
+					</p>
+				</div>
+				<div class="mt-2 flex items-center gap-4 max-md:justify-between">
+					<p
+						class="flex w-1/3 items-center gap-4 text-sm font-medium max-md:flex-1"
+					>
 						<Icon name="dollar-circle" size="22" />
 						<span>Installation charges</span>
 					</p>
-					<p class="col-span-3 text-sm font-medium">FREE</p>
+					<p class="flex-1 text-sm font-medium max-md:flex-none">FREE</p>
 				</div>
 			</div>
 		</div>
@@ -66,26 +79,37 @@ const { closeModal } = useModal()
 				class="mt-0.5 font-medium text-primary"
 				size="24"
 			/>
-			<div class="grow">
+			<div class="grow space-y-2">
 				<p class="mb-3 text-lg font-medium">Pricing</p>
-				<div class="grid grid-cols-6 items-center gap-4">
-					<p class="col-span-2 flex items-center gap-4 text-sm font-medium">
+
+				<div class="flex items-center gap-4 max-md:justify-between">
+					<p
+						class="flex w-1/3 items-center gap-4 text-sm font-medium max-md:flex-1"
+					>
 						<Icon name="hand-holding-dollar-circle" size="22" />
 						<span>28,000 MMK</span>
 					</p>
-					<p class="col-span-3 text-sm font-medium">for 30 days</p>
-
-					<p class="col-span-2 flex items-center gap-4 text-sm font-medium">
+					<p class="flex-1 text-sm font-medium max-md:flex-none">for 30 days</p>
+				</div>
+				<div class="flex items-center gap-4 max-md:justify-between">
+					<p
+						class="flex w-1/3 items-center gap-4 text-sm font-medium max-md:flex-1"
+					>
 						<Icon name="hand-holding-dollar-circle" size="22" />
 						<span>77,000 MMK</span>
 					</p>
-					<p class="col-span-3 text-sm font-medium">for 60 days</p>
-
-					<p class="col-span-2 flex items-center gap-4 text-sm font-medium">
+					<p class="flex-1 text-sm font-medium max-md:flex-none">for 60 days</p>
+				</div>
+				<div class="flex items-center gap-4 max-md:justify-between">
+					<p
+						class="flex w-1/3 items-center gap-4 text-sm font-medium max-md:flex-1"
+					>
 						<Icon name="hand-holding-dollar-circle" size="22" />
 						<span>140,000 MMK</span>
 					</p>
-					<p class="col-span-3 text-sm font-medium">for 180 days</p>
+					<p class="flex-1 text-sm font-medium max-md:flex-none">
+						for 180 days
+					</p>
 				</div>
 			</div>
 		</div>

@@ -63,7 +63,7 @@ const handleChangeLink = (link: number) => {
 				<!-- sticky service menu links -->
 				<div class="sticky top-28 z-10 flex items-center justify-center">
 					<div
-						class="rounded-full bg-white px-6 py-5 shadow-[0_20px_66px_0_rgba(34,48,73,0.2)] max-sm:px-2 max-sm:py-3"
+						class="rounded-full bg-white px-6 py-5 shadow-[0_20px_66px_0_rgba(34,48,73,0.2)] max-sm:px-2 max-sm:py-5"
 					>
 						<button
 							v-for="(link, index) in menuLinks"
@@ -71,7 +71,7 @@ const handleChangeLink = (link: number) => {
 							@click="handleChangeLink(index)"
 							:class="[
 								{ 'text-interactive-accent-active': activeLink === index },
-								'mx-3 cursor-pointer px-6 text-base text-content-primary max-sm:mx-2 max-sm:px-2',
+								'mx-3 cursor-pointer px-6 text-base text-content-primary max-sm:mx-0 max-sm:px-3',
 							]"
 						>
 							{{ link }}
