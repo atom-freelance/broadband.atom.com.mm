@@ -4,10 +4,13 @@ const drawer = useHeaderDrawer()
 
 <template>
 	<aside
-		class="absolute inset-y-0 z-40 w-full bg-slate-900 bg-opacity-50 shadow"
+		class="fixed inset-y-0 z-40 w-full bg-slate-900 bg-opacity-50 shadow"
 		:class="{ hidden: !drawer.isOpen.value }"
 	>
-		<nav @click.stop="" class="h-full w-full bg-white px-4 py-8">
+		<nav
+			@click.stop=""
+			class="h-full w-full overflow-y-auto bg-white px-4 py-8"
+		>
 			<div class="mb-10 flex items-center justify-between">
 				<button @click="drawer.close">
 					<Icon name="times" />

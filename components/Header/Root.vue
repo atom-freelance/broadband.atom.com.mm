@@ -6,9 +6,11 @@ const isLoggedIn = ref(true)
 
 <template>
 	<header class="sticky top-0 z-20">
-		<section class="h-8 bg-interactive-accent-hover text-body text-white">
+		<section
+			class="min-h-8 bg-interactive-accent-hover py-1 text-body text-white"
+		>
 			<nav class="container flex h-full items-center justify-between">
-				<p>
+				<p class="flex flex-wrap gap-2">
 					<span>{{ $t('common.contact_us') }} : </span>
 					<a href="tel:+959780008080" class="link">+959 780 008 080</a>
 				</p>
