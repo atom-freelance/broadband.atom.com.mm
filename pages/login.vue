@@ -5,7 +5,7 @@ definePageMeta({
 	layout: 'login',
 })
 
-let showPassword = ref(false)
+const { showModal, closeModal } = useModal()
 
 const login = async () => {
 	await navigateTo('/')
@@ -19,9 +19,9 @@ const login = async () => {
 			<img src="/login_mascots.png" class="absolute bottom-0" />
 		</section>
 		<section
-			class="flex flex-col justify-center space-y-28 p-8 lg:relative lg:-left-10 lg:p-0"
+			class="flex flex-col justify-around space-y-48 px-8 lg:relative lg:-left-10 lg:space-y-0 lg:p-0"
 		>
-			<NuxtLink class="flex space-x-3 align-middle" to="/">
+			<NuxtLink class="flex space-x-3 align-top" to="/">
 				<Icon name="arrow-left" />
 				<span>Back to home</span>
 			</NuxtLink>
@@ -43,55 +43,14 @@ const login = async () => {
 						/>
 					</label>
 
-					<label class="form-control">
-						<div class="label">
-							<span class="label-text">Password</span>
-						</div>
-						<div class="relative">
-							<input
-								:type="showPassword ? 'text' : 'password'"
-								placeholder="Type here"
-								class="input input-bordered input-sm w-full border-2 border-sentiment-negative md:input-md focus:border-sentiment-negative-hover focus:outline-none"
-							/>
-
-							<div
-								class="absolute inset-y-0 right-0 flex items-center pr-3 text-sm leading-5"
-							>
-								<Icon
-									name="eye-closed"
-									class="hover:cursor-pointer"
-									@click="() => (showPassword = true)"
-									v-show="!showPassword"
-								/>
-
-								<Icon
-									name="eye-slash"
-									class="hover:cursor-pointer"
-									@click="() => (showPassword = false)"
-									v-show="showPassword"
-								/>
-							</div>
-						</div>
-						<div class="label justify-start space-x-1">
-							<Icon name="exclamation-circle" class="text-sentiment-negative" />
-							<span
-								class="label-text-alt text-pretty text-xs text-sentiment-negative"
-							>
-								These password does not match our records.
-							</span>
-						</div>
-					</label>
-
 					<div class="flex w-full flex-col space-y-3 text-center">
 						<button
-							type="submit"
-							class="btn btn-sm bg-interactive-accent text-white md:btn-md"
+							type="button"
+							class="btn btn-sm bg-interactive-accent text-white md:btn-md hover:bg-interactive-accent-hover"
+							@click.prevent="showModal('verify-phone')"
 						>
 							Login
 						</button>
-						<NuxtLink to="#" class="text-xs text-interactive-accent md:text-lg"
-							>Forgot Password?</NuxtLink
-						>
 					</div>
 				</form>
 			</div>
@@ -101,4 +60,63 @@ const login = async () => {
 			</p>
 		</section>
 	</div>
+
+	<!-- Verify Phone Section -->
+	<ModalRoot id="verify-phone" class="px-0">
+		<div class="flex items-center justify-between px-8 pt-4">
+			<h3 class="text-title-body font-semibold">Verify phone</h3>
+
+			<button
+				class="btn btn-circle btn-ghost btn-sm text-content-primary lg:text-lg"
+				@click="() => closeModal('verify-phone')"
+			>
+				✕
+			</button>
+		</div>
+
+		<span class="divider my-0" />
+
+		<ModalBackdrop class="px-8" enableClose>
+			<div class="flex flex-col gap-6 py-8 text-content-primary">
+				<p class="font-normal text-content-primary">
+					Enter the 4-digit code we just send +95 912345678.
+					<span class="text-sm font-semibold underline underline-offset-4"
+						>change</span
+					>
+				</p>
+				<label class="form-control w-full">
+					<div class="label">
+						<span class="label-text">4-digit code</span>
+					</div>
+					<input
+						type="text"
+						class="input input-bordered input-sm w-full border-2 lg:input-lg focus:border-neutral focus:outline-none"
+						placeholder=""
+					/>
+				</label>
+
+				<span class="font-semibold text-black underline underline-offset-2"
+					>I didn't receive a code</span
+				>
+			</div>
+		</ModalBackdrop>
+
+		<span class="divider my-0" />
+
+		<ModalAction class="my-5 px-8">
+			<div class="w-full text-center">
+				<DashboardActionButton
+					type="submit"
+					btnText="Verify"
+					class="!h-fit w-full bg-interactive-accent px-6 py-3 text-white hover:bg-interactive-accent-hover"
+					@click="
+						() => {
+							closeModal('verify-phone')
+							login()
+						}
+					"
+				/>
+			</div>
+		</ModalAction>
+	</ModalRoot>
 </template>

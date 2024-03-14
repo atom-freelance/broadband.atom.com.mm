@@ -101,7 +101,10 @@ function toggleShowComponent(
 								:productName="
 									$t('subscription.checkout.payment_method.mobile_banking')
 								"
+								@click="toggleShowComponent('mobile_banking')"
+								:show="showComponent.mobile_banking"
 							>
+								<img src="/mobile-banking.svg" />
 							</DashboardPaymentMethod>
 
 							<DashboardPaymentMethod
@@ -109,7 +112,10 @@ function toggleShowComponent(
 								:productName="
 									$t('subscription.checkout.payment_method.pay_at_shops')
 								"
+								@click="toggleShowComponent('shop')"
+								:show="showComponent.shop"
 							>
+								<img src="/pay-at-shop.svg" />
 							</DashboardPaymentMethod>
 
 							<DashboardPaymentMethod

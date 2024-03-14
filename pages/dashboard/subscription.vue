@@ -88,7 +88,10 @@ function isTabActive(state: TabState) {
 							<DataTableHeader iconName="list">
 								{{ $t('subscription.fiber.status') }}
 							</DataTableHeader>
-							<DataTableHeader iconName="settings">
+							<DataTableHeader
+								iconName="settings"
+								class="sticky right-0 bg-gray-100"
+							>
 								{{ $t('subscription.fiber.action') }}
 							</DataTableHeader>
 						</tr>
@@ -104,7 +107,7 @@ function isTabActive(state: TabState) {
 							<td>
 								<DashboardStatus class="bg-categories-cash" name="Active" />
 							</td>
-							<td>
+							<td class="sticky right-0 bg-white">
 								<NuxtLink :to="`/checkout-${1}`">
 									<DashboardActionButton
 										:btnText="$t('dashboard.action.renew_plan')"
@@ -122,7 +125,7 @@ function isTabActive(state: TabState) {
 							<td>
 								<DashboardStatus class="bg-categories-cash" name="Active" />
 							</td>
-							<td>
+							<td class="sticky right-0 bg-white">
 								<NuxtLink :to="`/checkout-${1}`">
 									<DashboardActionButton
 										:btnText="$t('dashboard.action.renew_plan')"
@@ -140,7 +143,7 @@ function isTabActive(state: TabState) {
 							<td>
 								<DashboardStatus class="bg-categories-cash" name="Active" />
 							</td>
-							<td>
+							<td class="sticky right-0 bg-white">
 								<NuxtLink :to="`/checkout-${1}`">
 									<DashboardActionButton
 										:btnText="$t('dashboard.action.renew_plan')"
@@ -158,7 +161,7 @@ function isTabActive(state: TabState) {
 							<td>
 								<DashboardStatus class="bg-categories-cash" name="Active" />
 							</td>
-							<td>
+							<td class="sticky right-0 bg-white">
 								<NuxtLink :to="`/checkout-${1}`">
 									<DashboardActionButton
 										:btnText="$t('dashboard.action.renew_plan')"
@@ -198,9 +201,11 @@ function isTabActive(state: TabState) {
 							<DataTableHeader iconName="list">{{
 								$t('subscription.wireless.status')
 							}}</DataTableHeader>
-							<DataTableHeader iconName="settings">{{
-								$t('subscription.wireless.action')
-							}}</DataTableHeader>
+							<DataTableHeader
+								iconName="settings"
+								class="sticky right-0 bg-gray-100"
+								>{{ $t('subscription.wireless.action') }}</DataTableHeader
+							>
 						</tr>
 					</template>
 
@@ -214,7 +219,7 @@ function isTabActive(state: TabState) {
 							<td>
 								<DashboardStatus class="bg-categories-cash" name="Active" />
 							</td>
-							<td>
+							<td class="sticky right-0 bg-white">
 								<NuxtLink :to="`/checkout-${1}`">
 									<DashboardActionButton
 										:btnText="$t('dashboard.action.renew_plan')"
@@ -232,7 +237,7 @@ function isTabActive(state: TabState) {
 							<td>
 								<DashboardStatus class="bg-categories-cash" name="Active" />
 							</td>
-							<td>
+							<td class="sticky right-0 bg-white">
 								<NuxtLink :to="`/checkout-${1}`">
 									<DashboardActionButton
 										:btnText="$t('dashboard.action.renew_plan')"
@@ -250,7 +255,7 @@ function isTabActive(state: TabState) {
 							<td>
 								<DashboardStatus class="bg-categories-cash" name="Active" />
 							</td>
-							<td>
+							<td class="sticky right-0 bg-white">
 								<NuxtLink :to="`/checkout-${1}`">
 									<DashboardActionButton
 										:btnText="$t('dashboard.action.renew_plan')"
@@ -268,7 +273,7 @@ function isTabActive(state: TabState) {
 							<td>
 								<DashboardStatus class="bg-categories-cash" name="Active" />
 							</td>
-							<td>
+							<td class="sticky right-0 bg-white">
 								<NuxtLink :to="`/checkout-${1}`">
 									<DashboardActionButton
 										:btnText="$t('dashboard.action.renew_plan')"
@@ -308,9 +313,11 @@ function isTabActive(state: TabState) {
 							<DataTableHeader iconName="calendar-empty-alt">{{
 								$t('subscription.flexi_net.end_date')
 							}}</DataTableHeader>
-							<DataTableHeader iconName="settings">{{
-								$t('subscription.flexi_net.action')
-							}}</DataTableHeader>
+							<DataTableHeader
+								iconName="settings"
+								class="sticky right-0 bg-gray-100"
+								>{{ $t('subscription.flexi_net.action') }}</DataTableHeader
+							>
 						</tr>
 					</template>
 
@@ -324,7 +331,7 @@ function isTabActive(state: TabState) {
 							<td>
 								<DashboardStatus class="bg-categories-cash" name="Active" />
 							</td>
-							<td>
+							<td class="sticky right-0 bg-white">
 								<NuxtLink :to="`/checkout-${1}`">
 									<DashboardActionButton
 										:btnText="$t('dashboard.action.renew_plan')"
@@ -342,7 +349,7 @@ function isTabActive(state: TabState) {
 							<td>
 								<DashboardStatus class="bg-categories-cash" name="Active" />
 							</td>
-							<td>
+							<td class="sticky right-0 bg-white">
 								<NuxtLink :to="`/checkout-${1}`">
 									<DashboardActionButton
 										:btnText="$t('dashboard.action.renew_plan')"
@@ -360,7 +367,7 @@ function isTabActive(state: TabState) {
 							<td>
 								<DashboardStatus class="bg-categories-cash" name="Active" />
 							</td>
-							<td>
+							<td class="sticky right-0 bg-white">
 								<NuxtLink :to="`/checkout-${1}`">
 									<DashboardActionButton
 										:btnText="$t('dashboard.action.renew_plan')"
@@ -378,7 +385,7 @@ function isTabActive(state: TabState) {
 							<td>
 								<DashboardStatus class="bg-categories-cash" name="Active" />
 							</td>
-							<td>
+							<td class="sticky right-0 bg-white">
 								<NuxtLink :to="`/checkout-${1}`">
 									<DashboardActionButton
 										:btnText="$t('dashboard.action.renew_plan')"

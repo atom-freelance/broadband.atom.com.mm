@@ -28,10 +28,11 @@ const props = defineProps({
 				<tbody>
 					<slot name="tbody" />
 				</tbody>
-				<tfoot class="bg-gray-100">
-					<slot name="tfoot" />
-				</tfoot>
 			</table>
+		</div>
+
+		<div class="overflow-x-hidden bg-gray-100 p-2">
+			<slot name="tfoot" />
 		</div>
 	</div>
 </template>
