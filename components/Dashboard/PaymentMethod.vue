@@ -19,7 +19,7 @@ const props = defineProps({
 	<label
 		class="label cursor-pointer flex-col items-start rounded-xl border px-2"
 	>
-		<div class="flex flex-wrap items-center gap-4">
+		<div class="flex items-center gap-4">
 			<input type="radio" :name="props.name" class="radio checked:bg-primary" />
 
 			<span class="text-xs lg:text-sm">{{ props.productName }}</span>

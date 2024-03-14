@@ -200,7 +200,7 @@ const { showModal, closeModal } = useModal()
 	</DataTable>
 
 	<!-- Relocate Map -->
-	<ModalRoot id="relocate-map" isFullWidth class="mx-auto w-[965px]">
+	<ModalRoot id="relocate-map" isFullWidth class="mx-auto lg:w-[965px]">
 		<div class="flex items-center justify-between py-4">
 			<h3 class="text-title-body">{{ $t('relocate.relocate_address') }}</h3>
 

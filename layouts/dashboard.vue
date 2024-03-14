@@ -1,6 +1,6 @@
 <template>
 	<div class="container grid min-h-fit grid-cols-12 gap-0 py-4 lg:gap-4">
-		<div class="col-span-6 lg:col-span-3">
+		<div class="hidden lg:col-span-3 lg:block">
 			<SidebarList>
 				<li>
 					<SidebarItem
@@ -60,7 +60,7 @@
 				</li>
 			</SidebarList>
 		</div>
-		<div class="col-span-6 min-h-[500px] p-10 pl-0 lg:col-span-9">
+		<div class="col-span-12 min-h-[500px] pl-0 lg:col-span-9 lg:p-10">
 			<slot />
 		</div>
 	</div>
