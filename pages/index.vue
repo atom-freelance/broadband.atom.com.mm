@@ -104,7 +104,7 @@ const { showModal } = useModal()
 		<!-- Plans -->
 		<section class="container sticky bg-white pt-40">
 			<article class="flex flex-col items-center space-y-6 text-center">
-				<h2 class="flex gap-3 text-5xl font-medium">
+				<h2 class="flex gap-3 text-4xl font-medium lg:text-5xl">
 					<span>{{ $t('home.best_selling.title.sec.1') }}</span>
 					<i class="font-semibold">
 						{{ $t('home.best_selling.title.sec.2') }}

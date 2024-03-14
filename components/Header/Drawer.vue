@@ -4,11 +4,21 @@ const drawer = useHeaderDrawer()
 
 <template>
 	<aside
-		@click="drawer.close"
 		class="absolute inset-y-0 z-40 w-full bg-slate-900 bg-opacity-50 shadow"
 		:class="{ hidden: !drawer.isOpen.value }"
 	>
-		<nav @click.stop="" class="h-full w-3/4 bg-white px-4 py-8">
+		<nav @click.stop="" class="h-full w-full bg-white px-4 py-8">
+			<div class="mb-10 flex items-center justify-between">
+				<button @click="drawer.close">
+					<Icon name="times" />
+				</button>
+
+				<!-- Hide on Logged in -->
+				<NuxtLinkLocale to="/login" class="btn btn-primary rounded-full">
+					Login
+				</NuxtLinkLocale>
+			</div>
+
 			<div v-for="link in NavbarLinks" class="py-2">
 				<!-- Render Link if type is link -->
 				<NuxtLinkLocale
