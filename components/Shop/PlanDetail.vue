@@ -72,7 +72,10 @@ const planDetail = computed(() => {
 						<Icon name="rocket-launch" size="22" />
 						<span>Speed</span>
 					</p>
-					<p class="flex-1 text-sm font-medium max-md:flex-none">
+					<p
+						class="flex-1 text-sm font-medium max-md:flex-none"
+						v-if="planDetail?.title !== ''"
+					>
 						{{ $t(planDetail?.title as string) }}
 					</p>
 				</div>

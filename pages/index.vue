@@ -1,5 +1,11 @@
 <script setup lang="ts">
 const { showModal } = useModal()
+
+const plan = reactive({
+	title: 'Up to 10Mbps',
+	power: 'Starter Kit',
+	tax: '',
+})
 </script>
 
 <template>
@@ -283,7 +289,7 @@ const { showModal } = useModal()
 	</main>
 
 	<ModalRoot id="shop-plan-id" class="max-w-[800px]">
-		<ShopPlanDetail />
+		<ShopPlanDetail :plan="plan" />
 	</ModalRoot>
 </template>
 
