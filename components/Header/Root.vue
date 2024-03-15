@@ -77,8 +77,11 @@ const isLoggedIn = ref(true)
 
 				<!-- After logged in -->
 				<DropdownRoot v-show="isLoggedIn" v-slot="{ isOpen, close, toggle }">
-					<button class="btn btn-primary rounded-full" @click="toggle()">
-						<span class="lg:hidden">A</span>
+					<button
+						class="btn btn-primary size-12 rounded-full lg:size-[unset]"
+						@click="toggle()"
+					>
+						<span class="lg:hidden">AMS</span>
 						<Icon name="user" class="hidden lg:block" />
 						<span class="hidden lg:block">Hi, Aungmin</span>
 					</button>
