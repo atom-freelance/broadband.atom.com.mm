@@ -22,7 +22,7 @@ const { showModal, closeModal } = useModal()
 				<div>
 					<span class="font-normal">You can get the following benefits:</span>
 
-					<div class="grid grid-cols-1 gap-8 p-2 lg:grid-cols-3">
+					<div class="grid grid-cols-3 gap-8 p-2">
 						<DashboardBenefitCard
 							title="100GB"
 							subTitle="Monthly data"
@@ -103,7 +103,7 @@ const { showModal, closeModal } = useModal()
 				<div>
 					<span class="font-normal">You can get the following benefits:</span>
 
-					<div class="grid grid-cols-1 gap-8 p-2 lg:grid-cols-3">
+					<div class="grid grid-cols-3 gap-8 p-2">
 						<DashboardBenefitCard
 							title="100GB"
 							subTitle="Monthly data"

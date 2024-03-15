@@ -24,18 +24,27 @@ const props = defineProps({
 <template>
 	<section
 		:class="
-			twMerge('relative flex h-32 overflow-hidden rounded-2xl', props.class)
+			twMerge(
+				'h-32 overflow-hidden rounded-2xl lg:relative lg:flex',
+				props.class,
+			)
 		"
 	>
-		<div class="flex flex-col items-start justify-end gap-2 p-4">
-			<h5 class="text-lg font-semibold lg:text-2xl">{{ props.title }}</h5>
-			<p class="text-sm font-medium lg:text-sm">{{ props.subTitle }}</p>
+		<div
+			class="flex h-full flex-col items-center justify-center gap-2 text-center lg:items-start lg:justify-end lg:p-4"
+		>
+			<h5 class="text-sm font-semibold lg:text-2xl">
+				{{ props.title }}
+			</h5>
+			<p class="text-center text-xs font-medium lg:text-sm">
+				{{ props.subTitle }}
+			</p>
 		</div>
 
 		<Icon
 			:name="props.icon"
 			size="153px"
-			class="absolute bottom-0 right-0 translate-x-1/4 translate-y-7 font-extrabold opacity-20"
+			class="absolute bottom-0 right-0 hidden translate-x-1/4 translate-y-7 font-extrabold opacity-20 lg:block"
 		/>
 	</section>
 </template>
