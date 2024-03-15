@@ -1,5 +1,16 @@
 <script setup lang="ts">
+import type { PlanType } from './PlanCard.vue'
+
 const { showModal } = useModal()
+
+let selectedPlan = reactive<{ plan: PlanType }>({
+	plan: { title: '', tax: '' },
+})
+
+function handleOnclick(plan: PlanType) {
+	selectedPlan.plan = plan
+	showModal('shop-plan-id')
+}
 </script>
 
 <template>
@@ -19,7 +30,7 @@ const { showModal } = useModal()
 				v-for="plan in fiberHomePlans"
 				:key="plan.title"
 			>
-				<ModalAction class="block" @click="() => showModal('shop-plan-id')">
+				<ModalAction class="block" @click="handleOnclick(plan)">
 					<ShopPlanCard
 						:plan="plan"
 						:planType="'fiber'"
@@ -44,7 +55,7 @@ const { showModal } = useModal()
 				v-for="plan in fiberBusinessPlans"
 				:key="plan.title"
 			>
-				<ModalAction @click="() => showModal('shop-plan-id')">
+				<ModalAction @click="handleOnclick(plan)">
 					<ShopPlanCard
 						:plan="plan"
 						:planType="'fiber'"
@@ -54,8 +65,9 @@ const { showModal } = useModal()
 			</div>
 		</div>
 	</div>
+
 	<ModalRoot id="shop-plan-id" class="max-w-[800px]">
-		<ShopPlanDetail />
+		<ShopPlanDetail :plan="selectedPlan.plan" />
 	</ModalRoot>
 </template>
 

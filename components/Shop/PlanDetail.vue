@@ -1,5 +1,18 @@
 <script setup lang="ts">
+import type { PlanType } from './PlanCard.vue'
+
 const { closeModal } = useModal()
+
+const props = defineProps({
+	plan: {
+		type: Object as PropType<PlanType>,
+		required: true,
+	},
+})
+
+const planDetail = computed(() => {
+	return props.plan
+})
 </script>
 
 <template>
@@ -34,7 +47,9 @@ const { closeModal } = useModal()
 		</div>
 
 		<div class="mb-4 flex w-full justify-between">
-			<p class="text-2xl font-semibold">Power 15</p>
+			<p class="text-2xl font-semibold" v-if="planDetail?.power">
+				{{ $t(planDetail?.power as string) }}
+			</p>
 			<button
 				class="btn btn-circle btn-ghost btn-sm text-content-primary lg:text-lg"
 				@click="() => closeModal('shop-plan-id')"
@@ -58,7 +73,7 @@ const { closeModal } = useModal()
 						<span>Speed</span>
 					</p>
 					<p class="flex-1 text-sm font-medium max-md:flex-none">
-						Up to 15Mbps
+						{{ $t(planDetail?.title as string) }}
 					</p>
 				</div>
 				<div class="mt-2 flex items-center gap-4 max-md:justify-between">
@@ -123,8 +138,11 @@ const { closeModal } = useModal()
 			<div class="grow">
 				<p class="mb-3 text-lg font-medium">Benefits</p>
 				<p class="mb-3 text-sm font-medium">
-					Power15 ကို ဝယ်ယူ/သက်တမ်းတိုးပါက ဖုန်းနံပါတ် ၃ လုံးအထိ အောက်ပါအတိုင်း
-					Gift များရရှိနိုင်ပါသည်။
+					<span v-if="planDetail?.power">{{
+						$t(planDetail?.power as string)
+					}}</span>
+					ကို ဝယ်ယူ/သက်တမ်းတိုးပါက ဖုန်းနံပါတ် ၃ လုံးအထိ အောက်ပါအတိုင်း Gift
+					များရရှိနိုင်ပါသည်။
 				</p>
 				<ul class="list-inside list-disc">
 					<li class="mb-3 text-sm font-medium">အခမဲ့ ဒေတာ 1GB</li>

@@ -1,6 +1,7 @@
 export default {
 	'shop.fiber.home_plan': 'အိမ်သုံး Plan များ',
 	'shop.fiber.inclusive_tax': 'အခွန် ပါဝင်ပြီး',
+	'shop.fiber.power': 'မြန်နှုန်း',
 	'shop.fiber.up_to_15': 'မြန်နှုန်း - ၁၅ Mbps',
 	'shop.fiber.up_to_15.price_day': 'ရက် (၃၀) စာအတွက် ၂၈,၀၀၀ ကျပ်',
 	'shop.fiber.up_to_15.price_day_90': 'ရက် (၉၀) စာအတွက် ၇၇,၀၀၀ ကျပ်',

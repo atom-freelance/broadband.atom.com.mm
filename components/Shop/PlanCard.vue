@@ -4,6 +4,7 @@ import { reactive, type PropType } from 'vue'
 // { title: string; subtitle: string; tax: string; price: string; day: number; priceForBattery?: undefined; }
 export type PlanType = {
 	title: String
+	power?: String
 	subtitle?: String
 	tax: String
 	price?: String
@@ -64,7 +65,10 @@ const textClass = reactive({
 		</div>
 		<div class="py-3.5">
 			<div class="flex items-center justify-between">
-				<p class="text-lg font-semibold">{{ $t(plan.title as string) }}</p>
+				<p class="text-lg font-semibold">
+					<span v-if="plan.power">{{ $t(plan.power as string) }}</span>
+					{{ $t(plan.title as string) }}
+				</p>
 				<Icon
 					:name="'info-circle'"
 					class="rounded-full bg-interactive-accent text-white"
