@@ -32,7 +32,7 @@ const plan = reactive({
 				</NuxtLinkLocale>
 			</article>
 
-			<figure class="hero-figure mt-48">
+			<figure class="hero-figure mt-24 lg:mt-48">
 				<img src="/hero_image.jpeg" class="aspect-video" />
 			</figure>
 		</section>
@@ -183,12 +183,14 @@ const plan = reactive({
 					class="h-[450px] w-full object-cover object-center"
 				/>
 
-				<h5 class="mt-4 text-title-screen font-semibold">
-					{{ $t('home.scenarios.1.title') }}
-				</h5>
-				<h6 class="mt-2 text-title-body font-semibold">
-					{{ $t('home.scenarios.1.desc') }}
-				</h6>
+				<div class="mt-4 px-4">
+					<h5 class="text-title-screen font-semibold">
+						{{ $t('home.scenarios.1.title') }}
+					</h5>
+					<h6 class="mt-2 text-title-body font-semibold">
+						{{ $t('home.scenarios.1.desc') }}
+					</h6>
+				</div>
 			</figure>
 
 			<figure class="md:col-span-2 lg:col-span-3">
@@ -197,12 +199,14 @@ const plan = reactive({
 					class="h-[450px] w-full object-cover object-center"
 				/>
 
-				<h5 class="mt-4 text-title-screen font-semibold">
-					{{ $t('home.scenarios.2.title') }}
-				</h5>
-				<h6 class="mt-2 text-title-body font-semibold">
-					{{ $t('home.scenarios.2.desc') }}
-				</h6>
+				<div class="mt-4 px-4">
+					<h5 class="text-title-screen font-semibold">
+						{{ $t('home.scenarios.2.title') }}
+					</h5>
+					<h6 class="mt-2 text-title-body font-semibold">
+						{{ $t('home.scenarios.2.desc') }}
+					</h6>
+				</div>
 			</figure>
 
 			<figure class="md:col-span-1 lg:col-span-2">
@@ -211,12 +215,14 @@ const plan = reactive({
 					class="h-[450px] w-full object-cover object-center"
 				/>
 
-				<h5 class="mt-4 text-title-screen font-semibold">
-					{{ $t('home.scenarios.3.title') }}
-				</h5>
-				<h6 class="mt-2 text-title-body font-semibold">
-					{{ $t('home.scenarios.3.desc') }}
-				</h6>
+				<div class="mt-4 px-4">
+					<h5 class="text-title-screen font-semibold">
+						{{ $t('home.scenarios.3.title') }}
+					</h5>
+					<h6 class="mt-2 text-title-body font-semibold">
+						{{ $t('home.scenarios.3.desc') }}
+					</h6>
+				</div>
 			</figure>
 		</section>
 
