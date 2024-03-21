@@ -55,7 +55,7 @@ const isLoggedIn = ref(true)
 		</section>
 
 		<section class="h-16 bg-white">
-			<nav class="container flex h-full items-center justify-between">
+			<nav class="container flex h-full items-center justify-between gap-4">
 				<article class="flex h-full items-center gap-4">
 					<button @click="drawer.open" class="lg:hidden">
 						<Icon name="menu" />

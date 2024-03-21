@@ -27,6 +27,7 @@ const drawer = useHeaderDrawer()
 				<NuxtLinkLocale
 					v-if="link.type === 'link'"
 					:to="link.to"
+					@click="drawer.close"
 					class="hover:text-interactive-accent-hover"
 					exact-active-class="text-interactive-accent"
 				>
@@ -45,6 +46,7 @@ const drawer = useHeaderDrawer()
 							<NuxtLinkLocale
 								v-if="subLink.type === 'link'"
 								:to="subLink.to"
+								@click="drawer.close"
 								class="hover:text-interactive-accent-hover"
 								exact-active-class="text-interactive-accent"
 							>

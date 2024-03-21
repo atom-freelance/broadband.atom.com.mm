@@ -71,7 +71,7 @@ const handleChangeLink = (link: number) => {
 							@click="handleChangeLink(index)"
 							:class="[
 								{ 'text-interactive-accent-active': activeLink === index },
-								'mx-3 cursor-pointer px-6 text-base text-content-primary max-sm:mx-0 max-sm:px-3',
+								'mx-3 cursor-pointer px-6 text-xs text-content-primary max-sm:mx-0 max-sm:px-3 lg:text-base',
 							]"
 						>
 							{{ link }}
