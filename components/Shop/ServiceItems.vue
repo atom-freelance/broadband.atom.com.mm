@@ -46,7 +46,7 @@ onUnmounted(() => {
 		<div
 			v-for="link in menuLinks"
 			:key="link.label"
-			class="w-full rounded-full px-3 py-2 text-center sm:text-sm md:py-6 md:text-2xl lg:py-11 lg:text-5xl"
+			class="w-full rounded-full px-3 py-2 text-center text-sm md:py-6 md:text-2xl lg:py-11 lg:text-5xl"
 			:class="link.class"
 		>
 			{{ link.label }}
