@@ -223,7 +223,7 @@ const { showModal, closeModal } = useModal()
 			></iframe>
 
 			<div
-				class="absolute inset-5 flex max-h-fit w-1/3 flex-col gap-6 rounded-2xl bg-white p-5 text-content-primary"
+				class="absolute inset-5 flex max-h-fit w-5/6 lg:w-1/3 flex-col gap-6 rounded-2xl bg-white p-5 text-content-primary"
 			>
 				<div class="flex flex-col gap-4">
 					<h3 class="text-body-large font-semibold">
