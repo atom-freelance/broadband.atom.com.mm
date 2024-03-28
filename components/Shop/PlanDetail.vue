@@ -182,12 +182,9 @@ const planDetail = computed(() => {
 			>
 				Cancel
 			</button>
-			<button
-				class="btn btn-primary btn-md"
-				@click="() => closeModal('shop-plan-id')"
-			>
+			<NuxtLinkLocale to="/checkout-123" class="btn btn-primary btn-md">
 				Buy now
-			</button>
+			</NuxtLinkLocale>
 		</div>
 	</div>
 </template>
