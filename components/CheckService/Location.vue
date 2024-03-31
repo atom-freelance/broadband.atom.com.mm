@@ -30,11 +30,12 @@
 					</select>
 				</label>
 
-				<button
+				<NuxtLinkLocale
+					to="/shop?check=1&available=1"
 					class="btn w-36 rounded-full bg-interactive-accent px-6 py-3 text-base font-semibold text-white hover:bg-interactive-accent-hover max-md:self-center"
 				>
 					Check now
-				</button>
+				</NuxtLinkLocale>
 			</form>
 		</div>
 	</div>
