@@ -1,8 +1,11 @@
-<script lang="ts" setup>
-import { reactive, ref } from 'vue'
+<script setup lang="ts">
+import { computed, reactive, ref } from 'vue'
 import Fiber from '~/components/Shop/FiberPlans.vue'
 import Wireless from '~/components/Shop/WirelessPlans.vue'
 import FlexiNet from '~/components/Shop/FlexiNetPlans.vue'
+import AvailableService from './available-service.vue'
+import NoService from './no-service.vue'
+import AllService from './all-service.vue'
 
 type LinkType = 'Fiber' | 'Wireless' | 'FlexiNet' | 'MiniPro'
 
@@ -14,6 +17,16 @@ const menuLinks = reactive<LinkType[]>([
 	'MiniPro',
 ])
 
+const route = useRoute()
+
+const serviceCheck = computed(() => {
+	return {
+		check: Boolean(route.query.check),
+		available: route.query.township === 'tarmwe',
+	}
+})
+
+const { check, available } = serviceCheck.value
 const components = [Fiber, Wireless, FlexiNet]
 const handleChangeLink = (link: number) => {
 	activeLink.value = link
@@ -25,40 +38,19 @@ const handleChangeLink = (link: number) => {
 <template>
 	<div class="relative bg-white">
 		<!-- banner hero text and service menu -->
-		<div
-			class="container fixed left-0 right-0 top-16 flex h-[calc(95vh-10rem)] flex-col justify-center gap-10"
-		>
-			<div class="hero">
-				<div class="hero-content text-center">
-					<div class="relative">
-						<h1 class="text-title-hero max-md:text-6xl max-sm:text-4xl">
-							Let’s find <span class="font-bold italic">the best plans</span>
-							<br />
-							and <span class="font-bold italic">services</span> now!
-						</h1>
-						<p class="py-6 text-base max-sm:text-sm">
-							Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-							<br />
-							excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-							et a id nisi.
-						</p>
-						<img
-							src="~/assets/img/rocket-launch.svg"
-							alt="rocket"
-							class="absolute -right-20 top-20 h-16 w-16 max-sm:-right-10 max-sm:top-10 max-sm:h-11 max-sm:w-11"
-						/>
-					</div>
-				</div>
-			</div>
+		<AllService v-if="!check" />
 
-			<!-- service btn group -->
-			<ShopServiceItems />
-		</div>
+		<AvailableService v-else-if="available" />
+
+		<NoService v-else />
 
 		<!-- set height for fixed hero block -->
-		<div class="h-[calc(85vh-10rem)]"></div>
+		<div
+			class="h-[calc(85vh-10rem)]"
+			v-if="(check && available) || !check"
+		></div>
 
-		<div class="relative bg-white">
+		<div class="relative bg-white" v-if="(check && available) || !check">
 			<div id="shop-plans" class="container z-10 py-20">
 				<!-- sticky service menu links -->
 				<div class="sticky top-28 z-10 flex items-center justify-center">

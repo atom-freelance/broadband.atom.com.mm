@@ -23,7 +23,7 @@
 							want to use the service.
 						</p>
 						<NuxtLink
-							to="/check_service_availability"
+							to="/check-service-availability"
 							class="btn w-64 rounded-full bg-interactive-accent px-6 py-3 text-base font-semibold text-white hover:bg-interactive-accent-hover max-md:self-center"
 						>
 							Check service available

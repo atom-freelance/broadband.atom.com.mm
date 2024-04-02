@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const township = ref('tarmwe')
+</script>
+
 <template>
 	<div class="grid grid-cols-8 gap-8 py-3">
 		<div class="col-span-5 h-[450px] w-full">
@@ -24,14 +28,18 @@
 							Township <sup class="text-red-600">*</sup>
 						</span>
 					</div>
-					<select class="select select-bordered select-sm lg:select-md">
-						<option>Thingangyun</option>
-						<option>Kamayut</option>
+					<select
+						v-model="township"
+						class="select select-bordered select-sm lg:select-md"
+					>
+						<option value="thingangyun">Thingangyun</option>
+						<option value="tarmwe">Tarmwe</option>
+						<option value="kamayut">Kamayut</option>
 					</select>
 				</label>
 
 				<NuxtLinkLocale
-					to="/shop?check=1&available=1"
+					:to="'/shop?check=1&township=' + township"
 					class="btn w-36 rounded-full bg-interactive-accent px-6 py-3 text-base font-semibold text-white hover:bg-interactive-accent-hover max-md:self-center"
 				>
 					Check now
