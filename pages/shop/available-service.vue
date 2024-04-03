@@ -25,5 +25,5 @@
 		</div>
 	</div>
 	<!-- set height for fixed hero block -->
-	<div class="h-[calc(85vh-10rem)]"></div>
+	<!-- <div class="h-[calc(85vh-10rem)]"></div> -->
 </template>

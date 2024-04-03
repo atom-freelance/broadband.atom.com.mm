@@ -11,7 +11,7 @@ const serviceCheck = computed(() => {
 const { township } = serviceCheck.value
 </script>
 <template>
-	<div class="container inset-0 flex h-screen">
+	<div class="container inset-0 flex h-screen pb-36">
 		<div class="hero">
 			<div class="hero-content text-center">
 				<div class="relative">
