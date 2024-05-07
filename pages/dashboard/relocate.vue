@@ -1,203 +1,660 @@
 <script setup lang="ts">
+type TabState = 'fiber' | 'wireless' | 'flexi net'
+
+const tabState = ref<TabState>('fiber')
 const { showModal, closeModal } = useModal()
+
+function changeTabState(state: TabState) {
+	tabState.value = state
+}
+
+function isTabActive(state: TabState) {
+	return tabState.value === state
+}
 </script>
 
 <template>
-	<DataTable
-		:title="$t('relocate.title')"
-		:description="$t('relocate.subtitle')"
-	>
-		<template #thead>
-			<tr>
-				<DataTableHeader iconName="hard-drive">
-					{{ $t('relocate.cpe_device') }}
-				</DataTableHeader>
-				<DataTableHeader iconName="route">
-					{{ $t('relocate.relocate_address') }}
-				</DataTableHeader>
-				<DataTableHeader iconName="settings">
-					{{ $t('relocate.action') }}
-				</DataTableHeader>
-			</tr>
-		</template>
+	<section class="flex flex-col gap-4">
+		<h1 class="text-title-section font-semibold">
+			{{ $t('relocate.title') }}
+		</h1>
+		<p class="text-sm">{{ $t('relocate.subtitle') }}</p>
 
-		<template #tbody>
-			<tr>
-				<td>868465034183737</td>
-				<td>
-					<div class="flex items-center justify-start gap-10">
-						<span>Botahtaung, Yangon</span>
-						<div class="flex items-center justify-start gap-4">
-							<img src="/assets/img/greater-than-equal-to.svg" />
-							<span>Hlaing, Yangon</span>
-							<DashboardStatus
-								class="bg-categories-investments"
-								name="Effective on 30 Dec, 2023"
-							/>
-						</div>
-					</div>
-				</td>
-				<td>
-					<button
-						type="button"
-						class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
-						@click="() => showModal('relocate-map')"
-					>
-						Relocate
-					</button>
-				</td>
-			</tr>
-			<tr>
-				<td>868465034183737</td>
-				<td>
-					<div class="flex items-center justify-start gap-10">
-						<span>Botahtaung, Yangon</span>
-						<div class="flex items-center justify-start gap-4">
-							<img src="/assets/img/greater-than-equal-to.svg" />
-							<span>Hlaing, Yangon</span>
-							<DashboardStatus
-								class="bg-categories-investments"
-								name="Effective on 30 Dec, 2023"
-							/>
-						</div>
-					</div>
-				</td>
-				<td>
-					<button
-						type="button"
-						class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
-						@click="() => showModal('relocate-map')"
-					>
-						Relocate
-					</button>
-				</td>
-			</tr>
-			<tr>
-				<td>868465034183737</td>
-				<td>
-					<div class="flex items-center justify-start gap-10">
-						<span>Botahtaung, Yangon</span>
-						<div class="flex items-center justify-start gap-4">
-							<img src="/assets/img/greater-than-equal-to.svg" />
-						</div>
-					</div>
-				</td>
-				<td>
-					<button
-						type="button"
-						class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
-						@click="() => showModal('relocate-map')"
-					>
-						Relocate
-					</button>
-				</td>
-			</tr>
-			<tr>
-				<td>868465034183737</td>
-				<td>
-					<div class="flex items-center justify-start gap-10">
-						<span>Botahtaung, Yangon</span>
-						<div class="flex items-center justify-start gap-4">
-							<img src="/assets/img/greater-than-equal-to.svg" />
-						</div>
-					</div>
-				</td>
-				<td>
-					<button
-						type="button"
-						class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
-						@click="() => showModal('relocate-map')"
-					>
-						Relocate
-					</button>
-				</td>
-			</tr>
-			<tr>
-				<td>868465034183737</td>
-				<td>
-					<div class="flex items-center justify-start gap-10">
-						<span>Botahtaung, Yangon</span>
-						<div class="flex items-center justify-start gap-4">
-							<img src="/assets/img/greater-than-equal-to.svg" />
-						</div>
-					</div>
-				</td>
-				<td>
-					<button
-						type="button"
-						class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
-						@click="() => showModal('relocate-map')"
-					>
-						Relocate
-					</button>
-				</td>
-			</tr>
-			<tr>
-				<td>868465034183737</td>
-				<td>
-					<div class="flex items-center justify-start gap-10">
-						<span>Botahtaung, Yangon</span>
-						<div class="flex items-center justify-start gap-4">
-							<img src="/assets/img/greater-than-equal-to.svg" />
-						</div>
-					</div>
-				</td>
-				<td>
-					<button
-						type="button"
-						class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
-						@click="() => showModal('relocate-map')"
-					>
-						Relocate
-					</button>
-				</td>
-			</tr>
-			<tr>
-				<td>868465034183737</td>
-				<td>
-					<div class="flex items-center justify-start gap-10">
-						<span>Botahtaung, Yangon</span>
-						<div class="flex items-center justify-start gap-4">
-							<img src="/assets/img/greater-than-equal-to.svg" />
-						</div>
-					</div>
-				</td>
-				<td>
-					<button
-						type="button"
-						class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
-						@click="() => showModal('relocate-map')"
-					>
-						Relocate
-					</button>
-				</td>
-			</tr>
-			<tr>
-				<td>868465034183737</td>
-				<td>
-					<div class="flex items-center justify-start gap-10">
-						<span>Botahtaung, Yangon</span>
-						<div class="flex items-center justify-start gap-4">
-							<img src="/assets/img/greater-than-equal-to.svg" />
-						</div>
-					</div>
-				</td>
-				<td>
-					<button
-						type="button"
-						class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
-						@click="() => showModal('relocate-map')"
-					>
-						Relocate
-					</button>
-				</td>
-			</tr>
-		</template>
+		<section class="flex flex-col gap-4">
+			<!-- Tab Panel -->
+			<div class="grid grid-cols-3 text-center">
+				<label
+					class="col-span-1 space-x-2 border-b-2 py-2 hover:cursor-pointer"
+					:class="{ 'border-b-primary': isTabActive('fiber') }"
+				>
+					<input
+						type="radio"
+						name="subscription_tab"
+						role="tab"
+						@click="changeTabState('fiber')"
+						:checked="isTabActive('fiber')"
+					/>
+					<span>Fiber</span>
+				</label>
 
-		<template #tfoot>
-			<DataTableFooter />
-		</template>
-	</DataTable>
+				<label
+					class="col-span-1 space-x-2 border-b-2 py-2 hover:cursor-pointer"
+					:class="{ 'border-b-primary': isTabActive('wireless') }"
+				>
+					<input
+						type="radio"
+						name="subscription_tab"
+						role="tab"
+						@click="changeTabState('wireless')"
+						:checked="isTabActive('wireless')"
+					/>
+					<span>Wireless</span>
+				</label>
+
+				<label
+					class="col-span-1 space-x-2 border-b-2 py-2 hover:cursor-pointer"
+					:class="{ 'border-b-primary': isTabActive('flexi net') }"
+				>
+					<input
+						type="radio"
+						name="subscription_tab"
+						role="tab"
+						@click="changeTabState('flexi net')"
+						:checked="isTabActive('flexi net')"
+					/>
+					<span>Flexi Net</span>
+				</label>
+			</div>
+
+			<!-- Tab Content(fiber) -->
+			<section v-show="tabState === 'fiber'">
+				<DataTable>
+					<template #thead>
+						<tr>
+							<DataTableHeader iconName="hard-drive">
+								{{ $t('relocate.cpe_device') }}
+							</DataTableHeader>
+							<DataTableHeader iconName="route">
+								{{ $t('relocate.relocate_address') }}
+							</DataTableHeader>
+							<DataTableHeader iconName="settings">
+								{{ $t('relocate.action') }}
+							</DataTableHeader>
+						</tr>
+					</template>
+
+					<template #tbody>
+						<tr>
+							<td>868465034183737</td>
+							<td>
+								<div class="flex items-center justify-start gap-10">
+									<span>Botahtaung, Yangon</span>
+									<div class="flex items-center justify-start gap-4">
+										<img src="/assets/img/greater-than-equal-to.svg" />
+										<span>Hlaing, Yangon</span>
+										<DashboardStatus
+											class="bg-categories-investments"
+											name="Effective on 30 Dec, 2023"
+										/>
+									</div>
+								</div>
+							</td>
+							<td>
+								<button
+									type="button"
+									class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
+									@click="() => showModal('relocate-map')"
+								>
+									Relocate
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>868465034183737</td>
+							<td>
+								<div class="flex items-center justify-start gap-10">
+									<span>Botahtaung, Yangon</span>
+									<div class="flex items-center justify-start gap-4">
+										<img src="/assets/img/greater-than-equal-to.svg" />
+										<span>Hlaing, Yangon</span>
+										<DashboardStatus
+											class="bg-categories-investments"
+											name="Effective on 30 Dec, 2023"
+										/>
+									</div>
+								</div>
+							</td>
+							<td>
+								<button
+									type="button"
+									class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
+									@click="() => showModal('relocate-map')"
+								>
+									Relocate
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>868465034183737</td>
+							<td>
+								<div class="flex items-center justify-start gap-10">
+									<span>Botahtaung, Yangon</span>
+									<div class="flex items-center justify-start gap-4">
+										<img src="/assets/img/greater-than-equal-to.svg" />
+									</div>
+								</div>
+							</td>
+							<td>
+								<button
+									type="button"
+									class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
+									@click="() => showModal('relocate-map')"
+								>
+									Relocate
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>868465034183737</td>
+							<td>
+								<div class="flex items-center justify-start gap-10">
+									<span>Botahtaung, Yangon</span>
+									<div class="flex items-center justify-start gap-4">
+										<img src="/assets/img/greater-than-equal-to.svg" />
+									</div>
+								</div>
+							</td>
+							<td>
+								<button
+									type="button"
+									class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
+									@click="() => showModal('relocate-map')"
+								>
+									Relocate
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>868465034183737</td>
+							<td>
+								<div class="flex items-center justify-start gap-10">
+									<span>Botahtaung, Yangon</span>
+									<div class="flex items-center justify-start gap-4">
+										<img src="/assets/img/greater-than-equal-to.svg" />
+									</div>
+								</div>
+							</td>
+							<td>
+								<button
+									type="button"
+									class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
+									@click="() => showModal('relocate-map')"
+								>
+									Relocate
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>868465034183737</td>
+							<td>
+								<div class="flex items-center justify-start gap-10">
+									<span>Botahtaung, Yangon</span>
+									<div class="flex items-center justify-start gap-4">
+										<img src="/assets/img/greater-than-equal-to.svg" />
+									</div>
+								</div>
+							</td>
+							<td>
+								<button
+									type="button"
+									class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
+									@click="() => showModal('relocate-map')"
+								>
+									Relocate
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>868465034183737</td>
+							<td>
+								<div class="flex items-center justify-start gap-10">
+									<span>Botahtaung, Yangon</span>
+									<div class="flex items-center justify-start gap-4">
+										<img src="/assets/img/greater-than-equal-to.svg" />
+									</div>
+								</div>
+							</td>
+							<td>
+								<button
+									type="button"
+									class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
+									@click="() => showModal('relocate-map')"
+								>
+									Relocate
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>868465034183737</td>
+							<td>
+								<div class="flex items-center justify-start gap-10">
+									<span>Botahtaung, Yangon</span>
+									<div class="flex items-center justify-start gap-4">
+										<img src="/assets/img/greater-than-equal-to.svg" />
+									</div>
+								</div>
+							</td>
+							<td>
+								<button
+									type="button"
+									class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
+									@click="() => showModal('relocate-map')"
+								>
+									Relocate
+								</button>
+							</td>
+						</tr>
+					</template>
+
+					<template #tfoot>
+						<DataTableFooter />
+					</template>
+				</DataTable>
+			</section>
+
+			<!-- Tab Content(wireless) -->
+			<section v-show="tabState === 'wireless'">
+				<DataTable>
+					<template #thead>
+						<tr>
+							<DataTableHeader iconName="hard-drive">
+								{{ $t('relocate.cpe_device') }}
+							</DataTableHeader>
+							<DataTableHeader iconName="route">
+								{{ $t('relocate.relocate_address') }}
+							</DataTableHeader>
+							<DataTableHeader iconName="settings">
+								{{ $t('relocate.action') }}
+							</DataTableHeader>
+						</tr>
+					</template>
+
+					<template #tbody>
+						<tr>
+							<td>868465034183737</td>
+							<td>
+								<div class="flex items-center justify-start gap-10">
+									<span>Botahtaung, Yangon</span>
+									<div class="flex items-center justify-start gap-4">
+										<img src="/assets/img/greater-than-equal-to.svg" />
+										<span>Hlaing, Yangon</span>
+										<DashboardStatus
+											class="bg-categories-investments"
+											name="Effective on 30 Dec, 2023"
+										/>
+									</div>
+								</div>
+							</td>
+							<td>
+								<button
+									type="button"
+									class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
+									@click="() => showModal('relocate-map')"
+								>
+									Relocate
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>868465034183737</td>
+							<td>
+								<div class="flex items-center justify-start gap-10">
+									<span>Botahtaung, Yangon</span>
+									<div class="flex items-center justify-start gap-4">
+										<img src="/assets/img/greater-than-equal-to.svg" />
+										<span>Hlaing, Yangon</span>
+										<DashboardStatus
+											class="bg-categories-investments"
+											name="Effective on 30 Dec, 2023"
+										/>
+									</div>
+								</div>
+							</td>
+							<td>
+								<button
+									type="button"
+									class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
+									@click="() => showModal('relocate-map')"
+								>
+									Relocate
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>868465034183737</td>
+							<td>
+								<div class="flex items-center justify-start gap-10">
+									<span>Botahtaung, Yangon</span>
+									<div class="flex items-center justify-start gap-4">
+										<img src="/assets/img/greater-than-equal-to.svg" />
+									</div>
+								</div>
+							</td>
+							<td>
+								<button
+									type="button"
+									class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
+									@click="() => showModal('relocate-map')"
+								>
+									Relocate
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>868465034183737</td>
+							<td>
+								<div class="flex items-center justify-start gap-10">
+									<span>Botahtaung, Yangon</span>
+									<div class="flex items-center justify-start gap-4">
+										<img src="/assets/img/greater-than-equal-to.svg" />
+									</div>
+								</div>
+							</td>
+							<td>
+								<button
+									type="button"
+									class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
+									@click="() => showModal('relocate-map')"
+								>
+									Relocate
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>868465034183737</td>
+							<td>
+								<div class="flex items-center justify-start gap-10">
+									<span>Botahtaung, Yangon</span>
+									<div class="flex items-center justify-start gap-4">
+										<img src="/assets/img/greater-than-equal-to.svg" />
+									</div>
+								</div>
+							</td>
+							<td>
+								<button
+									type="button"
+									class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
+									@click="() => showModal('relocate-map')"
+								>
+									Relocate
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>868465034183737</td>
+							<td>
+								<div class="flex items-center justify-start gap-10">
+									<span>Botahtaung, Yangon</span>
+									<div class="flex items-center justify-start gap-4">
+										<img src="/assets/img/greater-than-equal-to.svg" />
+									</div>
+								</div>
+							</td>
+							<td>
+								<button
+									type="button"
+									class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
+									@click="() => showModal('relocate-map')"
+								>
+									Relocate
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>868465034183737</td>
+							<td>
+								<div class="flex items-center justify-start gap-10">
+									<span>Botahtaung, Yangon</span>
+									<div class="flex items-center justify-start gap-4">
+										<img src="/assets/img/greater-than-equal-to.svg" />
+									</div>
+								</div>
+							</td>
+							<td>
+								<button
+									type="button"
+									class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
+									@click="() => showModal('relocate-map')"
+								>
+									Relocate
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>868465034183737</td>
+							<td>
+								<div class="flex items-center justify-start gap-10">
+									<span>Botahtaung, Yangon</span>
+									<div class="flex items-center justify-start gap-4">
+										<img src="/assets/img/greater-than-equal-to.svg" />
+									</div>
+								</div>
+							</td>
+							<td>
+								<button
+									type="button"
+									class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
+									@click="() => showModal('relocate-map')"
+								>
+									Relocate
+								</button>
+							</td>
+						</tr>
+					</template>
+
+					<template #tfoot>
+						<DataTableFooter />
+					</template>
+				</DataTable>
+			</section>
+
+			<!-- Tab Content(flexi net) -->
+			<section v-show="tabState === 'flexi net'">
+				<DataTable>
+					<template #thead>
+						<tr>
+							<DataTableHeader iconName="hard-drive">
+								{{ $t('relocate.cpe_device') }}
+							</DataTableHeader>
+							<DataTableHeader iconName="route">
+								{{ $t('relocate.relocate_address') }}
+							</DataTableHeader>
+							<DataTableHeader iconName="settings">
+								{{ $t('relocate.action') }}
+							</DataTableHeader>
+						</tr>
+					</template>
+
+					<template #tbody>
+						<tr>
+							<td>868465034183737</td>
+							<td>
+								<div class="flex items-center justify-start gap-10">
+									<span>Botahtaung, Yangon</span>
+									<div class="flex items-center justify-start gap-4">
+										<img src="/assets/img/greater-than-equal-to.svg" />
+										<span>Hlaing, Yangon</span>
+										<DashboardStatus
+											class="bg-categories-investments"
+											name="Effective on 30 Dec, 2023"
+										/>
+									</div>
+								</div>
+							</td>
+							<td>
+								<button
+									type="button"
+									class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
+									@click="() => showModal('relocate-map')"
+								>
+									Relocate
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>868465034183737</td>
+							<td>
+								<div class="flex items-center justify-start gap-10">
+									<span>Botahtaung, Yangon</span>
+									<div class="flex items-center justify-start gap-4">
+										<img src="/assets/img/greater-than-equal-to.svg" />
+										<span>Hlaing, Yangon</span>
+										<DashboardStatus
+											class="bg-categories-investments"
+											name="Effective on 30 Dec, 2023"
+										/>
+									</div>
+								</div>
+							</td>
+							<td>
+								<button
+									type="button"
+									class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
+									@click="() => showModal('relocate-map')"
+								>
+									Relocate
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>868465034183737</td>
+							<td>
+								<div class="flex items-center justify-start gap-10">
+									<span>Botahtaung, Yangon</span>
+									<div class="flex items-center justify-start gap-4">
+										<img src="/assets/img/greater-than-equal-to.svg" />
+									</div>
+								</div>
+							</td>
+							<td>
+								<button
+									type="button"
+									class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
+									@click="() => showModal('relocate-map')"
+								>
+									Relocate
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>868465034183737</td>
+							<td>
+								<div class="flex items-center justify-start gap-10">
+									<span>Botahtaung, Yangon</span>
+									<div class="flex items-center justify-start gap-4">
+										<img src="/assets/img/greater-than-equal-to.svg" />
+									</div>
+								</div>
+							</td>
+							<td>
+								<button
+									type="button"
+									class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
+									@click="() => showModal('relocate-map')"
+								>
+									Relocate
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>868465034183737</td>
+							<td>
+								<div class="flex items-center justify-start gap-10">
+									<span>Botahtaung, Yangon</span>
+									<div class="flex items-center justify-start gap-4">
+										<img src="/assets/img/greater-than-equal-to.svg" />
+									</div>
+								</div>
+							</td>
+							<td>
+								<button
+									type="button"
+									class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
+									@click="() => showModal('relocate-map')"
+								>
+									Relocate
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>868465034183737</td>
+							<td>
+								<div class="flex items-center justify-start gap-10">
+									<span>Botahtaung, Yangon</span>
+									<div class="flex items-center justify-start gap-4">
+										<img src="/assets/img/greater-than-equal-to.svg" />
+									</div>
+								</div>
+							</td>
+							<td>
+								<button
+									type="button"
+									class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
+									@click="() => showModal('relocate-map')"
+								>
+									Relocate
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>868465034183737</td>
+							<td>
+								<div class="flex items-center justify-start gap-10">
+									<span>Botahtaung, Yangon</span>
+									<div class="flex items-center justify-start gap-4">
+										<img src="/assets/img/greater-than-equal-to.svg" />
+									</div>
+								</div>
+							</td>
+							<td>
+								<button
+									type="button"
+									class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
+									@click="() => showModal('relocate-map')"
+								>
+									Relocate
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>868465034183737</td>
+							<td>
+								<div class="flex items-center justify-start gap-10">
+									<span>Botahtaung, Yangon</span>
+									<div class="flex items-center justify-start gap-4">
+										<img src="/assets/img/greater-than-equal-to.svg" />
+									</div>
+								</div>
+							</td>
+							<td>
+								<button
+									type="button"
+									class="btn btn-xs rounded-2xl bg-interactive-accent text-white lg:btn-sm hover:bg-interactive-accent-hover"
+									@click="() => showModal('relocate-map')"
+								>
+									Relocate
+								</button>
+							</td>
+						</tr>
+					</template>
+
+					<template #tfoot>
+						<DataTableFooter />
+					</template>
+				</DataTable>
+			</section>
+		</section>
+	</section>
 
 	<!-- Relocate Map -->
 	<ModalRoot id="relocate-map" isFullWidth class="mx-auto lg:w-[965px]">
@@ -223,7 +680,7 @@ const { showModal, closeModal } = useModal()
 			></iframe>
 
 			<div
-				class="absolute inset-x-5 top-5 max-h-fit flex w-5/6 lg:w-1/3 flex-col gap-6 rounded-2xl bg-white p-5 text-content-primary"
+				class="absolute inset-x-5 top-5 flex max-h-fit w-5/6 flex-col gap-6 rounded-2xl bg-white p-5 text-content-primary lg:w-1/3"
 			>
 				<div class="flex flex-col gap-4">
 					<h3 class="text-body-large font-semibold">
