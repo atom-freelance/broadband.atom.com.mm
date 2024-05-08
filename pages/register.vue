@@ -7,7 +7,7 @@ definePageMeta({
 
 const { showModal, closeModal } = useModal()
 
-const login = async () => {
+const register = async () => {
 	await navigateTo('/')
 }
 </script>
@@ -27,9 +27,9 @@ const login = async () => {
 			</NuxtLink>
 
 			<div class="flex flex-col space-y-3 md:space-y-6">
-				<h3 class="text-xl font-bold md:text-3xl">Login here</h3>
+				<h3 class="text-xl font-bold md:text-3xl">Register</h3>
 				<form
-					@submit.prevent="login"
+					@submit.prevent="register"
 					class="flex flex-col space-y-2 md:space-y-6"
 				>
 					<label class="form-control">
@@ -112,7 +112,7 @@ const login = async () => {
 					@click="
 						() => {
 							closeModal('verify-phone')
-							login()
+							register()
 						}
 					"
 				/>
