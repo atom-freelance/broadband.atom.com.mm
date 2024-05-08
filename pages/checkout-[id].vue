@@ -81,6 +81,53 @@ function toggleShowComponent(
 
 					<div class="flex flex-col gap-3">
 						<div class="flex justify-between">
+							<span class="text-sm font-semibold">Delivery Information</span>
+						</div>
+
+						<div class="form-control gap-3">
+							<input
+								type="text"
+								placeholder="House No, Building Name, Street name"
+								class="input input-bordered input-sm md:input-md focus:border-interactive-secondary focus:outline-none"
+							/>
+
+							<select
+								class="select select-bordered select-sm lg:select-md focus:outline-none"
+							>
+								<option selected>Yangon</option>
+								<option>Mandalay</option>
+							</select>
+
+							<select
+								class="select select-bordered select-sm lg:select-md focus:outline-none"
+							>
+								<option selected>Tarmwe</option>
+								<option>Hledan</option>
+							</select>
+
+							<textarea
+								class="textarea textarea-bordered textarea-sm resize-none lg:textarea-md focus:border-interactive-secondary focus:outline-none"
+								placeholder="Direction / Landmark (Optional)"
+							></textarea>
+						</div>
+					</div>
+
+					<div class="flex flex-col gap-3">
+						<div class="flex justify-between">
+							<span class="text-sm font-semibold">Referral code</span>
+						</div>
+
+						<div class="form-control gap-3">
+							<input
+								type="text"
+								placeholder="Phone number"
+								class="input input-bordered input-sm md:input-md focus:border-interactive-secondary focus:outline-none"
+							/>
+						</div>
+					</div>
+
+					<div class="flex flex-col gap-3">
+						<div class="flex justify-between">
 							<span class="text-sm font-semibold">Payment method</span>
 						</div>
 
