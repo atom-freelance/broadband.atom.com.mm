@@ -182,7 +182,7 @@ const planDetail = computed(() => {
 			>
 				Cancel
 			</button>
-			<NuxtLinkLocale to="/checkout-123" class="btn btn-primary btn-md">
+			<NuxtLinkLocale to="/register" class="btn btn-primary btn-md">
 				Buy now
 			</NuxtLinkLocale>
 		</div>

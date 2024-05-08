@@ -14,7 +14,7 @@ const handleChange = (value: string) => {
 </script>
 
 <template>
-	<div class="space-y-10">
+	<div class="space-y-8">
 		<div class="flex">
 			<div
 				:class="[

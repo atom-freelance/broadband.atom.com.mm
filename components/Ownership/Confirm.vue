@@ -49,10 +49,8 @@ const props = defineProps({
 	</div>
 	<ModalRoot id="confirm-success">
 		<SuccessOrFail
-			title="Successfully changed"
-			subTitle="Ownership change successful! We'll notify you within 7 days once the
-					contact process is complete. If you have any concerns or need further
-					assistance, feel free to reach out to us."
+			title="Successfully requested"
+			subTitle="Ownership change successful! We'll notify you within 7 days once the contact process is complete. If you have any concerns or need further assistance, feel free to reach out to us."
 			:onClose="() => closeModal('confirm-success')"
 		/>
 	</ModalRoot>

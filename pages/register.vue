@@ -10,6 +10,10 @@ const { showModal, closeModal } = useModal()
 const register = async () => {
 	await navigateTo('/')
 }
+
+const checkout = async () => {
+	await navigateTo('/checkout-123')
+}
 </script>
 
 <template>
@@ -112,11 +116,41 @@ const register = async () => {
 					@click="
 						() => {
 							closeModal('verify-phone')
-							register()
+							showModal('id-form')
 						}
 					"
 				/>
 			</div>
 		</ModalAction>
+	</ModalRoot>
+
+	<ModalRoot id="id-form" class="p-0">
+		<div class="flex items-center justify-between border-b px-6">
+			<h3 class="py-4 text-title-body font-semibold">Upload ID</h3>
+
+			<button
+				class="btn btn-circle btn-ghost btn-sm text-content-primary lg:text-lg"
+				@click="() => closeModal('id-form')"
+			>
+				✕
+			</button>
+		</div>
+
+		<div class="p-6">
+			<p>Name</p>
+			<input
+				class="block w-full rounded-md border-0 px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-slate-800 sm:text-sm sm:leading-6"
+			/>
+		</div>
+		<div class="p-6">
+			<OwnershipIdForm
+				:onContinue="
+					() => {
+						closeModal('id-form')
+						checkout()
+					}
+				"
+			/>
+		</div>
 	</ModalRoot>
 </template>
