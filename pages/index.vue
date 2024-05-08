@@ -33,7 +33,16 @@ const plan = reactive({
 			</article>
 
 			<figure class="hero-figure mt-24 lg:mt-48">
-				<img src="/hero_image.jpeg" class="aspect-video" />
+				<video
+					src="/hero.mp4"
+					class="aspect-video"
+					autoplay
+					loop
+					muted
+					preload="auto"
+				>
+					<source src="/hero.mp4" type="video/mp4" />
+				</video>
 			</figure>
 		</section>
 
